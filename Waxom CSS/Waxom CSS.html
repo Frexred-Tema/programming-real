@@ -1,0 +1,696 @@
+<html>
+	<head>
+		<style>
+			.CGINGE{
+				display: flex;
+				flex-direction: column;
+				background-image: URL("slider_img.png");
+				height: 100%;
+				background-size: cover;
+				padding-top: 5vw;
+				padding-inline: 10vw;
+				gap: 30%;
+			}
+			.logo_flex{
+				display: flex;
+				color: white;
+				justify-content: center;
+				align-items: center;
+			}
+			.head_flex_logo{
+				display: flex;
+				gap: 5vw;
+				justify-content: center;
+				align-items: center;
+			}
+			.more_p_flex_logo{
+				display: flex;
+				gap: 1vw;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				font-family: 'Rubik', sans-serif;
+			}
+			.second_logo_flex{
+				display: flex;
+				gap: 4vw;
+				justify-content: center;
+				align-items: center;
+			}
+			.logo_images_flex{
+				display: flex;
+				gap: 1vw;
+			}
+			.center_first_flex{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.center_flex_texts{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				font-family: 'Rubik', sans-serif;
+			}
+			.arrowr_img{
+				width: 4vw;
+				height: 5vw;
+			}
+			.arrowl_img{
+				width: 4vw;
+				height: 5vw;
+			}
+			.middle_p{
+				margin: 0;
+				padding: 0;
+				font-size: 2vw;
+				font-family: 'Nunito Sans', sans-serif;
+			}
+			.big_p{
+				margin: 0;
+				padding: 0;
+				font-size: 3vw;
+				font-family: 'Nunito Sans', sans-serif;
+			}
+			.first_button{
+				background-color: rgb(153, 134, 117);
+				width: 10vw;
+				height: 2.5vw;
+				color: white;
+				border: 0;
+				border-radius:5px;
+				border-bottom: 3px solid rgb(82, 74, 72);
+				font-family: 'Nunito Sans', sans-serif;
+			}
+			.second_big_flex{
+				display: flex;
+				margin-inline: 15vw;
+				margin-top: 5vw;
+				margin-bottom: 10vw;
+			}
+			.in_second_flex{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+			.pp_in_second{
+				font-family: 'Kanit', sans-serif;
+				color: rgb(201, 175, 151);
+				font-size: 1.5rem;
+			}
+			.p_in_second{
+				font-family: 'Kanit', sans-serif;
+				color: rgb(84, 84, 84);
+				font-size: 1.5rem;
+			}
+			.text_in_second{
+				color: rgb(158, 158, 158);
+				font-family: 'Kanit', sans-serif;
+			}
+			.flex_window{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				text-align: center;
+				margin-inline: 5vw;
+				margin-bottom: 5vw;
+			}
+			.window_one{
+				width: 35vw;
+				position: absolute;
+				left: 5vw;
+				top: 7vw;
+			}
+			.window_two{
+				width: 35vw;
+				position: absolute;
+				top: 7vw;
+			}
+			.first_and_second{
+				position: relative;
+			}
+			.window_center{
+				width: 40vw;
+				position: absolute;
+				left: 30vw;
+			}
+			.now_button{
+				background-color: rgb(153, 134, 117);
+				width: 10vw;
+				height: 2.5vw;
+				color: white;
+				border: 0;
+				border-radius:5px;
+				border-bottom: 3px solid rgb(82, 74, 72);
+				font-family: 'Nunito Sans', sans-serif;
+			}
+			.flex_backfront_gray{
+				margin-top: 30vw;
+				padding-inline: 10vw;
+				display: flex;
+				align-items: center;
+				text-align: center;
+				padding-top: 2vw;
+				padding-bottom: 2vw;
+				margin-left: 2vw;
+				gap: 45vw;
+				background: linear-gradient(90deg, rgba(4,2,0,1) 0%, rgba(87,56,14,1) 100%);
+			}
+			.double_p_flex{
+				display: flex;
+				gap: 5px;
+			}
+			.text_flex_now{
+				padding: 0;
+				margin: 0;
+			}
+			.p_bf_one{
+				color: rgb(175, 162, 146);
+				font-family: 'Nunito Sans', sans-serif;
+			}
+			.p_bf_two{
+				color: white;
+				font-family: 'Nunito Sans', sans-serif;
+			}
+			.p_bf_three{
+				color: rgb(73, 64, 61);
+				padding: 0;
+				margin:0;
+				font-family: 'Nunito Sans', sans-serif;
+				font-size: 0.7vw;
+			}
+			.title{
+				font-family: 'Nunito Sans', sans-serif;
+				font-size: 1.5vw;
+			}
+			.buttom_title{
+				font-family: 'Nunito Sans', sans-serif;
+				color: rgb(161, 161, 161);
+			}
+			.punkt_flex{
+				display: flex;
+				gap: 1vw;
+				justify-content: center;
+				align-items: center;
+				font-family: 'Nunito Sans', sans-serif;
+			}
+			.t_white{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: rgb(153, 134, 117);
+				border-radius: 5px;
+				color: white;
+				width: 4vw;
+				height: 2vw;
+			}
+			.t_black{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: 1px solid gray;
+				border-radius: 5px;
+				width: 6vw;
+				color: gray;
+				height: 2vw;
+			}
+			.big_img_double{
+				display: flex;
+				flex-direction: column;
+				padding-inline: 15vw;
+				padding-top: 5vw;
+				font-family: 'Nunito Sans', sans-serif;
+				gap: 2vw;
+			}
+			.flex_in_double{
+				display: flex;
+				gap: 2vw;
+			}
+			.brown_div{
+				background-color: rgb(55, 47, 45);
+			}
+			.normal_div{
+				background-color: Snow;
+			}
+			.p_div{
+				padding-left: 2vw;
+				color: rgb(202, 196, 184);
+			}
+			.p_divv{
+				padding-left: 2vw;
+				font-size: 0.5vw;
+				color: gray;
+			}
+			.p_divv_brown{
+				padding-left: 2vw;
+				font-size: 0.5vw;
+				color: white;
+			}
+			.p_div_brown{
+				padding-left: 2vw;
+				color: white;
+			}
+			.button_loadmore_div{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				padding-top: 5vw;
+			}
+			.button_loadmore{
+				width: 8vw;
+				height: 3vw;
+				background-color: rgb(153, 134, 117);
+				border: 0;
+				border-radius: 10px;
+				color: white;
+				font-family: 'Nunito Sans', sans-serif;
+			}
+			.video_flex{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				background-image: url("video_img.png");
+				background-size: cover;
+				height: 50vw;
+				margin-top: 5vw;
+				color: white;
+				font-family: 'Nunito Sans', sans-serif;
+				margin-bottom: 5vw ;
+			}
+			.devise_flex{
+				display: flex;
+				padding-inline: 15vw;
+			}
+			.in_device{
+				display: flex;
+				flex-direction: column;
+				font-family: 'Nunito Sans', sans-serif;
+				color: gray;
+			}
+			.in_device_texts{
+				display: flex;
+				align-items: center;
+				gap: 1vw;
+				font-family: 'Nunito Sans', sans-serif;
+			}
+			.hover_arrow{
+				width: 2w;
+				height: 2vw;
+			}
+			.title_text_device{
+				font-size: 2vw;
+			}
+			.cafe_flex{
+				display: flex;
+				padding-top: 2vw;
+				padding-bottom: 3vw;
+				margin-top: 5vw;
+				margin-bottom: 5vw;
+				padding-inline: 15vw;
+				align-items: center;
+				justify-content: center;
+				background: linear-gradient(90deg, rgba(4,2,0,1) 0%, rgba(87,56,14,1) 100%);
+				gap: 5vw;
+			}
+			.coffee_flex{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			.icons{
+				width: 5vw;
+				height: 5vw;
+			}
+			.c_cafe_text{
+				font-size: 2vw;
+				color: white;
+				font-family: 'Nunito Sans', sans-serif;
+			}
+			.t_cafe{
+				color: white;
+				font-family: 'Nunito Sans', sans-serif;
+			}
+			.recent_flex{
+				display: flex;
+				padding-inline: 10vw;
+				gap: 1vw;
+				padding-bottom: 5vw;
+			}
+			.logo_flex_so_ggs{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding-top: 10vw;
+				padding-inline: 10vw;
+				padding-bottom: 10vw;
+				gap: 5vw;
+				background-image: url("footy_bg_img.png");
+				background-size: cover;
+			}
+			.last_big{
+				display: flex;
+				background-color: rgb(25, 25, 25);
+				padding-top: 5vw;
+				padding-inline: 15vw;
+				padding-bottom: 5vw;
+				gap: 3vw;
+			}
+			.lorem_ipsum{
+				font-family: 'Nunito Sans', sans-serif;
+				color: gray;
+			}
+			.read_more{
+				color: white;
+				font-family: 'Nunito Sans', sans-serif;
+			}
+			.last_t_gray{
+				color: gray;
+				font-family: 'Nunito Sans', sans-serif;
+			}
+			.last_title{
+				color: white;
+				font-family: 'Nunito Sans', sans-serif;
+				font-size: 2vw;
+			}
+			.last_cwet{
+				color: white;
+				font-family: 'Nunito Sans', sans-serif;
+			}
+			.last_cvet{
+				color: rgb(191, 183, 172);
+				font-family: 'Nunito Sans', sans-serif;
+			}
+			.blue{
+				color: rgb(21, 121, 146);
+			}
+			.biruzovi{
+				color: rgb(154, 154, 154);
+			}
+			.last_images{
+				display: flex;
+				gap: 1vw;
+			}
+			.dribble_flex{
+				display: flex;
+				flex-direction: column;
+				gap: 1vw;
+			}
+			.first_dribble{
+				padding-top: 1vw;
+				width: 20vw;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="CGINGE">
+			<div class="head_flex_logo">
+				<div class="logo_flex">
+					<img src="logo_img.png">
+					<p>Waxom</p>
+				</div>
+				<div class="second_logo_flex">
+					<div class="more_p_flex_logo">
+						<p>Home</p>
+						<p>About Us</p>
+						<p>Portfolio</p>
+						<p>Features</p>
+						<p>Blog</p>
+						<p>Pricing</p>
+						<p>Shortcodes</p>
+						<p>Contact</p>
+					</div>
+					<div class="logo_images_flex">
+						<img src="cart_icon.png">
+						<img src="search_icon.png">
+					</div>
+				</div>
+			</div>
+			<div class="center_first_flex">
+				<img class="arrowl_img" src="slider_l_arrow.png">
+				<div class="center_flex_texts">
+					<p class="middle_p">Unique and Modern Design</p>
+					<p class="big_p">Portfolio PSD Template</p>
+					<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imper-</p>
+					<p>diet doming id quod mazim placerat facer possim assum.</p>
+					<button class="first_button">GET STARTED</button>
+				</div>
+				<img class="arrowr_img" src="slider_r_arrow.png">
+			</div>
+		</div>
+		<div class="second_big_flex">
+			<div class="in_second_flex">
+				<img src="pencil_icon.png">
+				<p class="p_in_second">Web & App Design</p>
+				<p class="text_in_second">Nam liber tempor cum soluta nobis| elelfend option congue nihil imperdiet doming id quod mazim.</p>
+			</div>
+			<div class="in_second_flex">
+				<img src="stacks_icon.png">
+				<p class="pp_in_second">Development</p>
+				<p class="text_in_second">Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismodt incidunt ut laoreet.</p>
+			</div>
+			<div class="in_second_flex">
+				<img src="gear_icon.png">
+				<p class="p_in_second">Customization</p>
+				<p class="text_in_second">Nam liber tempor cum soluta nobis| elelfend option congue nihil imperdiet doming id quod mazim.</p>
+			</div>
+			<div class="in_second_flex"> 
+				<img src="case_icon.png">
+				<p class="p_in_second">Marketing</p>
+				<p class="text_in_second">Nam liber tempor cum soluta nobis| elelfend option congue nihil imperdiet doming id quod mazim.</p>
+			</div>
+		</div>
+		<div class="flex_window">
+			<p class="title">Waxom is Realization of your Ideas.</p>
+			<p class="buttom_title">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam</p>
+			<p class="buttom_title">processus dynamicus, qui sequitur mutationem consuetudium.</p>
+			<div class="winodows">
+				<div class="first_and_second">
+					<img class="window_one" src="window_left.png">
+					<img class="window_two" src="window_right.png">
+				</div>
+				<div class="center_window">
+					<img class="window_center" src="window_center.png">
+				</div>
+			</div>
+		</div>
+		<div class="flex_backfront_gray">
+			<div class="text_flex_now">
+				<div class="double_p_flex">
+					<p class="p_bf_one">Waxom</p>
+					<p class="p_bf_two">Multipurpose WordPress Theme</p>
+				</div>
+				<p class="p_bf_three">Don't Forget to Rate the Template. Thanks so much!</p>
+			</div>
+			<button class="now_button">PURCHASE NOW</button>
+		</div>
+		<div class="flex_window">
+			<p class="title">Our Latest Projects.</p>
+			<p class="buttom_title">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam</p>
+			<p class="buttom_title">processus dynamicus, qui sequitur mutationem consuetudium.</p>
+		</div>
+		<div class="punkt_flex">
+			<div class="t_white">All</div>
+			<div class="t_black">Web Design</div>
+			<div class="t_black">Mobile App</div>
+			<div class="t_black">Illustration</div>
+			<div class="t_black">Photography</div>
+		</div>
+		<div class="big_img_double">
+			<div class="flex_in_double">
+				<div class="normal_div">
+					<img src="img_1.png">
+					<p class="p_div">Claritas Etiam Processus</p>
+					<p class="p_divv">Photography, Nature</p>
+				</div>
+				<div class="brown_div">
+					<img src="img_2.png">
+					<p class="p_div_brown">Quam Nutamus Farum</p>
+					<p class="p_divv_brown">Graphic Design, Mock-Up</p>
+				</div>
+				<div class="normal_div">
+					<img src="img_3.png">
+					<p class="p_div">Usus Legentis Videntur</p>
+					<p class="p_divv">Photography. Hollday</p>
+				</div>
+			</div>
+			<div class="flex_in_double">
+				<div class="normal_div">
+					<img src="img_4.png">
+					<p class="p_div">Claritas Etiam Processus</p>
+					<p class="p_divv">Photography, Nature</p>
+				</div>
+				<div class="normal_div">
+					<img src="img_5.png">
+					<p class="p_div">Quam Nutamus Farum</p>
+					<p class="p_divv">Graphic Design, Mock-Up</p>
+				</div>
+				<div class="normal_div">
+					<img src="img_6.png">
+					<p class="p_div">Usus Legentis Videntur</p>
+					<p class="p_divv">Photography. Hollday</p>
+				</div>
+			</div>
+		</div>
+		<div class="button_loadmore_div">
+			<button class="button_loadmore">LOAD MORE</button>
+		</div>
+		<div class="video_flex">
+			<img src="video_play_icon.png">
+			<p>Waxom Video Presentation</p>
+			<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt</p>
+			<p>saepius, qui sequitur mutationem consuetudium.</p>
+			<p>03:26</p>
+		</div>
+		<div class="devise_flex">
+			<img src="device_psd_img.png">
+			<div class="in_device">
+				<p class="title_text_device">Excellent for Mobile Devices.</p>
+				<p>Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas. Eodem modo typi. qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+				<div>
+					<div class="in_device_texts">
+						<img class="hover_arrow" src="recent_arrow_r_hover.png">
+						<p>Nam liber tempor cum soluta nobis eleifend option:</p>
+					</div>
+					<div class="in_device_texts">
+						<img class="hover_arrow" src="recent_arrow_r_hover.png">
+						<p>Option congue nihil imperdiet doming id quod mazim placerat facer;</p>
+					</div>
+					<div class="in_device_texts">
+						<img class="hover_arrow" src="recent_arrow_r_hover.png">
+						<p>Eodem modo typi, qui nunc nobis videntur parum futurum:</p>
+					</div>
+					<div class="in_device_texts">
+						<img class="hover_arrow" src="recent_arrow_r_hover.png">
+						<p>Investigationes demonstraverunt lectores</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cafe_flex">
+			<div class="coffee_flex">
+				<img class="icons" src="icon_1.png">
+				<p class="c_cafe_text">3587</p>
+				<p class="t_cafe">SATISFIED CLIENTS</p>
+				<button></button>
+			</div>
+			<div class="coffee_flex">
+				<img class="icons" src="icon_2.png">
+				<p class="c_cafe_text">207</p>
+				<p class="t_cafe">CUPS OF COFFEE</p>
+				<button></button>
+			</div>
+			<div class="coffee_flex">
+				<img class="icons" src="icon_3.png">
+				<p class="c_cafe_text">2500</p>
+				<p class="t_cafe">BLOG POSTS</p>
+				<button></button>
+			</div>
+			<div class="coffee_flex">
+				<img class="icons" src="icon_4.png">
+				<p class="c_cafe_text">873</p>
+				<p class="t_cafe">LIKES</p>
+				<button></button>
+			</div>
+			<div class="coffee_flex">
+				<img class="icons" src="icon_5.png">
+				<p class="c_cafe_text">900</p>
+				<p class="t_cafe">WE LAUNCHED</p>
+				<button></button>
+			</div>
+		</div>
+		<div class="flex_window">
+			<p class="title">Recent Posts.</p>
+			<p class="buttom_title">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam</p>
+			<p class="buttom_title">processus dynamicus, qui sequitur mutationem consuetudium.</p>
+		</div>
+		<div class="recent_flex">
+			<div class="normal_div">
+				<img src="recent_img_1.png">
+				<p class="p_div">Lorem ipsum dolor sit amet</p>
+				<p class="p_divv">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+				<p class="p_divv">>Read More›</p>
+			</div>
+			<div class="brown_div">
+				<img src="recent_img_2.png">
+				<p class="p_div_brown">Lorem ipsum dolor sit amet</p>
+				<p class="p_divv_brown">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+				<p class="p_divv">>Read More›</p>
+			</div>
+			<div class="normal_div">
+				<img src="recent_img_3.png">
+				<p class="p_div">Lorem ipsum dolor sit amet</p>
+				<p class="p_divv">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+				<p class="p_divv">Read More›</p>
+			</div>
+		</div>
+		<div class="logo_flex_so_ggs">
+			<img src="footy_logo_1.png">
+			<img src="footy_logo_2.png">
+			<img src="footy_logo_3.png">
+			<img src="footy_logo_4.png">
+		</div>
+		<div class="last_big">
+			<div class="first_dribble">
+				<div class="logo_flex">
+					<img src="logo_img.png">
+					<p>Waxom</p>
+				</div>
+				<p class="lorem_ipsum">Lorem Ipsum dolor sit amet consec- tetuer adipiscing ellt. sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venlam, quis nostrud exerci suscipit lobortis claritatem.</p>
+				<p class="read_more">Read more></p>
+			</div>
+			<div>
+				<p class="last_title">Recent Posts</p>
+				<div>
+					<div>
+						<p class="last_t_gray">September 08, 2015</p>
+						<p class="last_t_gray">Lorem Ipsum dolor sit amet, consec- tetuer adipiscing ellt</p>
+					</div>
+					<div>
+						<p class="last_cwet">September 08, 2015</p>
+						<p class="last_cvet">Diam nonummy nibh euismod tincid-unt ut laoreet dolore magna</p>
+					</div>
+					<div>
+						<p class="last_t_gray">September 08, 2015</p>
+						<p class="last_t_gray">Claritas est etlam processus dynamic-us, qui sequitur mutationem per seac-ula quarta decima</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<p class="last_title">Our Twitter</p>
+				<div>
+					<div>
+						<p class="last_t_gray"><span class="blue">@waxom</span> Cum soluta nobis elelfend option congue nihil imperdlet doming</p>
+						<p class="last_t_gray">3 mins ago</p>
+					</div>
+					<div>
+						<p class="last_t_gray">Mirum est <span class="blue">#envato</span> notare quam littera gothica, quam nunc putamus parum anteposuerit litterarum</p>
+						<p class="last_t_gray">5 hours ago</p>
+					</div>
+					<div>
+						<p class="last_t_gray">Soluta nobis option <span class="biruzovi">bit.ly//Hniso7</span></p>
+						<p class="last_t_gray">20 days ago</p>
+					</div>
+				</div>
+			</div>
+			<div class="dribble_flex">
+				<p class="last_title">Dribbble Widget</p>
+				<div class="last_images">
+					<img src="dribble_img1.png">
+					<img src="dribble_img2.png">
+				</div>
+				<div class="last_images">
+					<img src="dribble_img3.png">
+					<img src="dribble_img4.png">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script src="jquery-3.7.1.min.js"></script>
+        <style>
+
+            #but{
+                width: 5%;
+                height: 2vw;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <form>
+            <input id="input" type="text">
+        </form>
+        <button id="but"></button>
+
+        <script>
+
+            let button = document.querySelector('#but')
+            button.addEventListener('click', ()=>{
+                let value = document.querySelector('#input').value
+                $.ajax({ 
+                    url: 'current.json',
+                    type: 'GET',
+                    success: (response) =>{
+                        let div = document.createElement('div')
+                        let p1 = document.createElement('p')
+                        p1.innerText = response.city_name
+                        div.appendChild(p1)
+                        let p2 = document.createElement('p')
+                        p2.innerText = response.app_temp
+                        div.appendChild(p2)
+                    }
+                })
+            })
+
+        </script>
+    </body>
+</html>

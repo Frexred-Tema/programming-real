@@ -1,0 +1,671 @@
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+            div{
+                font-size: 2vw;
+                font-family: 'Rubik';
+            }
+            body{
+                display: flex;
+                flex-direction: column;
+                gap: 1vw;
+            }
+            p{
+                font-size: 1vw;  
+            }
+            .pg{
+                font-size: 1vw;  
+                color: rgb(65, 204, 65);
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            let Question = ["What does HTML stand for?",'Who is making the Web standards?', 'Choose the correct HTML element for the wlargest heading:','What is the correct HTML element for inserting a line break?','What is the correct HTML for adding a background color?','Choose the correct HTML element to define important text','Choose the correct HTML element to define emphasized text','What is the correct HTML for creating a hyperlink?','Which character is used to indicate an end tag?','How can you open a link in a new tab/browser window?','Which of these elements are all <table> elements?','Inline elements are normally displayed without starting a new line.','How can you make a numbered list?','How can you make a bulleted list?','What is the correct HTML for making a checkbox?','What is the correct HTML for making a text input field?','What is the correct HTML for making a drop-down list?','What is the correct HTML for making a text area?','What is the correct HTML for inserting an image?','What is the correct HTML for inserting a background image?','An <iframe> is used to display a web page within a web page.','HTML comments start with <!-- and end with -->','Block elements are normally displayed without starting a new line.','Which HTML element defines the title of a document?','Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?','Which doctype is correct for HTML5?','Which HTML element is used to specify a footer for a document or section?','In HTML, you can embed SVG elements directly into an HTML page.','What is the correct HTML element for playing video files?','What is the correct HTML element for playing audio files?','The HTML global attribute, "contenteditable" is used to:','In HTML, onblur and onfocus are:','Graphics defined by SVG is in which format?','The HTML <canvas> element is used to:','In HTML, which attribute is used to specify that an input field must be filled out?','Which input type defines a slider control?','Which HTML element is used to display a scalar measurement within a range?','Which HTML element defines navigation links?','In HTML, what does the <aside> element define?','Which HTML element is used to specify a header for a document or section?'];
+                let Answers = [["Home Tool Markup Language","Hyper Text Markup Language","Hyperlinks and Text Markup Language"],
+            ['Google','Mozilla','Microsoft','The World Wide Web Consortium'],
+            ['<h6>','<h1>','<heading>','<head>'],
+            ['<break>','<br>','<lb>'],
+            ['<background ›yellow</background>','<body bg="ye llow">','<body style= "background-color:yellow;">'],
+            ['<i>','<b>','<strong>','<important>'],
+            ['<italic>','<em >','<i>'],
+            ['<a url= "http://www.w3schools.com">W3Schools.com</a>','<a name="http://www.w3schools.com">W3Schools.com</a>','<a> http://www.w3schools.com</a>','<a href= "http://www.w3schools.com">W3Schools</a>'],
+            ['^','/','*','<'],
+            ['<a href="url" new>','<a href="url" target="_blank">','<a href="url" target= "new" >'],
+            ['‹table > <tr> <tt>','‹thead> < body> <tr>','‹table > < head > <tfoot>','< table > <tr> <td>'],
+            ['True','False'],
+            ['< list>','‹dl>','<ol>','<ul>'],
+            ['< list>','<ul>','‹ dl>','<ol>'],
+            ['< check>','<input type="check">','< input type="checkbox">','< checkbox>'],
+            ['< textfield >','<input type="text" >','< textinput type= "text">','< input type= "textfield">'],
+            ['<input type= "list">','< select>','< input type="dropdown" >','< list>'],
+            ['< input type= "textarea">','<input type= "textbox">','< textarea >'],
+            ['<img src="image.gif" alt="Mylmage" >','<img alt= "Mylmage"> image.gif </img>','<image src="image.gif" alt= "Mylmage">','< img href="image.gif" alt= "Mylmage" >'],
+            ['< background img="background.gif">','< body style="background-image:url(background.gif)">','<body bg="background.gif">'],
+            ['There is no such thing as an <iframe>','False','True'],
+            ['True','False'],
+            ['False','True'],
+            ['‹head>','< title>','< meta >'],
+            ['longdesc','title','alt','src'],
+            ['<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 5.0//EN"."http://www.w3.org/TR/html5/strict.dtd">','‹!DOCTYPE html>','‹!DOCTYPE HTML5>'],
+            ['< section>','< bottom >','< footer>'],
+            ['False','True'],
+            ['< media >','< movie>','‹video>'],
+            ['< audio >','‹mp3>','‹sound>'],
+            ['Specify whether the content of an element should be editable or not','Specifies a context menu for an element. The menu appears when a user right-clicks onthe element','Update content from the server','Return the position of the first found occurrence of content inside a string'],
+            ['Style attributes','HTML elements','Event attributes'],
+            ['HTML','CSS','XML'],
+            ['draw graphics','create draggable elements','display database records','manipulate data in MySQL'],
+            ['placeholder','validate','formvalidate','required'],
+            ['slider','search','range','controls'],
+            ['< gauge>','< range>','< meter>','< measure >'],
+            ['‹ navigation>','< nav>','< navigate>'],
+            ['The ASCII character-set; to send information between computers on the Internet','A navigation list to be shown at the left side of the page','Content aside from the page content'],
+            ['header','‹head>','<section>','<top>']];
+
+            let div1 = document.createElement('div');
+            div1.innerText = Question[0]
+            document.body.appendChild(div1)
+            let p1 = document.createElement('p')
+            p1.innerText = Answers[0][0]
+            div1.appendChild(p1)
+            let p2 = document.createElement('p')
+            p2.innerText = Answers[0][1]
+            p2.className = 'pg' 
+            div1.appendChild(p2)
+            let p3 = document.createElement('p')
+            p3.innerText = Answers[0][2]
+            div1.appendChild(p3)
+
+            let div2 = document.createElement('div');
+            div2.innerText = Question[0]
+            document.body.appendChild(div2)
+            let p4 = document.createElement('p')
+            p4.innerText = Answers[1][0]
+            div2.appendChild(p4)
+            let p5 = document.createElement('p')
+            p5.innerText = Answers[1][1]
+            div2.appendChild(p5)
+            let p6 = document.createElement('p')
+            p6.innerText = Answers[1][2]
+            div2.appendChild(p6)
+            let p2_4 = document.createElement('p')
+            p2_4.innerText = Answers[1][3]
+            p2_4.className = 'pg'
+            div2.appendChild(p2_4)
+
+            let div3 = document.createElement('div');
+            div3.innerText = Question[2]
+            document.body.appendChild(div3)
+            let p7 = document.createElement('p')
+            p7.innerText = Answers[2][0]
+            div3.appendChild(p7)
+            let p8 = document.createElement('p')
+            p8.innerText = Answers[2][1]
+            p8.className = 'pg'
+            div3.appendChild(p8)
+            let p9 = document.createElement('p')
+            p9.innerText = Answers[2][2]
+            div3.appendChild(p9)
+            let p3_4 = document.createElement('p')
+            p3_4.innerText = Answers[2][3]
+            div3.appendChild(p3_4)
+
+            let div4 = document.createElement('div');
+            div4.innerText = Question[3]
+            document.body.appendChild(div4)
+            let p10 = document.createElement('p')
+            p10.innerText = Answers[3][0]
+            div4.appendChild(p10)
+            let p11 = document.createElement('p')
+            p11.innerText = Answers[3][1]
+            div4.appendChild(p11)
+            let p12 = document.createElement('p')
+            p12.innerText = Answers[3][2]
+            p12.className = 'pg'
+            div4.appendChild(p12)
+
+            let div5 = document.createElement('div');
+            div5.innerText = Question[4]
+            document.body.appendChild(div5)
+            let p13 = document.createElement('p')
+            p13.innerText = Answers[4][0]
+            div5.appendChild(p13)
+            let p14 = document.createElement('p')
+            p14.innerText = Answers[4][1]
+            div5.appendChild(p14)
+            let p15 = document.createElement('p')
+            p15.innerText = Answers[4][2]
+            p15.className = 'pg'
+            div5.appendChild(p15)
+
+            let div6 = document.createElement('div');
+            div6.innerText = Question[5]
+            document.body.appendChild(div6)
+            let p16 = document.createElement('p')
+            p16.innerText = Answers[5][0]
+            div6.appendChild(p16)
+            let p17 = document.createElement('p')
+            p17.innerText = Answers[5][1]
+            div6.appendChild(p17)
+            let p18 = document.createElement('p')
+            p18.innerText = Answers[5][2]
+            p18.className = 'pg'
+            div6.appendChild(p18)
+            let p6_4 = document.createElement('p')
+            p6_4.innerText = Answers[5][3]
+            div6.appendChild(p6_4)
+
+            let div7 = document.createElement('div');
+            div7.innerText = Question[6]
+            document.body.appendChild(div7)
+            let p19 = document.createElement('p')
+            p19.innerText = Answers[6][0]
+            div7.appendChild(p19)
+            let p20 = document.createElement('p')
+            p20.innerText = Answers[6][1]
+            p20.className = 'pg'
+            div7.appendChild(p20)
+            let p21 = document.createElement('p')
+            p21.innerText = Answers[6][2]
+            div7.appendChild(p21)
+
+            let div8 = document.createElement('div');
+            div8.innerText = Question[7]
+            document.body.appendChild(div8)
+            let p22 = document.createElement('p')
+            p22.innerText = Answers[7][0]
+            div8.appendChild(p22)
+            let p23 = document.createElement('p')
+            p23.innerText = Answers[7][1]
+            div8.appendChild(p23)
+            let p24 = document.createElement('p')
+            p24.innerText = Answers[7][2]
+            div8.appendChild(p24)
+            let p8_4 = document.createElement('p')
+            p8_4.innerText = Answers[7][3]
+            p8_4.className = 'pg'
+            div8.appendChild(p8_4)
+
+            let div9 = document.createElement('div');
+            div9.innerText = Question[8]
+            document.body.appendChild(div9)
+            let p25 = document.createElement('p')
+            p25.innerText = Answers[8][0]
+            div9.appendChild(p25)
+            let p26 = document.createElement('p')
+            p26.innerText = Answers[8][1]
+            p26.className = 'pg'
+            div9.appendChild(p26)
+            let p27 = document.createElement('p')
+            p27.innerText = Answers[8][2]
+            div9.appendChild(p27)
+            let p9_4 = document.createElement('p')
+            p9_4.innerText = Answers[8][3]
+            div9.appendChild(p9_4)
+
+            let div10 = document.createElement('div');
+            div10.innerText = Question[9]
+            document.body.appendChild(div10)
+            let p28 = document.createElement('p')
+            p28.innerText = Answers[9][0]
+            div10.appendChild(p28)
+            let p29 = document.createElement('p')
+            p29.innerText = Answers[9][1]
+            p29.className = 'pg'
+            div10.appendChild(p29)
+            let p30 = document.createElement('p')
+            p30.innerText = Answers[9][2]
+            div10.appendChild(p30)
+
+            let div11 = document.createElement('div');
+            div11.innerText = Question[10]
+            document.body.appendChild(div11)
+            let p31 = document.createElement('p')
+            p31.innerText = Answers[10][0]
+            div11.appendChild(p31)
+            let p32 = document.createElement('p')
+            p32.innerText = Answers[10][1]
+            div11.appendChild(p31)
+            let p33 = document.createElement('p')
+            p33.innerText = Answers[10][2]
+            div11.appendChild(p33)
+            let p11_4 = document.createElement('p')
+            p11_4.innerText = Answers[10][3]
+            p11_4.className = 'pg'
+            div11.appendChild(p11_4)
+
+            let div12 = document.createElement('div');
+            div12.innerText = Question[11]
+            document.body.appendChild(div12)
+            let p34 = document.createElement('p')
+            p34.innerText = Answers[11][0]
+            p34.className = 'pg'
+            div12.appendChild(p34)
+            let p35 = document.createElement('p')
+            p35.innerText = Answers[11][1]
+            div12.appendChild(p35)
+
+            let div13 = document.createElement('div');
+            div13.innerText = Question[12]
+            document.body.appendChild(div13)
+            let p37 = document.createElement('p')
+            p37.innerText = Answers[12][0]
+            div13.appendChild(p37)
+            let p38 = document.createElement('p')
+            p38.innerText = Answers[12][1]
+            div13.appendChild(p38)
+            let p39 = document.createElement('p')
+            p39.innerText = Answers[12][2]
+            p39.className = 'pg'
+            div13.appendChild(p39)
+            let p13_4 = document.createElement('p')
+            p13_4.innerText = Answers[12][3]
+            div13.appendChild(p13_4)
+
+            let div14 = document.createElement('div');
+            div14.innerText = Question[13]
+            document.body.appendChild(div14)
+            let p40 = document.createElement('p')
+            p40.innerText = Answers[13][0]
+            div14.appendChild(p40)
+            let p41 = document.createElement('p')
+            p41.innerText = Answers[13][1]
+            p41.className = 'pg'
+            div14.appendChild(p41)
+            let p42 = document.createElement('p')
+            p42.innerText = Answers[13][2]
+            div14.appendChild(p42)
+            let p14_4 = document.createElement('p')
+            p14_4.innerText = Answers[13][3]
+            div14.appendChild(p14_4)
+
+            let div15 = document.createElement('div');
+            div15.innerText = Question[14]
+            document.body.appendChild(div15)
+            let p43 = document.createElement('p')
+            p43.innerText = Answers[14][0]
+            div15.appendChild(p43)
+            let p44 = document.createElement('p')
+            p44.innerText = Answers[14][1]
+            div15.appendChild(p44)
+            let p45 = document.createElement('p')
+            p45.innerText = Answers[14][2]
+            p45.className = 'pg'
+            div15.appendChild(p45)
+            let p15_4 = document.createElement('p')
+            p15_4.innerText = Answers[14][3]
+            div15.appendChild(p15_4)
+
+            let div16 = document.createElement('div');
+            div16.innerText = Question[15]
+            document.body.appendChild(div16)
+            let p46 = document.createElement('p')
+            p46.innerText = Answers[15][0]
+            div16.appendChild(p46)
+            let p47 = document.createElement('p')
+            p47.innerText = Answers[15][1]
+            p47.className = 'pg'
+            div16.appendChild(p47)
+            let p48 = document.createElement('p')
+            p48.innerText = Answers[15][2]
+            div16.appendChild(p48)
+            let p16_4 = document.createElement('p')
+            p16_4 .innerText = Answers[15][3]
+            div16.appendChild(p16_4)
+
+            let div17 = document.createElement('div');
+            div17.innerText = Question[16]
+            document.body.appendChild(div17)
+            let p49 = document.createElement('p')
+            p49.innerText = Answers[16][0]
+            div17.appendChild(p49)
+            let p50 = document.createElement('p')
+            p50.innerText = Answers[16][1]
+            p50.className = 'pg'
+            div17.appendChild(p50)
+            let p51 = document.createElement('p')
+            p51.innerText = Answers[16][2]
+            div17.appendChild(p51)
+            let p17_4 = document.createElement('p')
+            p17_4.innerText = Answers[16][3]
+            div17.appendChild(p17_4)
+
+            let div18 = document.createElement('div');
+            div18.innerText = Question[17]
+            document.body.appendChild(div18)
+            let p52 = document.createElement('p')
+            p52.innerText = Answers[17][0]
+            div18.appendChild(p52)
+            let p53 = document.createElement('p')
+            p53.innerText = Answers[17][1]
+            div18.appendChild(p53)
+            let p54 = document.createElement('p')
+            p54.innerText = Answers[17][2]
+            p54.className = 'pg'
+            div18.appendChild(p54)
+
+            let div19 = document.createElement('div');
+            div19.innerText = Question[18]
+            document.body.appendChild(div19)
+            let p55 = document.createElement('p')
+            p55.innerText = Answers[18][0]
+            p55.className = 'pg'
+            div19.appendChild(p55)
+            let p56 = document.createElement('p')
+            p56.innerText = Answers[18][1]
+            div19.appendChild(p56)
+            let p57 = document.createElement('p')
+            p57.innerText = Answers[18][2]
+            div19.appendChild(p57)
+            let p19_4 = document.createElement('p')
+            p19_4.innerText = Answers[18][3]
+            div19.appendChild(p19_4)
+
+            let div20 = document.createElement('div');
+            div20.innerText = Question[19]
+            document.body.appendChild(div20)
+            let p58 = document.createElement('p')
+            p58.innerText = Answers[19][0]
+            div20.appendChild(p58)
+            let p59 = document.createElement('p')
+            p59.innerText = Answers[19][1]
+            p59.className = 'pg'
+            div20.appendChild(p59)
+            let p60 = document.createElement('p')
+            p60.innerText = Answers[19][2]
+            div20.appendChild(p60)
+
+            let div21 = document.createElement('div');
+            div21.innerText = Question[20]
+            document.body.appendChild(div21)
+            let p61 = document.createElement('p')
+            p61.innerText = Answers[20][0]
+            div21.appendChild(p61)
+            let p62 = document.createElement('p')
+            p62.innerText = Answers[20][1]
+            div21.appendChild(p62)
+            let p63 = document.createElement('p')
+            p63.innerText = Answers[20][2]
+            p63.className = 'pg'
+            div21.appendChild(p63)
+
+            let div22 = document.createElement('div');
+            div22.innerText = Question[21]
+            document.body.appendChild(div22)
+            let p64 = document.createElement('p')
+            p64.innerText = Answers[21][0]
+            p64.className = 'pg'
+            div22.appendChild(p64)
+            let p65 = document.createElement('p')
+            p65.innerText = Answers[21][1]
+            div22.appendChild(p65)
+
+            let div23 = document.createElement('div');
+            div23.innerText = Question[22]
+            document.body.appendChild(div23)
+            let p67 = document.createElement('p')
+            p67.innerText = Answers[22][0]
+            p67.className = 'pg'
+            div23.appendChild(p67)
+            let p68 = document.createElement('p')
+            p68.innerText = Answers[22][1]
+            div23.appendChild(p68)
+
+            let div24 = document.createElement('div');
+            div24.innerText = Question[23]
+            document.body.appendChild(div24)
+            let p70 = document.createElement('p')
+            p70.innerText = Answers[23][0]
+            div24.appendChild(p70)
+            let p71 = document.createElement('p')
+            p71.innerText = Answers[23][1]
+            p71.className = 'pg'
+            div24.appendChild(p71)
+            let p72 = document.createElement('p')
+            p72.innerText = Answers[23][2]
+            div24.appendChild(p72)
+
+            let div25 = document.createElement('div');
+            div25.innerText = Question[24]
+            document.body.appendChild(div25)
+            let p73 = document.createElement('p')
+            p73.innerText = Answers[24][0]
+            div25.appendChild(p73)
+            let p74 = document.createElement('p')
+            p74.innerText = Answers[24][1]
+            div25.appendChild(p74)
+            let p75 = document.createElement('p')
+            p75.innerText = Answers[24][2]
+            p75.className = 'pg'
+            div25.appendChild(p75)
+            let p25_4 = document.createElement('p')
+            p25_4.innerText = Answers[24][3]
+            div25.appendChild(p25_4)
+
+            let div26 = document.createElement('div');
+            div26.innerText = Question[25]
+            document.body.appendChild(div26)
+            let p76 = document.createElement('p')
+            p76.innerText = Answers[25][0]
+            div26.appendChild(p76)
+            let p77 = document.createElement('p')
+            p77.innerText = Answers[25][1]
+            p77.className = 'pg'
+            div26.appendChild(p77)
+            let p78 = document.createElement('p')
+            p78.innerText = Answers[25][2]
+            div26.appendChild(p78)
+
+            let div27 = document.createElement('div');
+            div27.innerText = Question[26]
+            document.body.appendChild(div27)
+            let p79 = document.createElement('p')
+            p79.innerText = Answers[26][0]
+            div27.appendChild(p79)
+            let p80 = document.createElement('p')
+            p80.innerText = Answers[26][1]
+            div27.appendChild(p80)
+            let p81 = document.createElement('p')
+            p81.innerText = Answers[26][2]
+            p81.className = 'pg'
+            div27.appendChild(p81)
+
+            let div28 = document.createElement('div');
+            div28.innerText = Question[27]
+            document.body.appendChild(div28)
+            let p82 = document.createElement('p')
+            p82.innerText = Answers[27][0]
+            div28.appendChild(p82)
+            let p83 = document.createElement('p')
+            p83.innerText = Answers[27][1]
+            p83.className = 'pg'
+            div28.appendChild(p83)
+
+            let div29 = document.createElement('div');
+            div29.innerText = Question[28]
+            document.body.appendChild(div29)
+            let p85 = document.createElement('p')
+            p85.innerText = Answers[28][0]
+            div29.appendChild(p85)
+            let p86 = document.createElement('p')
+            p86.innerText = Answers[28][1]
+            div29.appendChild(p86)
+            let p87 = document.createElement('p')
+            p87.innerText = Answers[28][2]
+            p87.className = 'pg'
+            div29.appendChild(p87)
+
+            let div30 = document.createElement('div');
+            div30.innerText = Question[29]
+            document.body.appendChild(div30)
+            let p88 = document.createElement('p')
+            p88.innerText = Answers[29][0]
+            p88.className = 'pg'
+            div30.appendChild(p88)
+            let p89 = document.createElement('p')
+            p89.innerText = Answers[29][1]
+            div30.appendChild(p89)
+            let p90 = document.createElement('p')
+            p90.innerText = Answers[29][2]
+            div30.appendChild(p90)
+
+            let div31 = document.createElement('div');
+            div31.innerText = Question[30]
+            document.body.appendChild(div31)
+            let p91 = document.createElement('p')
+            p91.innerText = Answers[30][0]
+            p91.className = 'pg'
+            div31.appendChild(p91)
+            let p92 = document.createElement('p')
+            p92.innerText = Answers[30][1]
+            div31.appendChild(p92)
+            let p93 = document.createElement('p')
+            p93.innerText = Answers[30][2]
+            div31.appendChild(p93)
+            let p31_4 = document.createElement('p')
+            p31_4.innerText = Answers[30][3]
+            div31.appendChild(p31_4)
+
+            let div32 = document.createElement('div');
+            div32.innerText = Question[31]
+            document.body.appendChild(div32)
+            let p94 = document.createElement('p')
+            p94.innerText = Answers[31][0]
+            div32.appendChild(p94)
+            let p95 = document.createElement('p')
+            p95.innerText = Answers[31][1]
+            div32.appendChild(p95)
+            let p96 = document.createElement('p')
+            p96.innerText = Answers[31][2]
+            p96.className = 'pg'
+            div32.appendChild(p96)
+
+            let div33 = document.createElement('div');
+            div33.innerText = Question[32]
+            document.body.appendChild(div33)
+            let p97 = document.createElement('p')
+            p97.innerText = Answers[32][0]
+            div33.appendChild(p97)
+            let p98 = document.createElement('p')
+            p98.innerText = Answers[32][1]
+            div33.appendChild(p98)
+            let p99 = document.createElement('p')
+            p99.innerText = Answers[32][2]
+            p99.className = 'pg'
+            div33.appendChild(p99)
+
+            let div34 = document.createElement('div');
+            div34.innerText = Question[33]
+            document.body.appendChild(div34)
+            let p100 = document.createElement('p')
+            p100.innerText = Answers[33][0]
+            p100.className = 'pg'
+            div34.appendChild(p100)
+            let p101 = document.createElement('p')
+            p101.innerText = Answers[33][1]
+            div34.appendChild(p101)
+            let p102 = document.createElement('p')
+            p102.innerText = Answers[33][2]
+            div34.appendChild(p102)
+            let p34_4 = document.createElement('p')
+            p34_4.innerText = Answers[33][3]
+            div34.appendChild(p34_4)
+
+            let div35 = document.createElement('div');
+            div35.innerText = Question[34]
+            document.body.appendChild(div35)
+            let p103 = document.createElement('p')
+            p103.innerText = Answers[34][0]
+            div35.appendChild(p103)
+            let p104 = document.createElement('p')
+            p104.innerText = Answers[34][1]
+            div35.appendChild(p104)
+            let p105 = document.createElement('p')
+            p105.innerText = Answers[34][2]
+            div35.appendChild(p105)
+            let p35_4 = document.createElement('p')
+            p35_4.innerText = Answers[34][3]
+            p35_4.className = 'pg'
+            div35.appendChild(p35_4)
+
+            let div36 = document.createElement('div');
+            div36.innerText = Question[35]
+            document.body.appendChild(div36)
+            let p106 = document.createElement('p')
+            p106.innerText = Answers[35][0]
+            div36.appendChild(p106)
+            let p107 = document.createElement('p')
+            p107.innerText = Answers[35][1]
+            p107.className = 'pg'
+            div36.appendChild(p107)
+            let p108 = document.createElement('p')
+            p108.innerText = Answers[35][2]
+            div36.appendChild(p108)
+            let p36_4 = document.createElement('p')
+            p36_4.innerText = Answers[35][3]
+            div36.appendChild(p36_4)
+
+            let div37 = document.createElement('div');
+            div37.innerText = Question[36]
+            document.body.appendChild(div37)
+            let p109 = document.createElement('p')
+            p109.innerText = Answers[36][0]
+            div37.appendChild(p109)
+            let p110 = document.createElement('p')
+            p110.innerText = Answers[36][1]
+            div37.appendChild(p110)
+            let p111 = document.createElement('p')
+            p111.innerText = Answers[36][2]
+            p111.className = 'pg'
+            div37.appendChild(p111)
+            let p37_4 = document.createElement('p')
+            p37_4.innerText = Answers[36][3]
+            div37.appendChild(p37_4)
+
+            let div38 = document.createElement('div');
+            div38.innerText = Question[37]
+            document.body.appendChild(div38)
+            let p112 = document.createElement('p')
+            p112.innerText = Answers[37][0]
+            div38.appendChild(p112)
+            let p113 = document.createElement('p')
+            p113.innerText = Answers[37][1]
+            p113.className = 'pg'
+            div38.appendChild(p113)
+            let p114 = document.createElement('p')
+            p114.innerText = Answers[37][2]
+            div38.appendChild(p114)
+
+            let div39 = document.createElement('div');
+            div39.innerText = Question[38]
+            document.body.appendChild(div39)
+            let p115 = document.createElement('p')
+            p115.innerText = Answers[38][0]
+            div39.appendChild(p115)
+            let p116 = document.createElement('p')
+            p116.innerText = Answers[38][1]
+            div39.appendChild(p116)
+            let p117 = document.createElement('p')
+            p117.innerText = Answers[38][2]
+            p117.className = 'pg'
+            div39.appendChild(p117)
+
+            let div40 = document.createElement('div');
+            div40.innerText = Question[39]
+            document.body.appendChild(div40)
+            let p118 = document.createElement('p')
+            p118.innerText = Answers[39][0]
+            p118.className = 'pg'
+            div40.appendChild(p118)
+            let p119 = document.createElement('p')
+            p119.innerText = Answers[39][1]
+            div40.appendChild(p119)
+            let p120 = document.createElement('p')
+            p120.innerText = Answers[39][2]
+            div40.appendChild(p120)
+
+        </script>
+    </body>
+</html>

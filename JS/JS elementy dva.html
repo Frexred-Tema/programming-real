@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<style>
+			.large_div{
+				display: flex;
+				gap: 1vw;
+			}
+			.div1{
+				display: flex;
+				flex-direction: column;
+			}
+			.div2{
+				display: flex;
+				flex-direction: column;
+				width: 8vw;
+			}
+			.image{
+				width: 15vw;
+				height: 15vw;
+				border-radius: 10vw;
+			}
+			.p1{
+				text-align: center;
+			}
+			.p2{
+				text-align: center;
+			}
+			.div3{
+				display: flex;
+				gap: 1vw;
+				text-align: center;
+				justify-content: center;
+			}
+			.p4{
+				color: purple;
+			}
+			.p5{
+				color: purple;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			let large_div = document.createElement("div")
+			large_div.className = "large_div"
+			document.body.appendChild(large_div)
+
+			let div1 = document.createElement("div")
+			div1.className = "div1"
+			large_div.appendChild(div1)
+
+			let div2 = document.createElement("div")
+			div2.className = "div2"
+			large_div.appendChild(div2)
+
+			let image = document.createElement("img")
+			image.src = ("https://celes.club/uploads/posts/2022-05/1651710293_40-celes-club-p-priroda-kirgizii-krasivo-foto-43.jpg")
+			image.className = "image"
+			div1.appendChild(image)
+
+			let p1 = document.createElement("p")
+			p1.innerText = "Ian Sikes"
+			p1.className = "p1"
+			div1.appendChild(p1)
+
+			let p2 = document.createElement("p")
+			p2.innerText = "CS Student"
+			p2.className = "p2"
+			div1.appendChild(p2)
+
+			let p3 = document.createElement("p")
+			p3.innerText = "I'm a computer science student, web developer, gamer, musician, and President of Computer Programming Club at Santa Monica College. Things I've been excited about lately are React, functional programming, and data visualization."
+			p3.className = "p3"
+			div2.appendChild(p3)
+
+			let div3 = document.createElement("div")
+			div3.className = "div3"
+			div2.appendChild(div3)
+
+			let p4 = document.createElement("p")
+			p4.innerText = "GitHub"
+			p4.className = "p4"
+			div3.appendChild(p4)
+
+			let p5 = document.createElement("p")
+			p5.innerText = "Medium"
+			p5.className = "p5"
+			div3 .appendChild(p5)
+		</script>
+	</body>
+</html>

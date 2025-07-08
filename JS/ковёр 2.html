@@ -1,0 +1,173 @@
+<head>
+    <style>
+        body{
+            margin-inline: 20vw;
+            padding-top: 5vw;
+        }
+        .bigdiv{
+            display: flex;
+        }
+        .boss{
+            width: 10vw;
+            border-radius: 20px 20px 0px 0px;
+            padding-block: 2vw;
+            text-align: center;
+            color: azure;
+            background-color: gray;
+            border: 2px solid gray;
+        }
+        .games{
+            display: none;
+            width: 10vw;
+            padding-block: 2vw;
+            text-align: center;
+            border: 2px solid black;
+            color: black;
+        }
+        .Library{
+            display: none;
+            width: 10vw;
+            padding-block: 2vw;
+            text-align: center;
+            border: 2px solid black;
+            color: black;
+            border-radius: 0px 0px 20px 20px;
+        }
+        .films{
+            display: none;
+            width: 10vw;
+            padding-block: 2vw;
+            text-align: center;
+            border: 2px solid black;
+            color: black;
+        }
+        .games1{
+            width: 10vw;
+            padding-block: 2vw;
+            text-align: center;
+            border: 2px solid black;
+            color: black;
+        }
+        .Library1{
+            width: 10vw;
+            padding-block: 2vw;
+            text-align: center;
+            border: 2px solid black;
+            color: black;
+            border-radius: 0px 0px 20px 20px;
+        }
+        .films1{
+            width: 10vw;
+            padding-block: 2vw;
+            text-align: center;
+            border: 2px solid black;
+            color: black;
+        }
+        .Contact{
+            display: none;
+            width: 10vw;
+            padding-block: 2vw;
+            text-align: center;
+            border: 2px solid black;
+            color: black;
+        }
+        .Contact1{
+            width: 10vw;
+            padding-block: 2vw;
+            text-align: center;
+            border: 2px solid black;
+            color: black;
+        }
+        .Home{
+            display: none;
+            width: 10vw;
+            padding-block: 2vw;
+            text-align: center;
+            border: 2px solid black;
+            color: black;
+        }
+        .Home1{
+            width: 10vw;
+            padding-block: 2vw;
+            text-align: center;
+            border: 2px solid black;
+            color: black;
+        }
+        .minidiv1{
+            display: none;
+        }
+        .minidiv11{
+            margin-top: 5.5vw;
+            padding-block: 0.8vw;
+            text-align: center;
+            border: 2px solid black;
+            width: 5vw;
+        }
+        .minidiv12{
+            margin-top: 0vw;
+            padding-block: 0.8vw;
+            text-align: center;
+            border: 2px solid black;
+            width: 5vw;
+        }
+        .minidiv2{
+            display: none;
+        }
+    </style>
+</head>
+<html>
+    <body>
+        <div class="bigdiv">
+            <div class="big_div_1">
+                <div class="films"></div>
+                <div class="Contact"></div>
+                <div class="Home"></div>
+                <div class="Library"></div>
+            </div>
+            <div class="big_div_2">
+                <div class="minidiv1"></div>
+                <div class="minidiv2"></div>
+            </div>
+        </div>
+        <script>
+
+            let div1 = document.createElement("div")
+            div1.innerText = "Games"
+            div1.className = "games"
+            big_div_1.appendChild(div1)
+
+            let boss = document.createElement("div")
+            boss.innerText = "Sections"
+            boss.className = "boss"
+            big_div_1.appendChild(boss)
+
+            boss.addEventListener("click", function(){
+                if (div1.className == "games") {
+                    div1.className = "games1"
+                    div2.className = "films1"
+                    div3.className = "Contact1"
+                    div4.className = "Home1"                    
+                    div5.className = "Library1"
+                }
+                else{
+                    div1.className = "games"
+                    div2.className = "films"
+                    div3.className = "Contact"
+                    div4.className = "Home"  
+                    div5.className = "Library"
+                }
+            })
+            div1.addEventListener('click', function(){
+                if (minidiv1.className == "minidiv1") {
+                    minidiv1.className = "minidiv11"
+                    minidiv2.className = "minidiv12"
+                }
+                else{
+                    minidiv1.className = "minidiv1"
+                    minidiv2.className = "minidiv2"
+                }
+            })
+
+        </script>
+    </body>
+</html>

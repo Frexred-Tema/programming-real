@@ -1,0 +1,304 @@
+{
+    "data1": {
+      "Price": "$300",
+      "Model": "AMD RX 6600",
+      "Quantity": 10,
+      "Characteristic": "8GB GDDR6, 128-bit, RDNA 2, 1920 Stream Processors"
+    },
+    "data2": {
+      "Price": "$480",
+      "Model": "AMD RX 6700 XT",
+      "Quantity": 8,
+      "Characteristic": "12GB GDDR6, 192-bit, RDNA 2, 2560 Stream Processors"
+    },
+    "data3": {
+      "Price": "$350",
+      "Model": "NVIDIA RTX 3060",
+      "Quantity": 19,
+      "Characteristic": "12GB GDDR6, 192-bit, Ray Tracing, 3584 CUDA Cores"
+    },
+    "data4": {
+      "Price": "$700",
+      "Model": "NVIDIA RTX 3080",
+      "Quantity": 4,
+      "Characteristic": "10GB GDDR6X, 320-bit, Ray Tracing, 8704 CUDA Cores"
+    },
+    "data5": {
+      "Price": "$900",
+      "Model": "AMD RX 6900 XT",
+      "Quantity": 24,
+      "Characteristic": "16GB GDDR6, 256-bit, RDNA 2, 5120 Stream Processors"
+    },
+    "data6": {
+      "Price": "$350",
+      "Model": "NVIDIA RTX 3060",
+      "Quantity": 8,
+      "Characteristic": "12GB GDDR6, 192-bit, Ray Tracing, 3584 CUDA Cores"
+    },
+    "data7": {
+      "Price": "$900",
+      "Model": "AMD RX 6900 XT",
+      "Quantity": 17,
+      "Characteristic": "16GB GDDR6, 256-bit, RDNA 2, 5120 Stream Processors"
+    },
+    "data8": {
+      "Price": "$900",
+      "Model": "AMD RX 6900 XT",
+      "Quantity": 16,
+      "Characteristic": "16GB GDDR6, 256-bit, RDNA 2, 5120 Stream Processors"
+    },
+    "data9": {
+      "Price": "$700",
+      "Model": "NVIDIA RTX 3080",
+      "Quantity": 12,
+      "Characteristic": "10GB GDDR6X, 320-bit, Ray Tracing, 8704 CUDA Cores"
+    },
+    "data10": {
+      "Price": "$500",
+      "Model": "NVIDIA RTX 3070",
+      "Quantity": 12,
+      "Characteristic": "8GB GDDR6, 256-bit, Ray Tracing, 5888 CUDA Cores"
+    },
+    "data11": {
+      "Price": "$300",
+      "Model": "AMD RX 6600",
+      "Quantity": 12,
+      "Characteristic": "8GB GDDR6, 128-bit, RDNA 2, 1792 Stream Processors"
+    },
+    "data12": {
+      "Price": "$700",
+      "Model": "NVIDIA RTX 3080",
+      "Quantity": 20,
+      "Characteristic": "10GB GDDR6X, 320-bit, Ray Tracing, 8704 CUDA Cores"
+    },
+    "data13": {
+      "Price": "$300",
+      "Model": "AMD RX 6600",
+      "Quantity": 2,
+      "Characteristic": "8GB GDDR6, 128-bit, RDNA 2, 1792 Stream Processors"
+    },
+    "data14": {
+      "Price": "$700",
+      "Model": "NVIDIA RTX 3080",
+      "Quantity": 14,
+      "Characteristic": "10GB GDDR6X, 320-bit, Ray Tracing, 8704 CUDA Cores"
+    },
+    "data15": {
+      "Price": "$580",
+      "Model": "AMD RX 6800",
+      "Quantity": 14,
+      "Characteristic": "16GB GDDR6, 256-bit, RDNA 2, 3840 Stream Processors"
+    },
+    "data16": {
+      "Price": "$300",
+      "Model": "AMD RX 6600",
+      "Quantity": 9,
+      "Characteristic": "8GB GDDR6, 128-bit, RDNA 2, 1792 Stream Processors"
+    },
+    "data17": {
+      "Price": "$480",
+      "Model": "AMD RX 6700 XT",
+      "Quantity": 8,
+      "Characteristic": "12GB GDDR6, 192-bit, RDNA 2, 2560 Stream Processors"
+    },
+    "data18": {
+      "Price": "$350",
+      "Model": "NVIDIA RTX 3060",
+      "Quantity": 19,
+      "Characteristic": "12GB GDDR6, 192-bit, Ray Tracing, 3584 CUDA Cores"
+    },
+    "data19": {
+      "Price": "$700",
+      "Model": "NVIDIA RTX 3080",
+      "Quantity": 4,
+      "Characteristic": "10GB GDDR6X, 320-bit, Ray Tracing, 8704 CUDA Cores"
+    },
+    "data20": {
+      "Price": "$900",
+      "Model": "AMD RX 6900 XT",
+      "Quantity": 24,
+      "Characteristic": "16GB GDDR6, 256-bit, RDNA 2, 5120 Stream Processors"
+    },
+    "data21": {
+    "Price": "$600",
+    "Model": "NVIDIA RTX 3070 Ti",
+    "Quantity": 13,
+    "Characteristic": "8GB GDDR6X, 256-bit, Ray Tracing, 6144 CUDA Cores"
+  },
+  "data22": {
+    "Price": "$350",
+    "Model": "AMD RX 6600 XT",
+    "Quantity": 10,
+    "Characteristic": "8GB GDDR6, 128-bit, RDNA 2, 2048 Stream Processors"
+  },
+  "data23": {
+    "Price": "$550",
+    "Model": "NVIDIA RTX 3070",
+    "Quantity": 7,
+    "Characteristic": "8GB GDDR6, 256-bit, Ray Tracing, 5888 CUDA Cores"
+  },
+  "data24": {
+    "Price": "$950",
+    "Model": "AMD RX 6950 XT",
+    "Quantity": 5,
+    "Characteristic": "16GB GDDR6, 256-bit, RDNA 2, 5120 Stream Processors"
+  },
+  "data25": {
+    "Price": "$700",
+    "Model": "NVIDIA RTX 3080 Ti",
+    "Quantity": 9,
+    "Characteristic": "12GB GDDR6X, 384-bit, Ray Tracing, 10240 CUDA Cores"
+  },
+  "data26": {
+    "Price": "$650",
+    "Model": "AMD RX 6800 XT",
+    "Quantity": 15,
+    "Characteristic": "16GB GDDR6, 256-bit, RDNA 2, 4608 Stream Processors"
+  },
+  "data27": {
+    "Price": "$800",
+    "Model": "NVIDIA RTX 3090",
+    "Quantity": 6,
+    "Characteristic": "24GB GDDR6X, 384-bit, Ray Tracing, 10496 CUDA Cores"
+  },
+  "data28": {
+    "Price": "$430",
+    "Model": "NVIDIA GTX 1660 Ti",
+    "Quantity": 10,
+    "Characteristic": "6GB GDDR5, 192-bit, 1536 CUDA Cores"
+  },
+  "data29": {
+    "Price": "$600",
+    "Model": "NVIDIA RTX 3070 Ti",
+    "Quantity": 12,
+    "Characteristic": "8GB GDDR6X, 256-bit, Ray Tracing, 6144 CUDA Cores"
+  },
+  "data30": {
+    "Price": "$400",
+    "Model": "AMD RX 5700 XT",
+    "Quantity": 11,
+    "Characteristic": "8GB GDDR6, 256-bit, RDNA, 2560 Stream Processors"
+  },
+  "data31": {
+    "Price": "$330",
+    "Model": "NVIDIA GTX 1650 Super",
+    "Quantity": 18,
+    "Characteristic": "4GB GDDR5, 128-bit, 1280 CUDA Cores"
+  },
+  "data32": {
+    "Price": "$450",
+    "Model": "AMD RX 6700",
+    "Quantity": 14,
+    "Characteristic": "12GB GDDR6, 192-bit, RDNA 2, 2560 Stream Processors"
+  },
+  "data33": {
+    "Price": "$500",
+    "Model": "NVIDIA RTX 2060 Super",
+    "Quantity": 13,
+    "Characteristic": "8GB GDDR6, 256-bit, Ray Tracing, 2176 CUDA Cores"
+  },
+  "data34": {
+    "Price": "$700",
+    "Model": "NVIDIA RTX 3070",
+    "Quantity": 9,
+    "Characteristic": "8GB GDDR6, 256-bit, Ray Tracing, 5888 CUDA Cores"
+  },
+  "data35": {
+    "Price": "$550",
+    "Model": "NVIDIA GTX 1080 Ti",
+    "Quantity": 5,
+    "Characteristic": "11GB GDDR5X, 352-bit, 3584 CUDA Cores"
+  },
+  "data36": {
+    "Price": "$600",
+    "Model": "AMD RX 6800",
+    "Quantity": 20,
+    "Characteristic": "16GB GDDR6, 256-bit, RDNA 2, 3840 Stream Processors"
+  },
+  "data37": {
+    "Price": "$650",
+    "Model": "NVIDIA RTX 3060 Ti",
+    "Quantity": 14,
+    "Characteristic": "8GB GDDR6, 256-bit, Ray Tracing, 4864 CUDA Cores"
+  },
+  "data38": {
+    "Price": "$550",
+    "Model": "AMD RX 6700 XT",
+    "Quantity": 7,
+    "Characteristic": "12GB GDDR6, 192-bit, RDNA 2, 2560 Stream Processors"
+  },
+  "data39": {
+    "Price": "$460",
+    "Model": "NVIDIA RTX 2060",
+    "Quantity": 18,
+    "Characteristic": "6GB GDDR6, 192-bit, Ray Tracing, 1920 CUDA Cores"
+  },
+  "data40": {
+    "Price": "$380",
+    "Model": "AMD RX 5600 XT",
+    "Quantity": 16,
+    "Characteristic": "6GB GDDR6, 192-bit, RDNA, 2304 Stream Processors"
+  },
+  "data41": {
+    "Price": "$450",
+    "Model": "NVIDIA GTX 1660 Super",
+    "Quantity": 10,
+    "Characteristic": "6GB GDDR5, 192-bit, 1408 CUDA Cores"
+  },
+  "data42": {
+    "Price": "$420",
+    "Model": "NVIDIA GTX 1650",
+    "Quantity": 12,
+    "Characteristic": "4GB GDDR5, 128-bit, 896 CUDA Cores"
+  },
+  "data43": {
+    "Price": "$720",
+    "Model": "NVIDIA RTX 3090 Ti",
+    "Quantity": 8,
+    "Characteristic": "24GB GDDR6X, 384-bit, Ray Tracing, 10752 CUDA Cores"
+  },
+  "data44": {
+    "Price": "$650",
+    "Model": "AMD RX 6800",
+    "Quantity": 6,
+    "Characteristic": "16GB GDDR6, 256-bit, RDNA 2, 3840 Stream Processors"
+  },
+  "data45": {
+    "Price": "$480",
+    "Model": "NVIDIA GTX 1660",
+    "Quantity": 15,
+    "Characteristic": "6GB GDDR5, 192-bit, 1408 CUDA Cores"
+  },
+  "data46": {
+    "Price": "$330",
+    "Model": "NVIDIA GTX 1050 Ti",
+    "Quantity": 13,
+    "Characteristic": "4GB GDDR5, 128-bit, 768 CUDA Cores"
+  },
+  "data47": {
+    "Price": "$550",
+    "Model": "AMD RX 6700 XT",
+    "Quantity": 7,
+    "Characteristic": "12GB GDDR6, 192-bit, RDNA 2, 2560 Stream Processors"
+  },
+  "data48": {
+    "Price": "$650",
+    "Model": "NVIDIA RTX 3070",
+    "Quantity": 12,
+    "Characteristic": "8GB GDDR6, 256-bit, Ray Tracing, 5888 CUDA Cores"
+  },
+  "data49": {
+    "Price": "$400",
+    "Model": "NVIDIA GTX 1650",
+    "Quantity": 18,
+    "Characteristic": "4GB GDDR5, 128-bit, 896 CUDA Cores"
+  },
+  "data50": {
+    "Price": "$480",
+    "Model": "AMD RX 5700",
+    "Quantity": 16,
+    "Characteristic": "8GB GDDR6, 256-bit, RDNA, 2304 Stream Processors"
+  }
+}
+  
+  

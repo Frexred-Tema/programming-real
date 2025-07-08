@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+
+function productFib(prod){
+  let arr = [0, 1]
+  let i = 1
+  let result = []
+  while (arr[i] * arr[i-1] != prod) {
+    if (arr[i] * arr[i-1] > prod) {
+      result.push(arr[i-1], arr[i], false)
+      return result
+    }
+    arr.push(arr[i] + arr[i-1])
+    i++
+  }
+  if(arr[i] * arr[i-1] == prod){
+    result.push(arr[i-1], arr[i], true)
+    return result
+  }
+  return result
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

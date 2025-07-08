@@ -1,0 +1,1207 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            body{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                padding: 0;
+                margin: 0;
+            }
+            .title{
+                background-color: rgb(0, 52, 102);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                padding-inline: 15vw;
+            }
+            .tabs{
+                display: flex;
+                align-items: center;
+                text-align: center;
+                gap: 2.5vw;
+                color: white;
+            }
+            .information{
+                padding-inline: 15vw;
+            }
+            .tit{
+                font-size: 2vw;
+            }
+            .sections{
+                color: white;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                gap: 0.25vw;
+            }
+            .div1{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(51, 103, 153);
+                height: 2vw;
+                width: 6vw;
+                font-size: 1vw;
+                cursor: pointer; 
+                user-select: none;
+            }
+            .div2{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(51, 103, 153);
+                height: 2vw;
+                width: 6vw;
+                font-size: 1vw;
+                cursor: pointer; 
+                user-select: none;
+            }
+            .div3{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(51, 103, 153);
+                height: 2vw;
+                width: 6vw;
+                font-size: 1vw;
+                cursor: pointer; 
+                user-select: none;
+            }
+            .div4{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(51, 103, 153);
+                height: 2vw;
+                width: 6vw;
+                font-size: 1vw;
+                cursor: pointer; 
+                user-select: none;
+            }
+            .div5{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(51, 103, 153);
+                height: 2vw;
+                width: 6vw;
+                font-size: 1vw;
+                cursor: pointer; 
+                user-select: none;
+            }
+            .calculator{
+                display: flex;
+                gap: 0.5vw;
+                background-color: rgb(238, 238, 238);
+                border: 1px solid grey;
+                width: 40vw;
+            }
+            .inp{
+                width: 12vw;
+                height: 2vw;
+            }
+            .inp2{
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                user-select: none;
+                width: 12vw;
+                height: 2vw;
+                margin: 0;
+                font-size: 1vw;
+                font-weight: 1px;
+                border: 1px solid black;
+                border-radius: 5px;
+                color: rgb(188, 199, 210);
+            }
+            .input-two-choose{
+                overflow: auto;
+            }
+            .solver{
+                height: 2vw;
+                display: flex;
+                justify-content: center;
+                background-color: white;
+                border: 1px solid black;
+                align-items: center;
+                border-radius: 5px;
+                cursor: pointer;
+                user-select: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="title">
+            <img src="https://d26tpo4cm8sb6k.cloudfront.net/img/svg/calculator-white.svg">
+            <div class="tabs">
+                <p style="cursor: pointer; user-select: none;">FINANCIAL</p>
+                <p style="cursor: pointer; user-select: none;">FITNESS & HEALTH</p>
+                <p style="cursor: pointer; user-select: none;">MATH</p>
+                <p style="cursor: pointer; user-select: none;">OTHER</p>
+                <p style="cursor: pointer; user-select: none;">SIGN IN</p>
+            </div>
+        </div>
+        <div class="information">
+            <div>
+                <p class="tit">Conversion Calculator</p>
+                <p>Use this Conversion Calculator to convert between commonly used units. Select the current unit in the left column, the desired unit in the right column, and enter a value in the left column to generate the resulting conversion. A full list of unit conversions is available at unitconverters.net.</p>
+                <div class="sections ">
+                    <div id="div1" class="div1">Length</div>
+                    <div id="div2"  class="div2">Temperature</div>
+                    <div id="div3"  class="div3">Area</div>
+                    <div id="div4"  class="div4">Volume</div>
+                    <div id="div5"  class="div5">Weight</div>
+                </div>
+                <div class="calculator">
+                    <div>
+                        <form>
+                            <input id="multipliable" class="inp" type="text" placeholder="Ввод">
+                        </form>
+                        <div class="input-one-choose">
+                            <form>
+                                <select id="first-chooser" class="first-chooser"></select>
+                            </form>
+                        </div>
+                    </div>
+                    <div>
+                        <form>
+                            <p id='ravno' class="inp2">Вывод</p>
+                        </form>
+                        <div class="input-two-choose">
+                            <form>
+                                <select id="second-chooser" class='second-chooser'></select>
+                            </form>
+                        </div>
+                    </div>
+                    <button class="solver" id="solver">Solve</button>
+                </div>
+                <p class="tit">Different Systems of Units</p>
+                <p>Historically, many different systems of units have been used, where a system of units is defined as a collection of units of measurement with rules that relate them to each other. A unit of measurement is a defined magnitude of a quantity that it used as a standard for mea surement for the same kind of quantity, such as measurements of length, weight, and volume.
+                    In the past, many systems of measurement were defined on a local level, and could be based on factors as arbitrary as the length of a king's thumb. While this may work on a local level, when considering trade, as well as science, having systems of units based on units that others may not be able to relate to or understand makes interaction difficult. As such, the development of more universal and consistent systems developed over time. Today, some of the systems of units in use include the metric system, the imperial system, and the United States customary units.                    
+                    The International System of Units (SI) is the standard metric system that is currently used, and consists of seven SI base units of length, mass, time, temperature, electric current, luminous intensity, and amount of substance. Although SI is used almost universally in science (including in the US), some countries such as the United States still use their own system of units. This is partly due to the substantial financial and cultural costs involved in changing a measurement system compared to the potential benefit of using a standardized system. Since US customary units (USC) are so entrenched in the United States, and SI is already used in most applications where standardization is important, everyday use of USC is still prevalent in the United States, and is unlikely to change. As such, many unit converters including this Conversion Calculator exist, and will continue to do so to ensure that people globally are able to communicate different measurements effectively.</p>
+                <p class="tit">History of the Pound</p>
+                <p>In the eighth and ninth centuries of the Common Era (CE), Arab civilization flourished in the Middle East and Spain. The Arabs used coins as a measurement of units of weight since a minted coin could not easily be cut or shaved to reduce its weight, and thus provided a measurable standard. They used a coin called a silver dirhem as a basic measure of weight, which had a weight roughly equivalent to 45 fully grown grains of barley. Ten dirhems comprised a Wukryeh, which was translated into Latin as an "uncia" – the origin of the word "ounce."
+                    Over time, trade spread from the Mediterranean area to Europe, including the northern German City States. As a result, a pound, 16 ounces of silver, or 7200 grains, became a commonly used measure in many regions.                    
+                    While England also adopted this measure, a shortage of silver caused King Offa to reduce the measurement of the pound to 5400 grains in order to use smaller coins. Eventually, when William the Conqueror became King of England, he retained the 5400-grain pound for minting coins, but reverted to the 7200-grain pound for other purposes.            
+                    Though many countries used the pound from that point onward, including England (the British pound sterling, or GBP was equal to one pound-weight of silver in King Offa's time), the avoirdupois weight system was adopted during the reign of Queen Elizabeth in the 16th century. It was a system based on the weight of coal, and its name was derived from the French phrase "avoir de pois" (goods of weight or property). The avoirdupois was equivalent to 7,000 grains, 256 drams of 27.344 grains each, or 16 ounces of 437 ½ grains each. Since 1959, the avoirdupois pound has been officially defined in most English-speaking countries as 0.45359237 kilograms.                    
+                    Different systems of measurement also developed over time in Asian countries. For example, in ancient India, a measure of weight called the "Satamana" was used, and was equal to the weight of 100 gunja berries. In China, the first emperor Shi Huang Di created a system of weights and measures in the third century BCE (Before the Common Era). The measurement of weight was based on the shi, which was equivalent to approximately 132 pounds. The Chi and Zhang were units of length equivalent to approximately 25 centimeters (9.8 inches) and 3 meters (9.8 feet) respectively. The Chinese also developed a means to ensure accuracy through the use of a special size of bowl used for measurements that also made a specific sound when struck – if the sound was off pitch, the measurement was not accurate.</p>
+                <p class="tit">Brief History of the Metric System</p>
+                <p>In 1668, John Wilkins proposed a decimal system in which length, area, volume, and mass were linked to each other based on a pendulum that had a beat of one second as a base unit of length. In 1670, Gabriel Mouton proposed a decimal system that was instead based on the circumference of the earth, an idea supported by other prominent scientists of the time such as Jean Picard and Christiaan Huygens, but that did not take hold for approximately another 100 years.
+                    By the mid-eighteenth century, it was clear to nations who traded and exchanged scientific ideas that standardization of weights and measures was necessary. In 1790, Charles Maurice de Talleyrand-Perigord, the Prince of Talleyrand, approached the British (represented by John Riggs-Miller) and the Americans (represented by Thomas Jefferson) with proposals to define a common standard of length based on the length of a pendulum. In that same year, Thomas Jefferson, presented the "Plan for Establishing Uniformity in the Coinage, Weights, and Measures of the United States," which advocated for a decimal system in which units were related to each other by powers of ten. A committee that was formed in France comprised of some of the most prominent scientists of the day came to a similar conclusion, and also proposed a decimal system for all weights and measures. Although Congress considered Jefferson's report, it was not adopted. In Great Britain, John Riggs-Miller lost his British Parliamentary seat in the 1790 election. As such, the measurement system was only implemented in France, and in 1795, the metric system was formally defined in French law. It was not until 1799, however, that the metric system was officially adopted in France, though it was still not universally observed across the country.
+                    The spread of the metric system did not occur quickly, and areas that were annexed by France during Napoleon's reign were the first to adopt the metric system. By 1875, two thirds of the European population, and nearly half the world's population had adopted the metric system. By 1920, the percentage of the world's population using the imperial system or the US customary system was ~22%, with 25% using mainly the metric system, and 53% using neither.
+                    The International System of Units, currently the most widely used system of measurement, was published in 1960. It has been adopted by all developed countries except for the United States, though as previously mentioned, it is used in science, as well as heavily in the military, even in the US.</p>
+            </div>
+        </div>
+        <script>
+            let length = [ "Meter", "Kilometer", "Centimeter", "Millimeter", "Micrometer", "Nanometer", "Mile", "Yard", "Foot", "Inch"]
+            let Temperature = ["Celsius", "Kelvin", "Fahrenheit"]
+            let Area = ["Square Meter", "Square Kilometer", "Square Centimeter", "Square Millimeter", "Square Micrometer", "Hectare", "Square Mile", "Square Yard", "Square Foot", "Square Inch", "Acre"]
+            let Volume = [  "Cubic Meter", "Cubic Kilometer",  "Cubic Centimeter",   "Cubic Millimeter",  "Liter",  "Milliliter","US Gallon",  "US Quart",  "US Pint", "US Cup", "US Fluid Ounce",  "US Table Spoon",  "US Tea Spoon", "Imperial Gallon",  "Imperial Quart", "Imperial Pint", "Imperial Fluid Ounce",  "Imperial Table Spoon", "Imperial Tea Spoon", "Cubic Mile","Cubic Yard","Cubic Foot","Cubic Inch"]
+            let Weight = ["Kilogram","Gram","Milligram","Metric Ton", "Long Ton","Short Ton","Pound","Ounce","Carrat","Atomic Mass Unit"]
+            let selector_one = document.getElementById('first-chooser')
+            let selector_two = document.getElementById('second-chooser')
+            let multipliable = document.getElementById('multipliable')
+            let length_but = document.getElementById('div1')
+            length_but.addEventListener('click', ()=>{
+                selector_one.replaceChildren()
+                selector_two.replaceChildren()
+                for(let i = 0; i < length.length; i++){
+                    let option = document.createElement('option')
+                    option.innerText = length[i]
+                    option.setAttribute('data-measure', length[i])
+                    selector_one.appendChild(option)
+                    selector_two.appendChild(option.cloneNode(true))
+                }
+            })
+            let Temperature_but = document.getElementById('div2')
+            Temperature_but.addEventListener('click', ()=>{
+                selector_one.replaceChildren()
+                selector_two.replaceChildren()
+                for(let i = 0; i < Temperature.length; i++){
+                    let option = document.createElement('option')
+                    option.innerText = Temperature[i]
+                    option.setAttribute('data-measure', Temperature[i])
+                    selector_one.appendChild(option)
+                    selector_two.appendChild(option.cloneNode(true))
+                }
+            })
+            let Area_but = document.getElementById('div3')
+            Area_but.addEventListener('click', ()=>{
+                selector_one.replaceChildren()
+                selector_two.replaceChildren()
+                for(let i = 0; i < Area.length; i++){
+                    let option = document.createElement('option')
+                    option.innerText = Area[i]
+                    option.setAttribute('data-measure', Area[i])
+                    selector_one.appendChild(option)
+                    selector_two.appendChild(option.cloneNode(true))
+                }
+            })
+            let Volume_but = document.getElementById('div4')
+            Volume_but.addEventListener('click', ()=>{
+                console.log(selector_one)
+                selector_one.replaceChildren()
+                selector_two.replaceChildren()
+                for(let i = 0; i < Volume.length; i++){
+                    let option = document.createElement('option')
+                    option.innerText = Volume[i]
+                    option.setAttribute('data-measure', Volume[i])
+                    selector_one.appendChild(option)
+                    selector_two.appendChild(option.cloneNode(true))
+                }
+            })
+            let Weight_but = document.getElementById('div5')
+            Weight_but.addEventListener('click', ()=>{
+                selector_one.replaceChildren()
+                selector_two.replaceChildren()
+                for(let i = 0; i < Weight.length; i++){
+                    let option = document.createElement('option')
+                    option.innerText = Weight[i]
+                    option.setAttribute('data-measure', Weight[i])
+                    selector_one.appendChild(option)
+                    selector_two.appendChild(option.cloneNode(true))
+                }
+            })
+            let solver = document.getElementById('solver')
+            solver.addEventListener('click', ()=>{
+                select_one = selector_one.value
+                select_two = selector_two.value
+                multipliabl = multipliable.value
+                let ravno = document.getElementById('ravno')
+                let selected = select_one+'-'+select_two
+                let book = {
+
+                    // Ниже Length
+                    
+                    'Meter-Meter':(m)=>{return m / 1},
+                    'Meter-Kilometer':(m)=>{return m / 10},
+                    'Meter-Centimeter':(m)=>{return m * 100},
+                    'Meter-Millimeter':(m)=>{return m * 1000},
+                    'Meter-Micrometer':(m)=>{return m * 1000000},
+                    'Meter-Nanometer':(m)=>{return m * 1000000000},
+                    'Meter-Mile':(m)=>{return m / 1609},
+                    'Meter-Yard':(m)=>{return m * 1.094},
+                    'Meter-Foot':(m)=>{return m * 3.281},
+                    'Meter-Inch':(m)=>{return m * 39.37},
+
+                    'Kilometer-Meter':(m)=>{return m *1000},
+                    'Kilometer-Kilometer':(m)=>{return m / 1},
+                    'Kilometer-Centimeter':(m)=>{return m *100000},
+                    'Kilometer-Millimeter':(m)=>{return m *1000000},
+                    'Kilometer-Micrometer':(m)=>{return m *1000000000},
+                    'Kilometer-Nanometer':(m)=>{return m *1000000000000},
+                    'Kilometer-Mile':(m)=>{return m / 1.609},
+                    'Kilometer-Yard':(m)=>{return m * 1094},
+                    'Kilometer-Foot':(m)=>{return m * 3281},
+                    'Kilometer-Inch':(m)=>{return m * 39370},
+
+                    'Centimeter-Meter':(m)=>{return m /100},
+                    'Centimeter-Kilometer':(m)=>{return m /100000},
+                    'Centimeter-Centimeter':(m)=>{return m /1},
+                    'Centimeter-Millimeter':(m)=>{return m *10},
+                    'Centimeter-Micrometer':(m)=>{return m *10000},
+                    'Centimeter-Nanometer':(m)=>{return m *10000000},
+                    'Centimeter-Mile':(m)=>{return m/160900 },
+                    'Centimeter-Yard':(m)=>{return m /91.44},
+                    'Centimeter-Foot':(m)=>{return m /30.48},
+                    'Centimeter-Inch':(m)=>{return m /2.54},
+
+                    'Millimeter-Meter':(m)=>{return m /1000},
+                    'Millimeter-Kilometer':(m)=>{return m /1000000},
+                    'Millimeter-Centimeter':(m)=>{return m /10},
+                    'Millimeter-Millimeter':(m)=>{return m /1000},
+                    'Millimeter-Micrometer':(m)=>{return m *1000},
+                    'Millimeter-Nanometer':(m)=>{return m *1000000},
+                    'Millimeter-Mile':(m)=>{return m /1.609+"+6"},
+                    'Millimeter-Yard':(m)=>{return m /914.4},
+                    'Millimeter-Foot':(m)=>{return m /304.8},
+                    'Millimeter-Inch':(m)=>{return m /25.4},
+                    
+                    'Micrometer-Meter':(m)=>{return m /1000000},
+                    'Micrometer-Kilometer':(m)=>{return m /1000000000},
+                    'Micrometer-Centimeter':(m)=>{return m /10000},
+                    'Micrometer-Millimeter':(m)=>{return m /1000},
+                    'Micrometer-Micrometer':(m)=>{return m /1},
+                    'Micrometer-Nanometer':(m)=>{return m *1000},
+                    'Micrometer-Mile':(m)=>{return m /1.609+"+9"},
+                    'Micrometer-Yard':(m)=>{return m /914400},
+                    'Micrometer-Foot':(m)=>{return m /304800},
+                    'Micrometer-Inch':(m)=>{return m /25400},
+                    
+                    'Nanometer-Meter':(m)=>{return m /1000000000},
+                    'Nanometer-Kilometer':(m)=>{return m /1000000000000},
+                    'Nanometer-Centimeter':(m)=>{return m /10000000},
+                    'Nanometer-Millimeter':(m)=>{return m /1000000},
+                    'Nanometer-Micrometer':(m)=>{return m /1000},
+                    'Nanometer-Nanometer':(m)=>{return m /1},
+                    'Nanometer-Mile':(m)=>{return m /1.609+"e+12"},
+                    'Nanometer-Yard':(m)=>{return m / 9.144+'e+8'},
+                    'Nanometer-Foot':(m)=>{return m /3.048+'e+8'},
+                    'Nanometer-Inch':(m)=>{return m /2.54+'e+7'},
+
+                    'Mile-Meter':(m)=>{return m*1609 },
+                    'Mile-Kilometer':(m)=>{return m *1.609},
+                    'Mile-Centimeter':(m)=>{return m *160900},
+                    'Mile-Millimeter':(m)=>{return m *1.609+"e+6"},
+                    'Mile-Micrometer':(m)=>{return m *1.609+"e+9"},
+                    'Mile-Nanometer':(m)=>{return m *1.609+"e+12"},
+                    'Mile-Mile':(m)=>{return m /1},
+                    'Mile-Yard':(m)=>{return m *1760},
+                    'Mile-Foot':(m)=>{return m *5280},
+                    'Mile-Inch':(m)=>{return m *63360},
+
+                    'Yard-Meter':(m)=>{return m /1.094},
+                    'Yard-Kilometer':(m)=>{return m /1094},
+                    'Yard-Centimeter':(m)=>{return m *91.44},
+                    'Yard-Millimeter':(m)=>{return m *914.4},
+                    'Yard-Micrometer':(m)=>{return m *914400},
+                    'Yard-Nanometer':(m)=>{return m *9.144*"e+8"},
+                    'Yard-Mile':(m)=>{return m /1760},
+                    'Yard-Yard':(m)=>{return m/1 },
+                    'Yard-Foot':(m)=>{return m *3},
+                    'Yard-Inch':(m)=>{return m *36},
+
+                    'Foot-Meter':(m)=>{return m /3.281},
+                    'Foot-Kilometer':(m)=>{return m /3281},
+                    'Foot-Centimeter':(m)=>{return m *30.48},
+                    'Foot-Millimeter':(m)=>{return m *304.8},
+                    'Foot-Micrometer':(m)=>{return m *304800},
+                    'Foot-Nanometer':(m)=>{return m *3.048+"e+8"},
+                    'Foot-Mile':(m)=>{return m /5280},
+                    'Foot-Yard':(m)=>{return m /3},
+                    'Foot-Foot':(m)=>{return m /1},
+                    'Foot-Inch':(m)=>{return m *12},
+
+                    'Inch-Meter':(m)=>{return m /39.37},
+                    'Inch-Kilometer':(m)=>{return m /39370},
+                    'Inch-Centimeter':(m)=>{return m /2.54},
+                    'Inch-Millimeter':(m)=>{return m *25.4},
+                    'Inch-Micrometer':(m)=>{return m /25400},
+                    'Inch-Nanometer':(m)=>{return m *2.54+'e+7'},
+                    'Inch-Mile':(m)=>{return m /63360},
+                    'Inch-Yard':(m)=>{return m /36},
+                    'Inch-Foot':(m)=>{return m /12},
+                    'Inch-Inch':(m)=>{return m /1},
+
+                    // Ниже Temperature
+
+                    'Celsius-Celsius':(m)=>{return m/1},
+                    'Celsius-Kelvin':(m)=>{return m+273.15},
+                    'Celsius-Fahrenheit':(m)=>{return (m*9/5)+32},
+
+                    'Kelvin-Celsius':(m)=>{return m -273.15},
+                    'Kelvin-Kelvin':(m)=>{return m},
+                    'Kelvin-Fahrenheit':(m)=>{return (m - 273,15) * 9/5 + 32 },
+
+                    'Fahrenheit-Celsiu':(m)=>{return (m- 32) * 5/9},
+                    'Fahrenheit-Kelvin':(m)=>{return m},
+                    'Fahrenheit-Fahrenheit':(m)=>{return (m - 32) * 5/9 + 273,15},
+
+                    // Ниже Area
+
+                    'Square Meter-Square Meter':(m)=>{return m},
+                    'Square Meter-Square Kilometer':(m)=>{return m+1+'e+6'},
+                    'Square Meter-Square Centimeter':(m)=>{return m*10000},
+                    'Square Meter-Square Millimeter':(m)=>{return m*1+'+6'},
+                    'Square Meter-Square Micrometer':(m)=>{return m*1+'e+12'},
+                    'Square Meter-Hectare':(m)=>{return m/10000},
+                    'Square Meter-Square Mile':(m)=>{return m/2.59+'e+6'},
+                    'Square Meter-Square Yard':(m)=>{return m*1.196},
+                    'Square Meter-Square Foot':(m)=>{return m*10.764},
+                    'Square Meter-Square Inch':(m)=>{return m*1550},
+                    'Square Meter-Acre':(m)=>{return m/4047},
+
+                    'Square Kilometer-Square Meter':(m)=>{return m*1+'e+6'},
+                    'Square Kilometer-Square Kilometer':(m)=>{return m},
+                    'Square Kilometer-Square Centimeter':(m)=>{return m*1+'e+10'},
+                    'Square Kilometer-Square Millimeter':(m)=>{return m**1+'e+12'},
+                    'Square Kilometer-Square Micrometer':(m)=>{return m*1+'e+18'},
+                    'Square Kilometer-Hectare':(m)=>{return m*100},
+                    'Square Kilometer-Square Mile':(m)=>{return m/2.59},
+                    'Square Kilometer-Square Yard':(m)=>{return m*1.196+'e+6'},
+                    'Square Kilometer-Square Foot':(m)=>{return m*1.076+'e+7'},
+                    'Square Kilometer-Square Inch':(m)=>{return m*1.55+'e+9'},
+                    'Square Kilometer-Acre':(m)=>{return m*247.1},
+                    
+                    'Square Centimeter-Square Meter':(m)=>{return m/10000},
+                    'Square Centimeter-Square Kilometer':(m)=>{return m/1+'e+10'},
+                    'Square Centimeter-Square Centimeter':(m)=>{return m},
+                    'Square Centimeter-Square Millimeter':(m)=>{return m*100},
+                    'Square Centimeter-Square Micrometer':(m)=>{return m*1+'e+8'},
+                    'Square Centimeter-Hectare':(m)=>{return m*1+'e+8'},
+                    'Square Centimeter-Square Mile':(m)=>{return m/2.59+'e+10'},
+                    'Square Centimeter-Square Yard':(m)=>{return m/8361},
+                    'Square Centimeter-Square Foot':(m)=>{return m/929},
+                    'Square Centimeter-Square Inch':(m)=>{return m/6.452},
+                    'Square Centimeter-Acre':(m)=>{return m/4.047+'e+7'},
+
+                    'Square Millimeter-Square Meter':(m)=>{return m/1+'e+6'},
+                    'Square Millimeter-Square Kilometer':(m)=>{return m/1+'e+12'},
+                    'Square Millimeter-Square Centimeter':(m)=>{return m/100},
+                    'Square Millimeter-Square Millimeter':(m)=>{return m},
+                    'Square Millimeter-Square Micrometer':(m)=>{return m*1+'e+6'},
+                    'Square Millimeter-Hectare':(m)=>{return m/1+'e+10'},
+                    'Square Millimeter-Square Mile':(m)=>{return m/2.59+'e+12'},
+                    'Square Millimeter-Square Yard':(m)=>{return m/836100},
+                    'Square Millimeter-Square Foot':(m)=>{return m/92900},
+                    'Square Millimeter-Square Inch':(m)=>{return m/645.2},
+                    'Square Millimeter-Acre':(m)=>{return m/4.047+'e+9'},
+
+                    'Square Micrometer-Square Meter':(m)=>{return m/1+'e+12'},
+                    'Square Micrometer-Square Kilometer':(m)=>{return m/1+'e+18'},
+                    'Square Micrometer-Square Centimeter':(m)=>{return m/1+'e+8'},
+                    'Square Micrometer-Square Millimeter':(m)=>{return m/1+'e+6'},
+                    'Square Micrometer-Square Micrometer':(m)=>{return m},
+                    'Square Micrometer-Hectare':(m)=>{return m/1+'e+16'},
+                    'Square Micrometer-Square Mile':(m)=>{return m/2.59+'e+18'},
+                    'Square Micrometer-Square Yard':(m)=>{return m/8.361+'e+11'},
+                    'Square Micrometer-Square Foot':(m)=>{return m/9.29+'e+10'},
+                    'Square Micrometer-Square Inch':(m)=>{return m/6.452+'e+8'},
+                    'Square Micrometer-Acre':(m)=>{return m/4.047+'e+15'},
+
+                    'Hectare-Square Meter':(m)=>{return m*10000},
+                    'Hectare-Square Kilometer':(m)=>{return m/100},
+                    'Hectare-Square Centimeter':(m)=>{return m*1+'e+8'},
+                    'Hectare-Square Millimeter':(m)=>{return m*1+'e+10'},
+                    'Hectare-Square Micrometer':(m)=>{return m*1+'e+16'},
+                    'Hectare-Hectare':(m)=>{return m},
+                    'Hectare-Square Mile':(m)=>{return m/259},
+                    'Hectare-Square Yard':(m)=>{return m*11960},
+                    'Hectare-Square Foot':(m)=>{return m*107600},
+                    'Hectare-Square Inch':(m)=>{return m*1.55+'e+7'},
+                    'Hectare-Acre':(m)=>{return m*2.471},
+
+                    'Square Mile-Square Meter':(m)=>{return m*2.59+'e+6'},
+                    'Square Mile-Square Kilometer':(m)=>{return m*2.59},
+                    'Square Mile-Square Centimeter':(m)=>{return m*2.59+'e+10'},
+                    'Square Mile-Square Millimeter':(m)=>{return m*2.59+'e+12'},
+                    'Square Mile-Square Micrometer':(m)=>{return m*2.59+'e+18'},
+                    'Square Mile-Hectare':(m)=>{return m*259},
+                    'Square Mile-Square Mile':(m)=>{return m},
+                    'Square Mile-Square Yard':(m)=>{return m*3.098+'e+6'},
+                    'Square Mile-Square Foot':(m)=>{return m*2.788+'e+7'},
+                    'Square Mile-Square Inch':(m)=>{return m*4.014+'e+9'},
+                    'Square Mile-Acre':(m)=>{return m*640},
+
+                    'Square Yard-Square Meter':(m)=>{return m/1.196},
+                    'Square Yard-Square Kilometer':(m)=>{return m/1.196+'e+6'},
+                    'Square Yard-Square Centimeter':(m)=>{return m*8361},
+                    'Square Yard-Square Millimeter':(m)=>{return m*836100},
+                    'Square Yard-Square Micrometer':(m)=>{return m*8.361+'e+11'},
+                    'Square Yard-Hectare':(m)=>{return m/11960},
+                    'Square Yard-Square Mile':(m)=>{return m*3.098+'e+6'},
+                    'Square Yard-Square Yard':(m)=>{return m},
+                    'Square Yard-Square Foot':(m)=>{return m*9},
+                    'Square Yard-Square Inch':(m)=>{return m*1296},
+                    'Square Yard-Acre':(m)=>{return m/4840},
+
+                    'Square Foot-Square Meter':(m)=>{return m/10.764},
+                    'Square Foot-Square Kilometer':(m)=>{return m/1.076+'e+7'},
+                    'Square Foot-Square Centimeter':(m)=>{return m*929},
+                    'Square Foot-Square Millimeter':(m)=>{return m*92900},
+                    'Square Foot-Square Micrometer':(m)=>{return m*9.29+'e+10'},
+                    'Square Foot-Hectare':(m)=>{return m/107600},
+                    'Square Foot-Square Mile':(m)=>{return m/2.788+'e+7'},
+                    'Square Foot-Square Yard':(m)=>{return m/9},
+                    'Square Foot-Square Foot':(m)=>{return m},
+                    'Square Foot-Square Inch':(m)=>{return m*144},
+                    'Square Foot-Acre':(m)=>{return m/43560},
+
+                    'Square Inch-Square Meter':(m)=>{return m/1550},
+                    'Square Inch-Square Kilometer':(m)=>{return m/1.55+'e+9'},
+                    'Square Inch-Square Centimeter':(m)=>{return m*6.452},
+                    'Square Inch-Square Millimeter':(m)=>{return m*645.2},
+                    'Square Inch-Square Micrometer':(m)=>{return m*6.452+'e+8'},
+                    'Square Inch-Hectare':(m)=>{return m/1.55+'e+7'},
+                    'Square Inch-Square Mile':(m)=>{return m/4.014+'e+9'},
+                    'Square Inch-Square Yard':(m)=>{return m/1296},
+                    'Square Inch-Square Foot':(m)=>{return m/144},
+                    'Square Inch-Square Inch':(m)=>{return m},
+                    'Square Inch-Acre':(m)=>{return m/6.273+'e+6'},
+
+                    'Acre-Square Meter':(m)=>{return m*4047},
+                    'Acre-Square Kilometer':(m)=>{return m/247.1},
+                    'Acre-Square Centimeter':(m)=>{return m*4.047+'e+7'},
+                    'Acre-Square Millimeter':(m)=>{return m*4.047+'e+9'},
+                    'Acre-Square Micrometer':(m)=>{return m*4.047+'e+15'},
+                    'Acre-Hectare':(m)=>{return m/2.471},
+                    'Acre-Square Mile':(m)=>{return m/640},
+                    'Acre-Square Yard':(m)=>{return m*4840},
+                    'Acre-Square Foot':(m)=>{return m*43560},
+                    'Acre-Square Inch':(m)=>{return m*6.273+'e+6'},
+                    'Acre-Acre':(m)=>{return m},
+
+                    // Ниже Volume
+
+                    'Cubic Meter-Cubic Meter':(m)=>{return m},
+                    'Cubic Meter-Cubic Kilometer':(m)=>{return m/1+'e-9'},
+                    'Cubic Meter-Cubic Centimeter':(m)=>{return m*1+'e+6'},
+                    'Cubic Meter-Cubic Millimeter':(m)=>{return m*1+'e+9'},
+                    'Cubic Meter-Liter':(m)=>{return m*1000},
+                    'Cubic Meter-Milliliter':(m)=>{return m*1+'e+6'},
+                    'Cubic Meter-US Gallon':(m)=>{return m*264.2},
+                    'Cubic Meter-US Quart':(m)=>{return m*1057},
+                    'Cubic Meter-US Pint':(m)=>{return m*2113},
+                    'Cubic Meter-US Cup':(m)=>{return m*4167},
+                    'Cubic Meter-US Fluid Ounce':(m)=>{return m*33810},
+                    'Cubic Meter-US Table Spoon':(m)=>{return m*67630},
+                    'Cubic Meter-US Tea Spoon':(m)=>{return m*202900},
+                    'Cubic Meter-Imperial Gallon':(m)=>{return m*220},
+                    'Cubic Meter-Imperial Quart':(m)=>{return m*879.9},
+                    'Cubic Meter-Imperial Pint':(m)=>{return m*1760},
+                    'Cubic Meter-Imperial Fluid Ounce':(m)=>{return m*35200},
+                    'Cubic Meter-Imperial Table Spoon':(m)=>{return m*56310},
+                    'Cubic Meter-Imperial Tea Spoon':(m)=>{return m*168900},
+                    'Cubic Meter-Cubic Mile':(m)=>{return m/4.168+'e-9'},
+                    'Cubic Meter-Cubic Yard':(m)=>{return m*1.308},
+                    'Cubic Meter-Cubic Foot':(m)=>{return m*35.315},
+                    'Cubic Meter-Cubic Inch':(m)=>{return m*61020},
+
+                    'Cubic Kilometer-Cubic Meter':(m)=>{return m*1+'e+9'},
+                    'Cubic Kilometer-Cubic Kilometer':(m)=>{return m},
+                    'Cubic Kilometer-Cubic Centimeter':(m)=>{return m*1+'e+15'},
+                    'Cubic Kilometer-Cubic Millimeter':(m)=>{return m*1+'e+18'},
+                    'Cubic Kilometer-Liter':(m)=>{return m*1+'e+12'},
+                    'Cubic Kilometer-Milliliter':(m)=>{return m*1+'e+15'},
+                    'Cubic Kilometer-US Gallon':(m)=>{return m*2.642+'e+11'},
+                    'Cubic Kilometer-US Quart':(m)=>{return m*1.057+'e+12'},
+                    'Cubic Kilometer-US Pint':(m)=>{return m*2.113+'e+12'},
+                    'Cubic Kilometer-US Cup':(m)=>{return m*4.167+'e+12'},
+                    'Cubic Kilometer-US Fluid Ounce':(m)=>{return m*3.381+'e+13'},
+                    'Cubic Kilometer-US Table Spoon':(m)=>{return m*6.763+'e+13'},
+                    'Cubic Kilometer-US Tea Spoon':(m)=>{return m*2.029+'e+14'},
+                    'Cubic Kilometer-Imperial Gallon':(m)=>{return m*2.2+'e+11'},
+                    'Cubic Kilometer-Imperial Quart':(m)=>{return m*8.799+'e+11'},
+                    'Cubic Kilometer-Imperial Pint':(m)=>{return m*1.76+'e+12'},
+                    'Cubic Kilometer-Imperial Fluid Ounce':(m)=>{return m*3.52+'e+13'},
+                    'Cubic Kilometer-Imperial Table Spoon':(m)=>{return m*5.631+'e+13'},
+                    'Cubic Kilometer-Imperial Tea Spoon':(m)=>{return m*1.689+'e+14'},
+                    'Cubic Kilometer-Cubic Mile':(m)=>{return m/4.168},
+                    'Cubic Kilometer-Cubic Yard':(m)=>{return m*1.308+'e+9'},
+                    'Cubic Kilometer-Cubic Foot':(m)=>{return m*3.531+'e+10'},
+                    'Cubic Kilometer-Cubic Inch':(m)=>{return m*6.102+'e+13'},
+
+                    'Cubic Centimeter-Cubic Meter':(m)=>{return m/1+'e-6'},
+                    'Cubic Centimeter-Cubic Kilometer':(m)=>{return m/1+'e-15'},
+                    'Cubic Centimeter-Cubic Centimeter':(m)=>{return m},
+                    'Cubic Centimeter-Cubic Millimeter':(m)=>{return m*1000},
+                    'Cubic Centimeter-Liter':(m)=>{return m/1000},
+                    'Cubic Centimeter-Milliliter':(m)=>{return m},
+                    'Cubic Centimeter-US Gallon':(m)=>{return m/3785},
+                    'Cubic Centimeter-US Quart':(m)=>{return m/946.4},
+                    'Cubic Centimeter-US Pint':(m)=>{return m/473.2},
+                    'Cubic Centimeter-US Cup':(m)=>{return m/240},
+                    'Cubic Centimeter-US Fluid Ounce':(m)=>{return m/29.574},
+                    'Cubic Centimeter-US Table Spoon':(m)=>{return m/14.787},
+                    'Cubic Centimeter-US Tea Spoon':(m)=>{return m/4.929},
+                    'Cubic Centimeter-Imperial Gallon':(m)=>{return m/4546},
+                    'Cubic Centimeter-Imperial Quart':(m)=>{return m/1137},
+                    'Cubic Centimeter-Imperial Pint':(m)=>{return m/568.3},
+                    'Cubic Centimeter-Imperial Fluid Ounce':(m)=>{return m/28.413},
+                    'Cubic Centimeter-Imperial Table Spoon':(m)=>{return m/17.758},
+                    'Cubic Centimeter-Imperial Tea Spoon':(m)=>{return m/5.919},
+                    'Cubic Centimeter-Cubic Mile':(m)=>{return m/4.168+'e-15'},
+                    'Cubic Centimeter-Cubic Yard':(m)=>{return m*764600},
+                    'Cubic Centimeter-Cubic Foot':(m)=>{return m/28320},
+                    'Cubic Centimeter-Cubic Inch':(m)=>{return m/16.387},
+
+                    'Cubic Millimeter-Cubic Meter':(m)=>{return m/1+'e-9'},
+                    'Cubic Millimeter-Cubic Kilometer':(m)=>{return m/1+'e-18'},
+                    'Cubic Millimeter-Cubic Centimeter':(m)=>{return m/1000},
+                    'Cubic Millimeter-Cubic Millimeter':(m)=>{return m},
+                    'Cubic Millimeter-Liter':(m)=>{return m/1+'e-6'},
+                    'Cubic Millimeter-Milliliter':(m)=>{return m/1000},
+                    'Cubic Millimeter-US Gallon':(m)=>{return m/3.785+'e-7'},
+                    'Cubic Millimeter-US Quart':(m)=>{return m/946400},
+                    'Cubic Millimeter-US Pint':(m)=>{return m/473200},
+                    'Cubic Millimeter-US Cup':(m)=>{return m/240000},
+                    'Cubic Millimeter-US Fluid Ounce':(m)=>{return m/29570},
+                    'Cubic Millimeter-US Table Spoon':(m)=>{return m/14790},
+                    'Cubic Millimeter-US Tea Spoon':(m)=>{return m/4929},
+                    'Cubic Millimeter-Imperial Gallon':(m)=>{return m/4.546+'e-7'},
+                    'Cubic Millimeter-Imperial Quart':(m)=>{return m/1.137+'e-7'},
+                    'Cubic Millimeter-Imperial Pint':(m)=>{return m/568300},
+                    'Cubic Millimeter-Imperial Fluid Ounce':(m)=>{return m/28410},
+                    'Cubic Millimeter-Imperial Table Spoon':(m)=>{return m/17760},
+                    'Cubic Millimeter-Imperial Tea Spoon':(m)=>{return m/5919},
+                    'Cubic Millimeter-Cubic Mile':(m)=>{return m/4.168+'e-19'},
+                    'Cubic Millimeter-Cubic Yard':(m)=>{return m/7.646+'e-9'},
+                    'Cubic Millimeter-Cubic Foot':(m)=>{return m/2.832+'e-8'},
+                    'Cubic Millimeter-Cubic Inch':(m)=>{return m/16390},
+
+                    'Liter-Cubic Meter':(m)=>{return m/1000},
+                    'Liter-Cubic Kilometer':(m)=>{return m/1+'e-12'},
+                    'Liter-Cubic Centimeter':(m)=>{return m*1000},
+                    'Liter-Cubic Millimeter':(m)=>{return m*1+'e+6'},
+                    'Liter-Liter':(m)=>{return m},
+                    'Liter-Milliliter':(m)=>{return m*1000},
+                    'Liter-US Gallon':(m)=>{return m/3.785},
+                    'Liter-US Quart':(m)=>{return m*1.057},
+                    'Liter-US Pint':(m)=>{return m*2.113},
+                    'Liter-US Cup':(m)=>{return m*4.167},
+                    'Liter-US Fluid Ounce':(m)=>{return m*33.814},
+                    'Liter-US Table Spoon':(m)=>{return m*67.628},
+                    'Liter-US Tea Spoon':(m)=>{return m*202.9},
+                    'Liter-Imperial Gallon':(m)=>{return m/4.546},
+                    'Liter-Imperial Quart':(m)=>{return m/1.136},
+                    'Liter-Imperial Pint':(m)=>{return m*1.76},
+                    'Liter-Imperial Fluid Ounce':(m)=>{return m*35.195},
+                    'Liter-Imperial Table Spoon':(m)=>{return m*56.312},
+                    'Liter-Imperial Tea Spoon':(m)=>{return m*168.9},
+                    'Liter-Cubic Mile':(m)=>{return m/4.168+'e-13'},
+                    'Liter-Cubic Yard':(m)=>{return m/764.6},
+                    'Liter-Cubic Foot':(m)=>{return m*28.317},
+                    'Liter-Cubic Inch':(m)=>{return m*61.024},
+
+                    'Milliliter-Cubic Meter':(m)=>{return m/1+'e-6'},
+                    'Milliliter-Cubic Kilometer':(m)=>{return m},
+                    'Milliliter-Cubic Centimeter':(m)=>{return m},
+                    'Milliliter-Cubic Millimeter':(m)=>{return m},
+                    'Milliliter-Liter':(m)=>{return m/1000},
+                    'Milliliter-Milliliter':(m)=>{return m},
+                    'Milliliter-US Gallon':(m)=>{return m/3785},
+                    'Milliliter-US Quart':(m)=>{return m/946.4},
+                    'Milliliter-US Pint':(m)=>{return m/473.2},
+                    'Milliliter-US Cup':(m)=>{return m/240},
+                    'Milliliter-US Fluid Ounce':(m)=>{return m/29.574},
+                    'Milliliter-US Table Spoon':(m)=>{return m/14.787},
+                    'Milliliter-US Tea Spoon':(m)=>{return m/4.929},
+                    'Milliliter-Imperial Gallon':(m)=>{return m/4546},
+                    'Milliliter-Imperial Quart':(m)=>{return m/1137},
+                    'Milliliter-Imperial Pint':(m)=>{return m/568.3},
+                    'Milliliter-Imperial Fluid Ounce':(m)=>{return m/28.413},
+                    'Milliliter-Imperial Table Spoon':(m)=>{return m/17.758},
+                    'Milliliter-Imperial Tea Spoon':(m)=>{return m/5.919},
+                    'Milliliter-Cubic Mile':(m)=>{return m/4.168+'e-16'},
+                    'Milliliter-Cubic Yard':(m)=>{return m/764600},
+                    'Milliliter-Cubic Foot':(m)=>{return m/28320},
+                    'Milliliter-Cubic Inch':(m)=>{return m/16.387},
+
+                    'US Gallon-Cubic Meter':(m)=>{return m/264.2},
+                    'US Gallon-Cubic Kilometer':(m)=>{return m/2.642+'e-11'},
+                    'US Gallon-Cubic Centimeter':(m)=>{return m*3785},
+                    'US Gallon-Cubic Millimeter':(m)=>{return m*3.785+'e+6'},
+                    'US Gallon-Liter':(m)=>{return m*3.785},
+                    'US Gallon-Milliliter':(m)=>{return m*3785},
+                    'US Gallon-US Gallon':(m)=>{return m},
+                    'US Gallon-US Quart':(m)=>{return m*4},
+                    'US Gallon-US Pint':(m)=>{return m*8},
+                    'US Gallon-US Cup':(m)=>{return m*15.773},
+                    'US Gallon-US Fluid Ounce':(m)=>{return m*128},
+                    'US Gallon-US Table Spoon':(m)=>{return m*256},
+                    'US Gallon-US Tea Spoon':(m)=>{return m*768},
+                    'US Gallon-Imperial Gallon':(m)=>{return m/1.201},
+                    'US Gallon-Imperial Quart':(m)=>{return m*3.331},
+                    'US Gallon-Imperial Pint':(m)=>{return m*6.661},
+                    'US Gallon-Imperial Fluid Ounce':(m)=>{return m*133.2},
+                    'US Gallon-Imperial Table Spoon':(m)=>{return m*213.2},
+                    'US Gallon-Imperial Tea Spoon':(m)=>{return m*639.5},
+                    'US Gallon-Cubic Mile':(m)=>{return m/1.101+'e-13'},
+                    'US Gallon-Cubic Yard':(m)=>{return m/202},
+                    'US Gallon-Cubic Foot':(m)=>{return m/7.48},
+                    'US Gallon-Cubic Inch':(m)=>{return m*231},
+
+                    'US Quart-Cubic Meter':(m)=>{return m/1057},
+                    'US Quart-Cubic Kilometer':(m)=>{return m/1.057+'e-13'},
+                    'US Quart-Cubic Centimeter':(m)=>{return m*946.4},
+                    'US Quart-Cubic Millimeter':(m)=>{return m*946400},
+                    'US Quart-Liter':(m)=>{return m/1.057},
+                    'US Quart-Milliliter':(m)=>{return m*946.4},
+                    'US Quart-US Gallon':(m)=>{return m/4},
+                    'US Quart-US Quart':(m)=>{return m},
+                    'US Quart-US Pint':(m)=>{return m*2},
+                    'US Quart-US Cup':(m)=>{return m*3.943},
+                    'US Quart-US Fluid Ounce':(m)=>{return m*32},
+                    'US Quart-US Table Spoon':(m)=>{return m*64},
+                    'US Quart-US Tea Spoon':(m)=>{return m*192},
+                    'US Quart-Imperial Gallon':(m)=>{return m/4,804},
+                    'US Quart-Imperial Quart':(m)=>{return m/1.201},
+                    'US Quart-Imperial Pint':(m)=>{return m*1.665},
+                    'US Quart-Imperial Fluid Ounce':(m)=>{return m*33.307},
+                    'US Quart-Imperial Table Spoon':(m)=>{return m*53.291},
+                    'US Quart-Imperial Tea Spoon':(m)=>{return m*159.9},
+                    'US Quart-Cubic Mile':(m)=>{return m/4.404+'e-13'},
+                    'US Quart-Cubic Yard':(m)=>{return m/807.9},
+                    'US Quart-Cubic Foot':(m)=>{return m/29.922},
+                    'US Quart-Cubic Inch':(m)=>{return m*57.75},
+
+                    'US Pint-Cubic Meter':(m)=>{return m/2113},
+                    'US Pint-Cubic Kilometer':(m)=>{return m/2,113+'e-13'},
+                    'US Pint-Cubic Centimeter':(m)=>{return m*473,2},
+                    'US Pint-Cubic Millimeter':(m)=>{return m*473200},
+                    'US Pint-Liter':(m)=>{return m/2.113},
+                    'US Pint-Milliliter':(m)=>{return m*473.2},
+                    'US Pint-US Gallon':(m)=>{return m/8},
+                    'US Pint-US Quart':(m)=>{return m/2},
+                    'US Pint-US Pint':(m)=>{return m},
+                    'US Pint-US Cup':(m)=>{return m*1.972},
+                    'US Pint-US Fluid Ounce':(m)=>{return m*16},
+                    'US Pint-US Table Spoon':(m)=>{return m*32},
+                    'US Pint-US Tea Spoon':(m)=>{return m*96},
+                    'US Pint-Imperial Gallon':(m)=>{return m/9.608},
+                    'US Pint-Imperial Quart':(m)=>{return m/2.402},
+                    'US Pint-Imperial Pint':(m)=>{return m/1.201},
+                    'US Pint-Imperial Fluid Ounce':(m)=>{return m*16.653},
+                    'US Pint-Imperial Table Spoon':(m)=>{return m*26.646},
+                    'US Pint-Imperial Tea Spoon':(m)=>{return m*79.937},
+                    'US Pint-Cubic Mile':(m)=>{return m/8,809+'e-13'},
+                    'US Pint-Cubic Yard':(m)=>{return m/1616},
+                    'US Pint-Cubic Foot':(m)=>{return m/59.844},
+                    'US Pint-Cubic Inch':(m)=>{return m*28.875},
+
+                    'US Cup-Cubic Meter':(m)=>{return m/4167},
+                    'US Cup-Cubic Kilometer':(m)=>{return m/4.227+'e-13'},
+                    'US Cup-Cubic Centimeter':(m)=>{return m*236.6},
+                    'US Cup-Cubic Millimeter':(m)=>{return m*236600},
+                    'US Cup-Liter':(m)=>{return m/4.167},
+                    'US Cup-Milliliter':(m)=>{return m*240},
+                    'US Cup-US Gallon':(m)=>{return m/15.772},
+                    'US Cup-US Quart':(m)=>{return m/3.943},
+                    'US Cup-US Pint':(m)=>{return m/1.972},
+                    'US Cup-US Cup':(m)=>{return m},
+                    'US Cup-US Fluid Ounce':(m)=>{return m*8.115},
+                    'US Cup-US Table Spoon':(m)=>{return m*16.231},
+                    'US Cup-US Tea Spoon':(m)=>{return m*48.692},
+                    'US Cup-Imperial Gallon':(m)=>{return m/18.942},
+                    'US Cup-Imperial Quart':(m)=>{return m/4.736},
+                    'US Cup-Imperial Pint':(m)=>{return m/2.368},
+                    'US Cup-Imperial Fluid Ounce':(m)=>{return m*8.447},
+                    'US Cup-Imperial Table Spoon':(m)=>{return m*13.515},
+                    'US Cup-Imperial Tea Spoon':(m)=>{return m*40.545},
+                    'US Cup-Cubic Mile':(m)=>{return m/1.762+'e-14'},
+                    'US Cup-Cubic Yard':(m)=>{return m/3232},
+                    'US Cup-Cubic Foot':(m)=>{return m/118},
+                    'US Cup-Cubic Inch':(m)=>{return m*14.646},
+
+                    'US Fluid Ounce-Cubic Meter':(m)=>{return m/33810},
+                    'US Fluid Ounce-Cubic Kilometer':(m)=>{return m/3.381+'e-14'},
+                    'US Fluid Ounce-Cubic Centimeter':(m)=>{return m*29.574},
+                    'US Fluid Ounce-Cubic Millimeter':(m)=>{return m*29570},
+                    'US Fluid Ounce-Liter':(m)=>{return m/33.814},
+                    'US Fluid Ounce-Milliliter':(m)=>{return m*29.574},
+                    'US Fluid Ounce-US Gallon':(m)=>{return m/128},
+                    'US Fluid Ounce-US Quart':(m)=>{return m/32},
+                    'US Fluid Ounce-US Pint':(m)=>{return m/16},
+                    'US Fluid Ounce-US Cup':(m)=>{return m/8.115},
+                    'US Fluid Ounce-US Fluid Ounce':(m)=>{return m},
+                    'US Fluid Ounce-US Table Spoon':(m)=>{return m*2},
+                    'US Fluid Ounce-US Tea Spoon':(m)=>{return m*6},
+                    'US Fluid Ounce-Imperial Gallon':(m)=>{return m/153.7},
+                    'US Fluid Ounce-Imperial Quart':(m)=>{return m/38.43},
+                    'US Fluid Ounce-Imperial Pint':(m)=>{return m/19.215},
+                    'US Fluid Ounce-Imperial Fluid Ounce':(m)=>{return m*1.041},
+                    'US Fluid Ounce-Imperial Table Spoon':(m)=>{return m*1.665},
+                    'US Fluid Ounce-Imperial Tea Spoon':(m)=>{return m*4.996},
+                    'US Fluid Ounce-Cubic Mile':(m)=>{return m/1,409+'e-15'},
+                    'US Fluid Ounce-Cubic Yard':(m)=>{return m/25850},
+                    'US Fluid Ounce-Cubic Foot':(m)=>{return m/957.5},
+                    'US Fluid Ounce-Cubic Inch':(m)=>{return m*1.805},
+
+                    'US Table Spoon-Cubic Meter':(m)=>{return m/67630},
+                    'US Table Spoon-Cubic Kilometer':(m)=>{return m/6.763+'e-14'},
+                    'US Table Spoon-Cubic Centimeter':(m)=>{return m*14.787},
+                    'US Table Spoon-Cubic Millimeter':(m)=>{return m*14790},
+                    'US Table Spoon-Liter':(m)=>{return m/67.628},
+                    'US Table Spoon-Milliliter':(m)=>{return m*14.787},
+                    'US Table Spoon-US Gallon':(m)=>{return m/256},
+                    'US Table Spoon-US Quart':(m)=>{return m/64},
+                    'US Table Spoon-US Pint':(m)=>{return m/32},
+                    'US Table Spoon-US Cup':(m)=>{return m/16.231},
+                    'US Table Spoon-US Fluid Ounce':(m)=>{return m/2},
+                    'US Table Spoon-US Table Spoon':(m)=>{return m},
+                    'US Table Spoon-US Tea Spoon':(m)=>{return m*3},
+                    'US Table Spoon-Imperial Gallon':(m)=>{return m/307.4},
+                    'US Table Spoon-Imperial Quart':(m)=>{return m/76.861},
+                    'US Table Spoon-Imperial Pint':(m)=>{return m/38.43},
+                    'US Table Spoon-Imperial Fluid Ounce':(m)=>{return m/1.922},
+                    'US Table Spoon-Imperial Table Spoon':(m)=>{return m/1.201},
+                    'US Table Spoon-Imperial Tea Spoon':(m)=>{return m*2.498},
+                    'US Table Spoon-Cubic Mile':(m)=>{return m/2.819+'e-15'},
+                    'US Table Spoon-Cubic Yard':(m)=>{return m/51710},
+                    'US Table Spoon-Cubic Foot':(m)=>{return m/1915},
+                    'US Table Spoon-Cubic Inch':(m)=>{return m/1.108},
+
+                    'US Tea Spoon-Cubic Meter':(m)=>{return m/202900},
+                    'US Tea Spoon-Cubic Kilometer':(m)=>{return m/2.029+'e-15'},
+                    'US Tea Spoon-Cubic Centimeter':(m)=>{return m*4.929},
+                    'US Tea Spoon-Cubic Millimeter':(m)=>{return m*4929},
+                    'US Tea Spoon-Liter':(m)=>{return m/202.9},
+                    'US Tea Spoon-Milliliter':(m)=>{return m*4.929},
+                    'US Tea Spoon-US Gallon':(m)=>{return m/768},
+                    'US Tea Spoon-US Quart':(m)=>{return m/192},
+                    'US Tea Spoon-US Pint':(m)=>{return m/96},
+                    'US Tea Spoon-US Cup':(m)=>{return m/48.692},
+                    'US Tea Spoon-US Fluid Ounce':(m)=>{return m/6},
+                    'US Tea Spoon-US Table Spoon':(m)=>{return m*3},
+                    'US Tea Spoon-US Tea Spoon':(m)=>{return m},
+                    'US Tea Spoon-Imperial Gallon':(m)=>{return m/922.3},
+                    'US Tea Spoon-Imperial Quart':(m)=>{return m/230.6},
+                    'US Tea Spoon-Imperial Pint':(m)=>{return m/115.3},
+                    'US Tea Spoon-Imperial Fluid Ounce':(m)=>{return m/5.765},
+                    'US Tea Spoon-Imperial Table Spoon':(m)=>{return m/3.603},
+                    'US Tea Spoon-Imperial Tea Spoon':(m)=>{return m/1.201},
+                    'US Tea Spoon-Cubic Mile':(m)=>{return m/8.457+'e-15'},
+                    'US Tea Spoon-Cubic Yard':(m)=>{return m/155100},
+                    'US Tea Spoon-Cubic Foot':(m)=>{return m/5745},
+                    'US Tea Spoon-Cubic Inch':(m)=>{return m/3.325},
+
+                    'Imperial Gallon-Cubic Meter':(m)=>{return m/220},
+                    'Imperial Gallon-Cubic Kilometer':(m)=>{return m/2.2+"e-12"},
+                    'Imperial Gallon-Cubic Centimeter':(m)=>{return m*4546},
+                    'Imperial Gallon-Cubic Millimeter':(m)=>{return m*4.546+"e+6"},
+                    'Imperial Gallon-Liter':(m)=>{return m*4.546},
+                    'Imperial Gallon-Milliliter':(m)=>{return m*4546},
+                    'Imperial Gallon-US Gallon':(m)=>{return m*1.201},
+                    'Imperial Gallon-US Quart':(m)=>{return m*4.804},
+                    'Imperial Gallon-US Pint':(m)=>{return m*9.608},
+                    'Imperial Gallon-US Cup':(m)=>{return m*18.942},
+                    'Imperial Gallon-US Fluid Ounce':(m)=>{return m*153.7},
+                    'Imperial Gallon-US Table Spoon':(m)=>{return m*307.4},
+                    'Imperial Gallon-US Tea Spoon':(m)=>{return m*922.3},
+                    'Imperial Gallon-Imperial Gallon':(m)=>{return m},
+                    'Imperial Gallon-Imperial Quart':(m)=>{return m*4},
+                    'Imperial Gallon-Imperial Pint':(m)=>{return m*8},
+                    'Imperial Gallon-Imperial Fluid Ounce':(m)=>{return m*160},
+                    'Imperial Gallon-Imperial Table Spoon':(m)=>{return m*256},
+                    'Imperial Gallon-Imperial Tea Spoon':(m)=>{return m/768},
+                    'Imperial Gallon-Cubic Mile':(m)=>{return m/9.169+'e-12'},
+                    'Imperial Gallon-Cubic Yard':(m)=>{return m/168.2},
+                    'Imperial Gallon-Cubic Foot':(m)=>{return m/6.229},
+                    'Imperial Gallon-Cubic Inch':(m)=>{return m*277.4},
+
+                    'Imperial Quart-Cubic Meter':(m)=>{return m/879.9},
+                    'Imperial Quart-Cubic Kilometer':(m)=>{return m/8.799+'e-12'},
+                    'Imperial Quart-Cubic Centimeter':(m)=>{return m*1137},
+                    'Imperial Quart-Cubic Millimeter':(m)=>{return m*1.137+'e+6'},
+                    'Imperial Quart-Liter':(m)=>{return m*1.137},
+                    'Imperial Quart-Milliliter':(m)=>{return m*1137},
+                    'Imperial Quart-US Gallon':(m)=>{return m/3.331},
+                    'Imperial Quart-US Quart':(m)=>{return m*1.201},
+                    'Imperial Quart-US Pint':(m)=>{return m*2.402},
+                    'Imperial Quart-US Cup':(m)=>{return m*4.736},
+                    'Imperial Quart-US Fluid Ounce':(m)=>{return m*38.43},
+                    'Imperial Quart-US Table Spoon':(m)=>{return m*76.861},
+                    'Imperial Quart-US Tea Spoon':(m)=>{return m*230.6},
+                    'Imperial Quart-Imperial Gallon':(m)=>{return m/4},
+                    'Imperial Quart-Imperial Quart':(m)=>{return m},
+                    'Imperial Quart-Imperial Pint':(m)=>{return m*2},
+                    'Imperial Quart-Imperial Fluid Ounce':(m)=>{return m*40},
+                    'Imperial Quart-Imperial Table Spoon':(m)=>{return m*64},
+                    'Imperial Quart-Imperial Tea Spoon':(m)=>{return m*192},
+                    'Imperial Quart-Cubic Mile':(m)=>{return m/3.667+'e-13'},
+                    'Imperial Quart-Cubic Yard':(m)=>{return m/672.7},
+                    'Imperial Quart-Cubic Foot':(m)=>{return m/24.915},
+                    'Imperial Quart-Cubic Inch':(m)=>{return m*69.355},
+
+                    'Imperial Pint-Cubic Meter':(m)=>{return m/1760},
+                    'Imperial Pint-Cubic Kilometer':(m)=>{return m/1.76+'e-13'},
+                    'Imperial Pint-Cubic Centimeter':(m)=>{return m*568.3},
+                    'Imperial Pint-Cubic Millimeter':(m)=>{return m*568300},
+                    'Imperial Pint-Liter':(m)=>{return m/1.76},
+                    'Imperial Pint-Milliliter':(m)=>{return m*568.3},
+                    'Imperial Pint-US Gallon':(m)=>{return m/6.661},
+                    'Imperial Pint-US Quart':(m)=>{return m/1.665},
+                    'Imperial Pint-US Pint':(m)=>{return m*1.201},
+                    'Imperial Pint-US Cup':(m)=>{return m*2.368},
+                    'Imperial Pint-US Fluid Ounce':(m)=>{return m*19.215},
+                    'Imperial Pint-US Table Spoon':(m)=>{return m*38.43},
+                    'Imperial Pint-US Tea Spoon':(m)=>{return m*115.3},
+                    'Imperial Pint-Imperial Gallon':(m)=>{return m/8},
+                    'Imperial Pint-Imperial Quart':(m)=>{return m/2},
+                    'Imperial Pint-Imperial Pint':(m)=>{return m},
+                    'Imperial Pint-Imperial Fluid Ounce':(m)=>{return m*20},
+                    'Imperial Pint-Imperial Table Spoon':(m)=>{return m*32},
+                    'Imperial Pint-Imperial Tea Spoon':(m)=>{return m*96},
+                    'Imperial Pint-Cubic Mile':(m)=>{return m/7.335+'e-13'},
+                    'Imperial Pint-Cubic Yard':(m)=>{return m/1345},
+                    'Imperial Pint-Cubic Foot':(m)=>{return m/49.831},
+                    'Imperial Pint-Cubic Inch':(m)=>{return m*34.677},
+
+                    'Imperial Fluid Ounce-Cubic Meter':(m)=>{return m/35200},
+                    'Imperial Fluid Ounce-Cubic Kilometer':(m)=>{return m/3.52+'e-14'},
+                    'Imperial Fluid Ounce-Cubic Centimeter':(m)=>{return m*28.413},
+                    'Imperial Fluid Ounce-Cubic Millimeter':(m)=>{return m*28410},
+                    'Imperial Fluid Ounce-Liter':(m)=>{return m/35.195},
+                    'Imperial Fluid Ounce-Milliliter':(m)=>{return m*28.413},
+                    'Imperial Fluid Ounce-US Gallon':(m)=>{return m/133.2},
+                    'Imperial Fluid Ounce-US Quart':(m)=>{return m/33.307},
+                    'Imperial Fluid Ounce-US Pint':(m)=>{return m/16.654},
+                    'Imperial Fluid Ounce-US Cup':(m)=>{return m/8.447},
+                    'Imperial Fluid Ounce-US Fluid Ounce':(m)=>{return m*1.041},
+                    'Imperial Fluid Ounce-US Table Spoon':(m)=>{return m*1.922},
+                    'Imperial Fluid Ounce-US Tea Spoon':(m)=>{return m*5.765},
+                    'Imperial Fluid Ounce-Imperial Gallon':(m)=>{return m/160},
+                    'Imperial Fluid Ounce-Imperial Quart':(m)=>{return m/40},
+                    'Imperial Fluid Ounce-Imperial Pint':(m)=>{return m/20},
+                    'Imperial Fluid Ounce-Imperial Fluid Ounce':(m)=>{return m},
+                    'Imperial Fluid Ounce-Imperial Table Spoon':(m)=>{return m*1.6},
+                    'Imperial Fluid Ounce-Imperial Tea Spoon':(m)=>{return m*4.8},
+                    'Imperial Fluid Ounce-Cubic Mile':(m)=>{return m/1.467+'e-15'},
+                    'Imperial Fluid Ounce-Cubic Yard':(m)=>{return m/26910},
+                    'Imperial Fluid Ounce-Cubic Foot':(m)=>{return m/996.6},
+                    'Imperial Fluid Ounce-Cubic Inch':(m)=>{return m*1.734},
+
+                    'Imperial Table Spoon-Cubic Meter':(m)=>{return m/56310},
+                    'Imperial Table Spoon-Cubic Kilometer':(m)=>{return m/5.631+'e-14'},
+                    'Imperial Table Spoon-Cubic Centimeter':(m)=>{return m*17.758},
+                    'Imperial Table Spoon-Cubic Millimeter':(m)=>{return m*17760},
+                    'Imperial Table Spoon-Liter':(m)=>{return m/56.312},
+                    'Imperial Table Spoon-Milliliter':(m)=>{return m*17.758},
+                    'Imperial Table Spoon-US Gallon':(m)=>{return m/213.2},
+                    'Imperial Table Spoon-US Quart':(m)=>{return m/53.291},
+                    'Imperial Table Spoon-US Pint':(m)=>{return m/26.646},
+                    'Imperial Table Spoon-US Cup':(m)=>{return m/13.515},
+                    'Imperial Table Spoon-US Fluid Ounce':(m)=>{return m/1.665},
+                    'Imperial Table Spoon-US Table Spoon':(m)=>{return m*1.201},
+                    'Imperial Table Spoon-US Tea Spoon':(m)=>{return m*3.603},
+                    'Imperial Table Spoon-Imperial Gallon':(m)=>{return m/256},
+                    'Imperial Table Spoon-Imperial Quart':(m)=>{return m/64},
+                    'Imperial Table Spoon-Imperial Pint':(m)=>{return m/32},
+                    'Imperial Table Spoon-Imperial Fluid Ounce':(m)=>{return m/1.6},
+                    'Imperial Table Spoon-Imperial Table Spoon':(m)=>{return m},
+                    'Imperial Table Spoon-Imperial Tea Spoon':(m)=>{return m*3},
+                    'Imperial Table Spoon-Cubic Mile':(m)=>{return m/2.347+'e-15'},
+                    'Imperial Table Spoon-Cubic Yard':(m)=>{return m/43050},
+                    'Imperial Table Spoon-Cubic Foot':(m)=>{return m/1595},
+                    'Imperial Table Spoon-Cubic Inch':(m)=>{return m*1.084},
+
+                    'Imperial Tea Spoon-Cubic Meter':(m)=>{return m/168900},
+                    'Imperial Tea Spoon-Cubic Kilometer':(m)=>{return m/1.689+'e-15'},
+                    'Imperial Tea Spoon-Cubic Centimeter':(m)=>{return m*5,919},
+                    'Imperial Tea Spoon-Cubic Millimeter':(m)=>{return m*5919},
+                    'Imperial Tea Spoon-Liter':(m)=>{return m/168.9},
+                    'Imperial Tea Spoon-Milliliter':(m)=>{return m*5.919},
+                    'Imperial Tea Spoon-US Gallon':(m)=>{return m/639.5},
+                    'Imperial Tea Spoon-US Quart':(m)=>{return m/159.9},
+                    'Imperial Tea Spoon-US Pint':(m)=>{return m/79.937},
+                    'Imperial Tea Spoon-US Cup':(m)=>{return m/40.545},
+                    'Imperial Tea Spoon-US Fluid Ounce':(m)=>{return m/4.996},
+                    'Imperial Tea Spoon-US Table Spoon':(m)=>{return m/2.498},
+                    'Imperial Tea Spoon-US Tea Spoon':(m)=>{return m*1.201},
+                    'Imperial Tea Spoon-Imperial Gallon':(m)=>{return m/768},
+                    'Imperial Tea Spoon-Imperial Quart':(m)=>{return m/192},
+                    'Imperial Tea Spoon-Imperial Pint':(m)=>{return m/96},
+                    'Imperial Tea Spoon-Imperial Fluid Ounce':(m)=>{return m/4,8},
+                    'Imperial Tea Spoon-Imperial Table Spoon':(m)=>{return m/3},
+                    'Imperial Tea Spoon-Imperial Tea Spoon':(m)=>{return m},
+                    'Imperial Tea Spoon-Cubic Mile':(m)=>{return m/7.042+'e-15'},
+                    'Imperial Tea Spoon-Cubic Yard':(m)=>{return m/129200},
+                    'Imperial Tea Spoon-Cubic Foot':(m)=>{return m/4784},
+                    'Imperial Tea Spoon-Cubic Inch':(m)=>{return m/2.768},
+
+                    'Cubic Mile-Cubic Meter':(m)=>{return m*4.168+'e+9'},
+                    'Cubic Mile-Cubic Kilometer':(m)=>{return m*4.168},
+                    'Cubic Mile-Cubic Centimeter':(m)=>{return m*4.168+'e+15'},
+                    'Cubic Mile-Cubic Millimeter':(m)=>{return m*4.168+'e+18'},
+                    'Cubic Mile-Liter':(m)=>{return m*4.168+'e+12'},
+                    'Cubic Mile-Milliliter':(m)=>{return m*4.168+'e+15'},
+                    'Cubic Mile-US Gallon':(m)=>{return m*1.101+'e+12'},
+                    'Cubic Mile-US Quart':(m)=>{return m*4.404+'e+12'},
+                    'Cubic Mile-US Pint':(m)=>{return m*8.809+'e+12'},
+                    'Cubic Mile-US Cup':(m)=>{return m*1.737+'e+13'},
+                    'Cubic Mile-US Fluid Ounce':(m)=>{return m*1.409+'e+14'},
+                    'Cubic Mile-US Table Spoon':(m)=>{return m*2.819+'e+14'},
+                    'Cubic Mile-US Tea Spoon':(m)=>{return m*8.457+'e+14'},
+                    'Cubic Mile-Imperial Gallon':(m)=>{return m*1.101+'e+12'},
+                    'Cubic Mile-Imperial Quart':(m)=>{return m*3.667+'e+12'},
+                    'Cubic Mile-Imperial Pint':(m)=>{return m*7.335+'e+12'},
+                    'Cubic Mile-Imperial Fluid Ounce':(m)=>{return m*1.467+'e+14'},
+                    'Cubic Mile-Imperial Table Spoon':(m)=>{return m*2.347+'e+14'},
+                    'Cubic Mile-Imperial Tea Spoon':(m)=>{return m*7.042+'e+14'},
+                    'Cubic Mile-Cubic Mile':(m)=>{return m*4.168+'e+12'},
+                    'Cubic Mile-Cubic Yard':(m)=>{return m*5.452+'e+9'},
+                    'Cubic Mile-Cubic Foot':(m)=>{return m*1.472+'e+11'},
+                    'Cubic Mile-Cubic Inch':(m)=>{return m*2.544+'e+14'},
+
+                    'Cubic Yard-Cubic Meter':(m)=>{return m/1.308},
+                    'Cubic Yard-Cubic Kilometer':(m)=>{return m/1.308+'e-10'},
+                    'Cubic Yard-Cubic Centimeter':(m)=>{return m*764600},
+                    'Cubic Yard-Cubic Millimeter':(m)=>{return m/7.646+'e+8'},
+                    'Cubic Yard-Liter':(m)=>{return m*764.6},
+                    'Cubic Yard-Milliliter':(m)=>{return m*764600},
+                    'Cubic Yard-US Gallon':(m)=>{return m*202},
+                    'Cubic Yard-US Quart':(m)=>{return m*807.9},
+                    'Cubic Yard-US Pint':(m)=>{return m*1616},
+                    'Cubic Yard-US Cup':(m)=>{return m*3186},
+                    'Cubic Yard-US Fluid Ounce':(m)=>{return m*25850},
+                    'Cubic Yard-US Table Spoon':(m)=>{return m*51710},
+                    'Cubic Yard-US Tea Spoon':(m)=>{return m*155100},
+                    'Cubic Yard-Imperial Gallon':(m)=>{return m*168.2},
+                    'Cubic Yard-Imperial Quart':(m)=>{return m*672.7},
+                    'Cubic Yard-Imperial Pint':(m)=>{return m*1345},
+                    'Cubic Yard-Imperial Fluid Ounce':(m)=>{return m*26910},
+                    'Cubic Yard-Imperial Table Spoon':(m)=>{return m*43050},
+                    'Cubic Yard-Imperial Tea Spoon':(m)=>{return m*129200},
+                    'Cubic Yard-Cubic Mile':(m)=>{return m*5.452+'e+9'},
+                    'Cubic Yard-Cubic Yard':(m)=>{return m},
+                    'Cubic Yard-Cubic Foot':(m)=>{return m*27},
+                    'Cubic Yard-Cubic Inch':(m)=>{return m*46660},
+
+                    'Cubic Foot-Cubic Meter':(m)=>{return m/35.315},
+                    'Cubic Foot-Cubic Kilometer':(m)=>{return m/3.531+'e-11'},
+                    'Cubic Foot-Cubic Centimeter':(m)=>{return m*28320},
+                    'Cubic Foot-Cubic Millimeter':(m)=>{return m*2.832+'e+7'},
+                    'Cubic Foot-Liter':(m)=>{return m*28.317},
+                    'Cubic Foot-Milliliter':(m)=>{return m*28320},
+                    'Cubic Foot-US Gallon':(m)=>{return m*7.481},
+                    'Cubic Foot-US Quart':(m)=>{return m*29.922},
+                    'Cubic Foot-US Pint':(m)=>{return m*59.844},
+                    'Cubic Foot-US Cup':(m)=>{return m*118},
+                    'Cubic Foot-US Fluid Ounce':(m)=>{return m*957.5},
+                    'Cubic Foot-US Table Spoon':(m)=>{return m*1915},
+                    'Cubic Foot-US Tea Spoon':(m)=>{return m*5745},
+                    'Cubic Foot-Imperial Gallon':(m)=>{return m*6.229},
+                    'Cubic Foot-Imperial Quart':(m)=>{return m*24.915},
+                    'Cubic Foot-Imperial Pint':(m)=>{return m*49.831},
+                    'Cubic Foot-Imperial Fluid Ounce':(m)=>{return m*996.6},
+                    'Cubic Foot-Imperial Table Spoon':(m)=>{return m*1595},
+                    'Cubic Foot-Imperial Tea Spoon':(m)=>{return m*4784},
+                    'Cubic Foot-Cubic Mile':(m)=>{return m/1.472+'e-12'},
+                    'Cubic Foot-Cubic Yard':(m)=>{return m/27},
+                    'Cubic Foot-Cubic Foot':(m)=>{return m},
+                    'Cubic Foot-Cubic Inch':(m)=>{return m*1728},
+
+                    'Cubic Inch-Cubic Meter':(m)=>{return m/61020},
+                    'Cubic Inch-Cubic Kilometer':(m)=>{return m/6.102+'e-14'},
+                    'Cubic Inch-Cubic Centimeter':(m)=>{return m*16.387},
+                    'Cubic Inch-Cubic Millimeter':(m)=>{return m*16390},
+                    'Cubic Inch-Liter':(m)=>{return m/61.024},
+                    'Cubic Inch-Milliliter':(m)=>{return m*16.387},
+                    'Cubic Inch-US Gallon':(m)=>{return m/231},
+                    'Cubic Inch-US Quart':(m)=>{return m/57.75},
+                    'Cubic Inch-US Pint':(m)=>{return m/28.875},
+                    'Cubic Inch-US Cup':(m)=>{return m/14.646},
+                    'Cubic Inch-US Fluid Ounce':(m)=>{return m/1.805},
+                    'Cubic Inch-US Table Spoon':(m)=>{return m*1.108},
+                    'Cubic Inch-US Tea Spoon':(m)=>{return m*3.325},
+                    'Cubic Inch-Imperial Gallon':(m)=>{return m/277.4},
+                    'Cubic Inch-Imperial Quart':(m)=>{return m/69.355},
+                    'Cubic Inch-Imperial Pint':(m)=>{return m/34.677},
+                    'Cubic Inch-Imperial Fluid Ounce':(m)=>{return m/1.734},
+                    'Cubic Inch-Imperial Table Spoon':(m)=>{return m/1.084},
+                    'Cubic Inch-Imperial Tea Spoon':(m)=>{return m*2.768},
+                    'Cubic Inch-Cubic Mile':(m)=>{return m/2.544+'e-15'},
+                    'Cubic Inch-Cubic Yard':(m)=>{return m*46660},
+                    'Cubic Inch-Cubic Foot':(m)=>{return m/1728},
+                    'Cubic Inch-Cubic Inch':(m)=>{return m},
+
+                    // Ниже Weight
+
+                    'Kilogram-Kilogram':(m)=>{return m},
+                    'Kilogram-Gram':(m)=>{return m*1000},
+                    'Kilogram-Milligram':(m)=>{return m+"e+6"},
+                    'Kilogram-Metric Ton':(m)=>{return m/1000},
+                    'Kilogram-Long Ton':(m)=>{return m/1016},
+                    'Kilogram-Short Ton':(m)=>{return m/907.2},
+                    'Kilogram-Pound':(m)=>{return m*2.205},
+                    'Kilogram-Ounce':(m)=>{return m*35.274},
+                    'Kilogram-Carrat':(m)=>{return m*5000},
+                    'Kilogram-Atomic Mass Unit':(m)=>{return m*6.022+'e+26'},
+
+                    'Gram-Kilogram':(m)=>{return m/1000},
+                    'Gram-Gram':(m)=>{return m},
+                    'Gram-Milligram':(m)=>{return m*1000},
+                    'Gram-Metric Ton':(m)=>{return m/1+'e+6'},
+                    'Gram-Long Ton':(m)=>{return m/1.016+'e+6'},
+                    'Gram-Short Ton':(m)=>{return m/907200},
+                    'Gram-Pound':(m)=>{return m/453,6},
+                    'Gram-Ounce':(m)=>{return m/28.35},
+                    'Gram-Carrat':(m)=>{return m*5},
+                    'Gram-Atomic Mass Unit':(m)=>{return m*6.022+'e+23'},
+
+                    'Milligram-Kilogram':(m)=>{return m/1+'e+6'},
+                    'Milligram-Gram':(m)=>{return m/1000},
+                    'Milligram-Milligram':(m)=>{return m},
+                    'Milligram-Metric Ton':(m)=>{return m/1+'e+9'},
+                    'Milligram-Long Ton':(m)=>{return m/1.016+'e+9'},
+                    'Milligram-Short Ton':(m)=>{return m/9.072+'e+8'},
+                    'Milligram-Pound':(m)=>{return m/453600},
+                    'Milligram-Ounce':(m)=>{return m/28350},
+                    'Milligram-Carrat':(m)=>{return m/200},
+                    'Milligram-Atomic Mass Unit':(m)=>{return m*6.022+'e+20'},
+
+                    'Metric Ton-Kilogram':(m)=>{return m*1000},
+                    'Metric Ton-Gram':(m)=>{return m*1+'e+6'},
+                    'Metric Ton-Milligram':(m)=>{return m*1+'e+9'},
+                    'Metric Ton-Metric Ton':(m)=>{return m},
+                    'Metric Ton-Long Ton':(m)=>{return m/1.016},
+                    'Metric Ton-Short Ton':(m)=>{return m*1.102},
+                    'Metric Ton-Pound':(m)=>{return m*2205},
+                    'Metric Ton-Ounce':(m)=>{return m*35270},
+                    'Metric Ton-Carrat':(m)=>{return m*5+'e+6'},
+                    'Metric Ton-Atomic Mass Unit':(m)=>{return m*6.022+'e+29'},
+
+                    'Long Ton-Kilogram':(m)=>{return m*1016},
+                    'Long Ton-Gram':(m)=>{return m*1.016+'e+6'},
+                    'Long Ton-Milligram':(m)=>{return m*1.016+'e+9'},
+                    'Long Ton-Metric Ton':(m)=>{return m* 1.016},
+                    'Long Ton-Long Ton':(m)=>{return m},
+                    'Long Ton-Short Ton':(m)=>{return m*1.12},
+                    'Long Ton-Pound':(m)=>{return m*2240},
+                    'Long Ton-Ounce':(m)=>{return m*35840},
+                    'Long Ton-Carrat':(m)=>{return m*5.08+'e+6'},
+                    'Long Ton-Atomic Mass Unit':(m)=>{return m*6.119+'e+29'},
+
+                    'Short Ton-Kilogram':(m)=>{return m*907.2},
+                    'Short Ton-Gram':(m)=>{return m*907200},
+                    'Short Ton-Milligram':(m)=>{return m*9.072+'e+8'},
+                    'Short Ton-Metric Ton':(m)=>{return m/1.102},
+                    'Short Ton-Long Ton':(m)=>{return m/1.12},
+                    'Short Ton-Short Ton':(m)=>{return m},
+                    'Short Ton-Pound':(m)=>{return m*2000},
+                    'Short Ton-Ounce':(m)=>{return m*32000},
+                    'Short Ton-Carrat':(m)=>{return m*4.536+'e+6'},
+                    'Short Ton-Atomic Mass Unit':(m)=>{return m/5.463+'e+29'},
+
+                    'Pound-Kilogram':(m)=>{return m/2.205},
+                    'Pound-Gram':(m)=>{return m*453.6},
+                    'Pound-Milligram':(m)=>{return m*453600},
+                    'Pound-Metric Ton':(m)=>{return m/2205},
+                    'Pound-Long Ton':(m)=>{return m/2240},
+                    'Pound-Short Ton':(m)=>{return m/2000},
+                    'Pound-Pound':(m)=>{return m},
+                    'Pound-Ounce':(m)=>{return m*16},
+                    'Pound-Carrat':(m)=>{return m*2268},
+                    'Pound-Atomic Mass Unit':(m)=>{return m*2.732+'e+26'},
+
+                    'Ounce-Kilogram':(m)=>{return m/35.274},
+                    'Ounce-Gram':(m)=>{return m*28.35},
+                    'Ounce-Milligram':(m)=>{return m*28350},
+                    'Ounce-Metric Ton':(m)=>{return m/35270},
+                    'Ounce-Long Ton':(m)=>{return m/35840},
+                    'Ounce-Short Ton':(m)=>{return m/32000},
+                    'Ounce-Pound':(m)=>{return m/16},
+                    'Ounce-Ounce':(m)=>{return m},
+                    'Ounce-Carrat':(m)=>{return m*141,7},
+                    'Ounce-Atomic Mass Unit':(m)=>{return m*1.707+'e+25'},
+
+                    'Carrat-Kilogram':(m)=>{return m/5000},
+                    'Carrat-Gram':(m)=>{return m/5},
+                    'Carrat-Milligram':(m)=>{return m*200},
+                    'Carrat-Metric Ton':(m)=>{return m/6+'e+6'},
+                    'Carrat-Long Ton':(m)=>{return m/5.08+'e+6'},
+                    'Carrat-Short Ton':(m)=>{return m/4.536+'e+6'},
+                    'Carrat-Pound':(m)=>{return m/2268},
+                    'Carrat-Ounce':(m)=>{return m/141,7},
+                    'Carrat-Carrat':(m)=>{return m},
+                    'Carrat-Atomic Mass Unit':(m)=>{return m},
+
+                    'Atomic Mass Unit-Kilogram':(m)=>{return m/6.022+'e+26'},
+                    'Atomic Mass Unit-Gram':(m)=>{return m/6.022+'e+23'},
+                    'Atomic Mass Unit-Milligram':(m)=>{return m/6.022+'e+20'},
+                    'Atomic Mass Unit-Metric Ton':(m)=>{return m/6.022+'e+29'},
+                    'Atomic Mass Unit-Long Ton':(m)=>{return m/6.119+'e+29'},
+                    'Atomic Mass Unit-Short Ton':(m)=>{return m/5.463+'e+29'},
+                    'Atomic Mass Unit-Pound':(m)=>{return m/2.732+'e+26'},
+                    'Atomic Mass Unit-Ounce':(m)=>{return m/1.707+'e+25'},
+                    'Atomic Mass Unit-Carrat':(m)=>{return m},
+                    'Atomic Mass Unit-Atomic Mass Unit':(m)=>{return m/1.204+'e+23'},
+                }
+                ravno.innerText = book[selected](multipliabl)
+                return book[selected](multipliabl)
+            })
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,143 @@
+<html>
+	<head>
+		<style>
+			div{
+				position: absolute;
+			}
+			.d{
+				border: 50px solid transparent; border-top: 50px solid blue;
+				width: 0;
+			}
+			.d1{
+				border: 50px solid transparent; border-right: 50px solid blue;
+				width: 0vw;
+			}
+			.d2{
+				border: 50px solid transparent; border-bottom: 50px solid blue;
+				width: 0vw;
+			}
+			.d3{
+				border: 50px solid transparent; border-left: 50px solid blue;
+				width: 0vw;
+			}
+			#d{
+				animation-name: d;
+				animation-duration: 1s;
+				animation-delay: 0;
+				animation-iteration-count: infinite;
+			}
+			#d1{
+				animation-name: d1;
+				animation-duration: 1s;
+				animation-delay: 1s;
+				animation-iteration-count: infinite;
+			}	
+			#d2{
+				animation-name: d2;
+				animation-duration: 1s;
+				animation-delay: 2s;
+				animation-iteration-count: infinite;
+			}
+			#d3{
+				animation-name: d3;
+				animation-delay: 3s;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+			}
+			@keyframes d {
+  				0% {
+    				-webkit-transform: rotate(0deg);
+   		 			transform: rotate(0deg);
+  				}
+  				20%{
+  					border-top: 50px solid red;
+  				}
+  				40%{
+  					border-top: 50px solid green;
+  				}
+  				60%{
+					border-top: 50px solid yellow;
+  				}
+  				80%{
+  					border-top: 50px solid purple;
+  				}
+  				100% {
+    				-webkit-transform: rotate(360deg);
+    				transform: rotate(360deg);
+ 				}
+			}
+			@keyframes d1 {
+  				0% {
+    				-webkit-transform: rotate(0deg);
+   		 			transform: rotate(0deg);
+  				}
+  				20%{
+  					border-right: 50px solid purple;
+  				}
+  				40%{
+  					border-right: 50px solid black;
+  				}
+  				60%{
+					border-right: 50px solid red;
+  				}
+  				80%{
+  					border-right: 50px solid orange;
+  				}
+  				100% {
+    				-webkit-transform: rotate(360deg);
+    				transform: rotate(360deg);
+ 				}
+			}
+			@keyframes d2 {
+  				0% {
+    				-webkit-transform: rotate(0deg);
+   		 			transform: rotate(0deg);
+  				}
+  				20%{
+  					border-bottom: 50px solid orange;
+  				}
+  				40%{
+  					border-bottom: 50px solid darkcyan;
+  				}
+  				60%{
+					border-bottom: 50px solid black;
+  				}
+  				80%{
+  					border-bottom: 50px solid beige;
+  				}
+  				100% {
+    				-webkit-transform: rotate(360deg);
+    				transform: rotate(360deg);
+ 				}
+			}
+			@keyframes d3 {
+  				0% {
+    				-webkit-transform: rotate(0deg);
+   		 			transform: rotate(0deg);
+  				}
+  				20%{
+  					border-left: 50px solid chocolate;
+  				}
+  				40%{
+  					border-left: 50px solid darkkhaki;
+  				}
+  				60%{
+					border-left: 50px solid firebrick;
+  				}
+  				80%{
+  					border-left: 50px solid azure;
+  				}
+  				100% {
+    				-webkit-transform: rotate(360deg);
+    				transform: rotate(360deg);
+ 				}
+			}	
+		</style>
+	</head>
+	<body>
+		<div class="d" id="d"></div>
+		<div class="d1" id="d1"></div>
+		<div class="d2" id="d2"></div>
+		<div class="d3" id="d3"></div>
+	</body>
+</html>

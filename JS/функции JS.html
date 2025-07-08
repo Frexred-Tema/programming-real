@@ -1,0 +1,31 @@
+<script>
+
+	let fun = function (NoName, NoN, Naan) {
+		if (NoName > 255) {
+			NoName = String("255");
+		}
+		else if (NoName < 0){
+			NoName = String("0");
+		}
+		else if (NoN > 255){
+			NoN = String("255");
+		}
+		else if (NoN < 0){
+			NoN = String("0");
+		}
+		else if (Naan > 255){
+			Naan = String("255");
+		}
+		else if (Naan < 0){
+			Naan = String("0");
+		}
+		else {
+			alert("(rgb:" + NoName + ","  + NoN + "," + Naan + ")");
+		}
+	}
+	let soldier = prompt()
+	let minigunner = prompt()
+	let scout = prompt()
+	fun(soldier, minigunner, scout)
+
+</script>

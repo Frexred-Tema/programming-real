@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		body{
+			background-color: rgb(1, 206, 209);
+			display: flex;
+			justify-content: center;
+			align-content: center;
+		}
+		.forma{
+			display: flex;
+			flex-direction: column;
+			padding-bottom: 0.5vw;
+		}}
+		.first{
+			background-color: white;
+			width: 25%;
+			padding: 5vw;
+			height: auto;
+			border-right: 1vw solid rgb(0, 165, 167);
+			border-bottom: 1vw solid rgb(0, 165, 167);
+		}
+		.button{
+			background-color: rgb(250, 128, 113);
+		 	width: 25vw;
+			height: 3vw;
+			border: 0;
+			text-align: center;
+			color: white;
+			padding-top: 1vw;
+		}
+		.title{
+			font-size: 2vw;
+		}
+		.comment{
+			background-color: rgb(255, 236, 206);
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="first">
+		<p class="title">Log in</p>
+		<p class="comment">Sorry. That login is incorrect</p>
+		<form class="forma">
+			<label>Username:</label>
+			<input type="text" name="чтото">
+			<label>Password:</label>
+			<input class="h" type="password" name="чтото">
+			<button class="button">LOG IN</button>
+		</form>
+	</div>
+	<script>
+		let div1 = document.createElement("div")
+		div1.className = "first"
+		document.body.appendChild(div1)
+
+		let p1 = document.createElement("p")
+		p1.className = "title"
+		p1.innerText = "Log in"
+		div1.appendChild(p1)
+	</script>
+</body>
+</html>

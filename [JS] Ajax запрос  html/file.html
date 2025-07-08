@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <script src="jquery-3.7.1.min.js"></script>
+        <style>
+            body{
+                margin-inline: 10vw;
+                margin-top: 5vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            #but{
+                width: 15%;
+                height: 5vw;
+                border-radius: 20px;
+                margin-bottom: 5vw;
+                border-bottom: 2px solid black;
+                border-left: 1px solid black;
+                border-right: 0;
+                border-top: 0;
+            }
+            #mini_text{
+                font-size: 1vw;
+                color: gray;
+            }
+            .big_text{
+                font-size: 2.5vw;
+            }
+            #line{
+                margin-top: 1vw;
+                width: 40vw;
+                height: 1px;
+                background-color: rgb(212, 212, 212);
+            }
+            .ib_buttons{
+                width: 4vw;
+                height: 4vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid black;
+                border-radius: 20px;
+            }
+            #information_buttons{
+                font-size: 0.8vw;
+                display: flex;
+                justify-content: space-around;
+                gap: 2vw;
+            }
+
+        </style>
+    </head>
+    <body>
+        <button id="but">Random Person</button>
+        <div id="card">
+            <img id="img">
+            <div id="line"></div>
+            <p id="mini_text"></p>
+            <p id="big_text"></p>
+            <div id="information_buttons">
+                <div id="ib1" class="ib_buttons">Name</div>
+                <div id="ib2" class="ib_buttons">Email</div>
+                <div id="ib3" class="ib_buttons">Birthday</div>
+                <div id="ib4" class="ib_buttons">Home Adress</div>
+                <div id="ib5" class="ib_buttons">Phone Number</div>
+                <div id="ib6" class="ib_buttons">Password</div>
+            </div>
+        </div>
+        <script>
+            let button = document.querySelector('#but')
+            button.addEventListener('click', ()=>{
+                $.ajax({ 
+                    url: 'https://randomuser.me/api/',
+                    type: 'GET',
+                    success: (response) =>{
+                        let but = document.getElementById('but')
+                        let card = document.getElementById('card') 
+                        let img = document.getElementById('img')
+                        img.src = response.results[0].picture.large
+                        let line = document.getElementById('line') 
+                        let mini_text = document.getElementById('mini_text') 
+                        let big_text = document.getElementById('big_text') 
+                        let information_buttons = document.getElementById('information_buttons')
+                        let ib1 = document.getElementById('ib1')
+                        mini_text.innerText = ''
+                        big_text.innerText = ''
+                        ib1.addEventListener('click', ()=>{
+                            mini_text.innerText = 'Hi, My name is'
+                            big_text.innerText = response.results[0].name.first + ' ' + response.results[0].name.last
+                        })
+                        let ib2 = document.getElementById('ib2')
+                        ib2.addEventListener('click', ()=>{
+                            mini_text.innerText = 'My email address is'
+                            big_text.innerText = response.results[0].email
+                        })
+                        let ib3 = document.getElementById('ib3')
+                        ib3.addEventListener('click', ()=>{
+                            mini_text.innerText = 'My birthday is'
+                            let dob = response.results[0].dob.date.split('T')
+                            big_text.innerText = dob[0]
+                        })
+                        let ib4 = document.getElementById('ib4')
+                        ib4.addEventListener('click', ()=>{цц
+                            mini_text.innerText = 'My address is'
+                            big_text.innerText = response.results[0].location.street.number + ' ' + response.results[0].location.street.name
+                        })
+                        let ib5 = document.getElementById('ib5')
+                        ib5.addEventListener('click', ()=>{
+                            mini_text.innerText = 'My phone number is'
+                            big_text.innerText = response.results[0].phone
+                        })
+                        let ib6 = document.getElementById('ib6')
+                        ib6.addEventListener('click', ()=>{
+                            mini_text.innerText = 'My password is'
+                            big_text.innerText = response.results[0].login.password
+                        })
+                        
+                    }
+                })
+            })
+        </script>
+    </body>
+</html>

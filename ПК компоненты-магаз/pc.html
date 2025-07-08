@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <script src="jquery-3.7.1.min.js">
+                
+        </script>
+        <style>
+            body{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .div{
+                display: flex;
+                justify-content: space-around;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+                gap:  2vw;
+            }
+
+        </style>
+    </head>
+    <body>
+        <button>Вы не робот ?</button>
+        <script>
+
+            let but = document.querySelector('button');
+            but.addEventListener('click', ()=>{
+                console.log(1)
+                $.ajax({
+                    url: 'pc.json',
+                    type: 'GET',
+                    success: (response) =>{
+                        for (const k in response) {
+                            console.log(1)
+                            console.log(k)
+                            let div = document.createElement('div');
+                            div.className = 'div'
+                            document.body.appendChild(div)
+                            let p_1 = document.createElement('p');
+                            p_1.innerText = 'Модель: ' + response[k].Model;
+                            p_1.style.color = 'blue'
+                            div.appendChild(p_1);
+                            let p_2 = document.createElement('p');
+                            p_2.innerText = 'Характеристики: '+ response[k].Characteristic;
+                            p_2.style.color = 'red'
+                            div.appendChild(p_2);
+                            let p_3 = document.createElement('p');
+                            p_3.innerText = 'Цена: '+ response[k].Price;
+                            p_3.style.color = 'green'
+                            div.appendChild(p_3);
+                            let p_4 = document.createElement('p');
+                            p_4.innerText = 'Кол-во на складе: '+ response[k].Quantity;
+                            p_4.style.color = 'dark'
+                            div.appendChild(p_4);
+                        }
+                    }
+                })
+            })
+             
+        </script>
+    </body>
+</html>

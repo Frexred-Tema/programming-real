@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <style>
+            body{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .buy-menu{
+                display: flex;
+                gap: 0.85vw;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+            }
+            .information_menu{
+                display: flex;
+                gap: 0;
+                align-items: center;
+                flex-direction: column;
+                justify-content: flex-start;
+                text-align: center;
+            }
+            .information_menu2{
+                display: flex;
+                gap: 1vw;
+                align-items: center;
+                text-align: center;
+            }
+            .buy-menu-button{
+                display: flex;
+                background-color: rgb(238, 106, 102);
+                width: 15vw;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                gap: 0.5vw;
+                border-radius: 30px;
+                cursor: pointer;
+                user-select: none;
+            }
+            .count{
+                width: 2vw;
+                height: 2vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                cursor: pointer;
+                user-select: none;
+                align-items: center;
+                border: 1px solid black;
+            }
+            .minus{
+                cursor: pointer;
+                user-select: none;
+            }
+            .plus{
+                cursor: pointer;
+                user-select: none;
+            }
+            .bbut{
+                display: flex;
+                align-items: center;
+                text-align: center;
+                cursor: pointer;
+                font-size: 2vw;
+                user-select: none;
+            }
+            .buy-menu-img{
+                width: 2vw;
+                height: 2vw;
+            }
+            .im1{
+                display: flex;
+                gap: 2.5vw;
+            }
+            .im2_p1_none{
+                display: none;
+            }
+            .im2_p1_normal{
+                width: 40vw;
+                border: 1px solid black;
+                height: auto;
+                color: rgb(76, 89, 105);
+                padding: 1vw;
+                background-color: rgb(244, 244, 244);
+                border-radius: 0px 0px 10px 10px;
+                margin-top: 0;
+            }
+            .imb1{
+                width: auto;
+                padding-inline: 1vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 4vw;
+                cursor: pointer;
+                user-select: none;
+                margin-bottom: 0;
+                color: rgb(76, 89, 105);
+                border: 1px solid black;
+                border-radius: 10px 10px 0 0;
+                background-color: white;
+            }
+            .imb2{
+                width: auto;
+                padding-inline: 1vw;
+                margin-bottom: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 4vw;
+                border: 1px solid black;
+                cursor: pointer;
+                user-select: none;
+                color: rgb(76, 89, 105);
+                border-radius: 10px 10px 0 0;
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="buy-menu" id="buy-menu">
+            <p style="cursor: pointer; user-select: none;">Количество</p>
+            <p class="minus" id="minus">-</p>
+            <p class="count" id="count">0</p>
+            <p class="plus" id="plus">+</p>
+            <div class="buy-menu-button">
+                <img class="buy-menu-img" src="https://avatars.mds.yandex.net/i?id=0d09a8ab50cfe45f1aa722350629f0e35f9ef1e0-9882580-images-thumbs&n=13">
+                <p class="bbut" id="bbut" style="color: aliceblue;">Купить</p>
+            </div>
+        </div>
+        <div class="information_menu" id="information_menu">
+            <div class="im1" id="im1">
+                <p class="imb1" id="imb1">Описание и характеристики</p>
+                <p class="imb2" id="imb2">Отзывы</p>
+            </div>
+            <div class="im2" id="im2">
+                <p class="im2_p1_none" id="im2_p1"></p>
+            </div>
+        </div>
+        <script>
+            let plus = document.getElementById('plus')
+            let minus = document.getElementById('minus')
+            let count = document.getElementById('count')
+            let counter = 0
+            plus.addEventListener('click', ()=>{
+                counter++
+                count.innerText = counter
+            })
+            minus.addEventListener('click', ()=>{
+                if (counter != 0) {
+                    counter-=1
+                    count.innerText = counter
+                }
+            })
+            let imb1 = document.getElementById('imb1')
+            let imb2 = document.getElementById('imb2')
+            let im2_p1 = document.getElementById('im2_p1')
+            let information_menu2 = document.getElementById('information_menu2');
+            imb1.addEventListener('click', ()=>{
+                imb2.style.backgroundColor = 'white'
+                if (im2_p1.className == 'im2_p1_none') {
+                    im2_p1.innerText = 'Неорганический наполнитель составляет 80% всей массы. ОСОБЕННОСТИ Материал Денфил быстро полимеризуется, демонстрируя при этом небольшую усадку. Он легко обрабатывается. Благодаря наличию большого количества оттенков, есть возможность добиться идеальной совместимости по цвету с эмалью остальных зубов. Еще один немаловажный плюс - качественное краевое прилегание. Denfil является рентгеноконтрастным. Не меняет цвет даже при длительных воздействиях внешних факторов (температура, влажность, кислотные и щелочные среды). Применяется для заполнения кариозных полостей в передних зу бах (III, IV, V классы), в боковых зу бах (I, II и V классы.).'
+                    im2_p1.className = 'im2_p1_normal'
+                    imb1.style.backgroundColor = 'rgb(244, 244, 244)'
+                    imb1.style.borderBottomColor = 'rgb(244, 244, 244)'
+                }
+                else{
+                    im2_p1.innerText = 'Неорганический наполнитель составляет 80% всей массы. ОСОБЕННОСТИ Материал Денфил быстро полимеризуется, демонстрируя при этом небольшую усадку. Он легко обрабатывается. Благодаря наличию большого количества оттенков, есть возможность добиться идеальной совместимости по цвету с эмалью остальных зубов. Еще один немаловажный плюс - качественное краевое прилегание. Denfil является рентгеноконтрастным. Не меняет цвет даже при длительных воздействиях внешних факторов (температура, влажность, кислотные и щелочные среды). Применяется для заполнения кариозных полостей в передних зу бах (III, IV, V классы), в боковых зу бах (I, II и V классы.).'
+                    imb1.style.backgroundColor = 'rgb(244, 244, 244)'
+                    imb1.style.borderBottomColor = 'rgb(244, 244, 244)'
+                }
+            })
+            imb2.addEventListener('click', ()=>{
+                imb1.style.backgroundColor = 'white'
+                if (im2_p1.className == 'im2_p1_none') {
+                    im2_p1.innerText = 'В данном случае мы говорим о сокращенном слове, а полное записывается как "комментарий". Его можно разобрать. Корнем будет "коммент", а суффиксом - "арий". Такой же, как в дельфинарий, планетарий. Потому мы просто отсекаем суффикс и оставляем корень. Убирать при этом сдвоенную согласную не имеет смыла. Потому остается "коммент". Да, если мы сократим слово сильнее, до "ком", то в таком случае одна буква пропадет, как и все следующие за ней.'
+                    im2_p1.className = 'im2_p1_normal'
+                    imb2.style.backgroundColor = 'rgb(244, 244, 244)'
+                    imb2.style.borderBottomColor = 'rgb(244, 244, 244)'
+                }
+                else{
+                    im2_p1.innerText = 'В данном случае мы говорим о сокращенном слове, а полное записывается как "комментарий". Его можно разобрать. Корнем будет "коммент", а суффиксом - "арий". Такой же, как в дельфинарий, планетарий. Потому мы просто отсекаем суффикс и оставляем корень. Убирать при этом сдвоенную согласную не имеет смыла. Потому остается "коммент". Да, если мы сократим слово сильнее, до "ком", то в таком случае одна буква пропадет, как и все следующие за ней.'
+                    imb2.style.backgroundColor = 'rgb(244, 244, 244)'
+                    imb2.style.borderBottomColor = 'rgb(244, 244, 244)'
+                }
+            })
+
+        </script>
+    </body>
+</html>

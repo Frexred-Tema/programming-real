@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		.head{
+			margin-top: 5vw;
+			margin-inline: 5vw;
+		}
+		.flex_logo_first{
+			display: flex;
+			gap: 52vw;
+		}
+		.flex_in_logo_svg_img{
+			display: flex;
+			gap: 1vw;
+		}
+		.logo_svg_img{
+			width: 15vw;
+		}
+		.img_telephone{
+			width: 1vw;
+		}
+		.flex_lupa{
+			display: grid;
+			grid-template-columns: 25% 50% 25%;
+		}
+		.in_flex_lupa_first{
+			display: flex;
+			align-items: center;
+			background-color: rgb(38, 60, 83);
+			font-family: 'Rubik', sans-serif;
+			color: white;
+			padding-top: 1vw;
+			padding-bottom: 1vw;
+			padding-left: 2.5vw;
+		}
+		.in_flex_lupa_second{
+			display: flex;
+			align-items: center;
+			background-color: rgb(224, 106, 106);
+			padding-top: 1vw;
+			padding-bottom: 1vw;
+			border-top: 5px solid red;
+			border-bottom: 5px solid red;
+		}
+		.in_flex_lupa_third{
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			background-color: rgb(38, 60, 83);
+			padding-top: 1vw;
+			padding-bottom: 1vw;
+		}
+		.big_search_img{
+			width: 1vw;
+		}
+		.vvod_word{
+			background-color: rgb(224, 106, 106);
+			color: white;
+			border: 0;
+		}
+		.people_img{
+			width: 2vw;
+		}
+		.trash_img{
+			width: 2vw;
+		}
+		.ok_lupa{
+			border: 0.1vw solid white;
+			padding: 0.4vw;
+			border-radius: 5px;
+			color: white;
+			font-family: 'Rubik', sans-serif;
+		}
+		.text_menu_flex{
+			display: flex;
+			flex-direction: column;
+			padding-top: 2.5vw;
+			font-family: 'Rubik', sans-serif;
+		}
+		.mini_flex_in_menu{
+			display: flex;
+			align-items: center;
+			gap: 1vw;
+		}
+		.img_open_ic{
+			width: 0.8vw;
+			height: 0.8vw;
+		}
+		.flex_big_slide{
+			background-image: url("slide_1.jpg");
+			background-size: cover;
+			width: 80vw;
+			height: 100%;
+		}
+		.biggest_flex{
+			display: flex;
+			padding-bottom: 5vw;
+		}
+		.flex_big{
+			display: flex;
+			flex-direction: column;
+		}
+		.flex_by_svg{
+			display: flex;
+			background-image: url("bg_bla.png");
+			text-align: center;
+			align-items: center;
+			justify-content: space-around;
+			color: white;
+			padding-top: 2.5vw;
+			padding-bottom: 2.5vw;
+			font-family: 'Rubik', sans-serif;
+		}
+		.svg_flex{
+			width: 5vw;
+			height: 5vw;
+		}
+		.div_by_spec{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			text-align: center;
+			font-family: 'Rubik', sans-serif;
+			padding-bottom: 5vw;
+		}
+		.spec_img{
+			width: auto;
+			height: 1vw;
+		}
+		.spesial_text{
+			font-size: 1.5vw;
+		}
+		.blue_text{
+			color: rgb(114, 229, 222);
+			font-family: 'Rubik', sans-serif;
+		}
+		.red_text{
+			color: rgb(221, 108, 108);
+			font-family: 'Rubik', sans-serif;
+		}
+		.item_big_grid_first{
+			display: grid;
+			grid-template-columns: 25% 25% 25% 21.5%;
+			gap: 1vw;
+			padding-bottom: 1vw;
+		}
+		.item_big_grid_second{
+			display: grid;
+			grid-template-columns: 25% 25% 25% 21.5%;
+			gap: 1vw;
+		}
+		.item_flex{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			border: 2px solid gray;
+		}
+		.div_emailform{
+			background-image: url("bg_email.png");
+			margin-top: 2.5vw;
+			display: flex;
+			flex-direction: column;
+		}
+		.div_email_two{
+			display: flex;
+			align-items: center;
+			padding-left: 15vw;
+			padding-bottom: 2.5vw;
+			gap: 2.5vw;
+		}
+		.div_email_one{
+			display: flex;
+			align-items: center;
+			padding-left: 15vw;
+		}
+		.p_text{
+			font-family: 'Rubik', sans-serif;
+			text-align: center;
+		}
+		.e-mail_p{
+			border-bottom: 2.5px solid white;
+			font-family: 'Rubik', sans-serif;
+			text-align: center;
+			color: black;
+			width: 50vw;
+		}
+		.subscribe_p_text{
+			color: white;
+			font-family: 'Rubik', sans-serif;
+			padding-top: 5vw;
+			font-size: 3vw;
+		}
+		.e-mail_button{
+			background-color: white;
+			color: rgb(255, 104, 96);
+			border-radius: 30px;
+			border: 5px solid rgb(240, 175, 176);
+			font-family: 'Rubik', sans-serif;
+			width: 10vw;
+			height: 3vw;
+		}
+		.e-mail-img{
+			width: 15vw;
+		}
+		.div_big_case{
+			display: flex;
+			padding-top: 2.5vw;
+			padding-bottom: 2.5vw;
+		}
+		.p_{
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
+		.mini-texts-in-case{
+			font-size: 1.2vw;
+			font-family: 'Rubik', sans-serif;
+			color: rgb(94, 101, 111);
+		}
+		.nearfooter{
+			width: 45vw;
+		}
+		.lorem_ipsum_text{
+			font-family: 'Rubik', sans-serif;
+			font-size: 1.8vw;
+			color: rgb(94, 101, 111);
+		}
+		.last-flex{
+			display: flex;
+			padding-top: 3vw;
+			padding-left: 5vw;
+			padding-right: 5vw;
+			padding-bottom: 2vw;
+			justify-content: space-around;
+			background-image: url(bg_footer.png);
+		}
+		.last-mini-flex{
+			display: flex;
+			gap: 5px;
+		}
+		.last-img{
+			width: 1vw;
+		}
+		.tel-flex{
+			display: flex;
+			gap: 1px;
+			flex-direction: column;
+			padding: 0;
+			margin: 0;
+		}
+		.tel_1{
+			padding: 0;
+			margin: 0;
+		}
+		.tel_2{
+			padding: 0;
+			margin: 0;
+		}
+		.button_last{
+
+		}
+		.last_big_first{
+			display: flex;
+			flex-direction: column;
+			gap: 5vw;
+		}
+		.last_big_second{
+			display: flex;
+			flex-direction: column;
+			gap: 2vw;
+		}
+	</style>
+</head>
+<body>
+	<div class="head">
+		<div class="flex_logo_first">
+			<img class="logo_svg_img" src="logo.svg">
+			<div class="flex_in_logo_svg_img">
+				<img class="img_telephone" src="tel_black.svg">
+				<p>+38(044) 777-77-77</p>
+				<p>+38(044) 777-77-77</p>
+			</div>
+		</div>
+		<div class="flex_lupa">
+			<div class="in_flex_lupa_first">Категории</div>
+			<div class="in_flex_lupa_second">
+				<img src="close_button.png">
+				<img class="big_search_img" src="search.svg">
+				<button class="vvod_word">введите слово</button>
+			</div>
+			<div class="in_flex_lupa_third">
+				<div class="ok_lupa">OK</div>
+				<img class="people_img" src="cabinet.svg">
+				<img class="trash_img" src="trash.svg">
+			</div>
+		</div>
+		<div class="biggest_flex">
+			<div class="text_menu_flex">
+				<div class="mini_flex_in_menu">
+					<img class="img_open_ic" src="open_ic.png">
+					<p>Адгезивы 5</p>
+				</div>
+				<div>
+					<img src="">
+					<p>Боры</p>
+					<p>Lorem ipsum</p>
+					<p>dolor sit amconsectetur</p>
+					<p>adipisicing elit</p>
+				</div>
+				<div class="mini_flex_in_menu">
+					<img class="img_open_ic" src="open_ic.png">
+					<p>Наконечники</p>
+				</div>
+				<div class="mini_flex_in_menu">
+					<img class="img_open_ic" src="open_ic.png">
+					<p>Оттискные материалы</p>
+				</div>
+				<div class="mini_flex_in_menu">
+					<img class="img_open_ic" src="open_ic.png">
+					<p>Цементы</p>
+				</div>
+				<div class="mini_flex_in_menu">
+					<img class="img_open_ic" src="open_ic.png">
+					<p>Шлифовка и полировка</p>
+				</div>
+				<div class="mini_flex_in_menu">
+					<img class="img_open_ic" src="open_ic.png">
+					<p> Эндодонтия</p>
+				</div>
+				<div class="mini_flex_in_menu">
+					<img class="img_open_ic" src="open_ic.png">
+					<p>Цементы</p>
+				</div>
+				<div class="mini_flex_in_menu">
+					<p>Шлифовка и полировка</p>
+				</div>
+				<div class="mini_flex_in_menu">
+					<img class="img_open_ic" src="open_ic.png">
+					<p>Эндодонтия</p>
+				</div>
+				<div class="mini_flex_in_menu">
+					<img class="img_open_ic" src="open_ic.png">
+					<p>Цементы</p>
+				</div>
+				<div class="mini_flex_in_menu">
+					<p>Шлифовка и полировка</p>
+				</div>
+				<div class="mini_flex_in_menu">
+					<p>Эндодонтия</p>
+				</div>
+			</div>
+			<div class="flex_big">
+				<div class="flex_big_slide">
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+					<button></button>
+				</div>
+				<div class="flex_by_svg">
+					<div>
+						<img class="svg_flex" src="1.svg">
+						<p>Высокое качество обслуживания и оперативность</p>
+					</div>
+					<div>
+						<img class="svg_flex" src="2.svg">
+						<p>Современные качественные и проверенныю материалы</p>
+					</div>
+					<div>
+						<img class="svg_flex" src="3.svg">
+						<p>Широкий ассортимент</p>
+					</div>
+					<div>
+						<img class="svg_flex" src="4.svg">
+						<p>Бесплатная доставка в кабинет</p>
+					</div>
+					<div>
+						<img class="svg_flex" src="5.svg">
+						<p>Различные акции для постоянных клиентов</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="div_by_spec">
+				<img class="spec_img" src="l_spec.png">
+				<p class="spesial_text">СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</p>
+				<img class="spec_img" src="r_spec.png">
+			</div>
+		</div>
+		<div>
+			<div class="item_big_grid_first">
+				<div class="item_flex">
+					<span class="blue_text">Новинка</span>
+					<img src="item_1.png">
+					<p class="p_text">Корпульные иглы Medic Dentfi</p>
+					<p>108.19 грн</p>
+				</div>
+				<div class="item_flex">
+					<span class="red_text">Суперцена</span>
+					<img src="item_2_6.png">
+					<p class="p_text">Корпульные иглы Medic Dentfi</p>
+					<p>108.19 грн</p>
+				</div>
+				<div class="item_flex">
+					<span class="blue_text">Новинка</span>
+					<img src="item_3.png">
+					<p class="p_text">Корпульные иглы Medic Dentfi</p>
+					<p>108.19 грн</p>
+				</div>
+				<div class="item_flex">
+					<span class="red_text">Суперцена</span>
+					<img src="item_4.png">
+					<p class="p_text">Корпульные иглы Medic Dentfi</p>
+					<p>108.19 грн</p>
+				</div>
+			</div>
+			<div class="item_big_grid_second">
+				<div class="item_flex">
+					<span class="blue_text">Новинка</span>
+					<img src="item_5.png">
+					<p class="p_text">Корпульные иглы Medic Dentfi</p>
+					<p>108.19 грн</p>
+				</div>
+				<div class="item_flex">
+					<span class="red_text">Суперцена</span>
+					<img src="item_2_6.png">
+					<p class="p_text">Корпульные иглы Medic Dentfi</p>
+					<p>108.19 грн</p>
+				</div>
+				<div class="item_flex">
+					<span class="blue_text">Новинка</span>
+					<img src="item_7.png">
+					<p class="p_text">Корпульные иглы Medic Dentfi</p>
+					<p>108.19 грн</p>
+				</div>
+				<div class="item_flex">
+					<span class="red_text">Суперцена</span>
+					<img src="item_8.png">
+					<p class="p_text">Корпульные иглы Medic Dentfi</p>
+					<p>108.19 грн</p>
+				</div>
+			</div>
+		</div>
+		<div class="div_emailform">
+			<div class="div_email_one">
+				<img class="e-mail-img" src="email_form.png">
+				<p class="subscribe_p_text">ПОДПИСАТЬСЯ НА РАССЫЛКУ</p>
+			</div>
+			<div class="div_email_two">
+				<form>
+					<input  class="e-mail_p" placeholder="e-mail">
+           			<input class="e-mail_button" type="submit" value="ПОДПИСАТЬСЯ" >
+       	 		</form>
+			</div>
+		</div>
+		<div class="div_big_case">
+			<img class="nearfooter" src="img_nearfooter.png">
+			<div>
+				<p class="lorem_ipsum_text">LOREM IPSUM DOLOR SIT</p>
+				<p class="mini-texts-in-case">Вечер Анны Павловны был пущен. Веретена с разных сторон</p>
+				<p class="mini-texts-in-case">равномерно и не умолкая шумели. Кроме ma tante, около</p>
+				<div class="p_">
+					<img class="img_open_ic" src="open_ic.png">
+					<p class="mini-texts-in-case">которой сидела только одна пожилая дама</p>
+				</div>
+				<div class="p_">
+					<img class="img_open_ic" src="open_ic.png">
+					<p class="mini-texts-in-case">худым лицом, несколько чужая в этом блестящем</p>
+				</div>
+				<div class="p_">
+					<img class="img_open_ic" src="open_ic.png">
+					<p class="mini-texts-in-case">общество разбилось на три кружка. В одном, более</p>
+				</div>
+				<p class="mini-texts-in-case">центром был аббат; в другом, молодом, - красавица княжна</p>
+				<p class="mini-texts-in-case">Элен, дочь князя Василия, и хорошенькая, румяная, слишком</p>
+				<p class="mini-texts-in-case">полная по своей молодости, маленькая княгиня Болконская.</p>
+				<p class="mini-texts-in-case">В третьем - Мортемар и Анна Павловна.</p>
+			</div>
+		</div>
+		<div class="last-flex">
+			<div class="last_big_first">
+				<img src="logo_white.svg">
+				<p>@ dentservice2018. все права зашищены дизайн Буяльская Татьяна.</p>
+			</div>
+			<div  class="last_big_second">
+				<div class="last-mini-flex">
+					<img class="last-img" src="mail.svg">
+					<p>Info@DENTSERVICE.ua</p>
+				</div>
+				<div class="last-mini-flex">
+					<img class="last-img" src="tel_white.svg">
+					<div class="tel-flex">
+						<p class="tel_1">(066) 468-02-72</p>
+						<p class="tel_2">(066) 468-02-72</p>
+					</div>
+				</div>
+				 <button class="e-mail_button">ЗАКАЗАТЬ ЗВОНОК</button>
+			</div>
+			<div class="last_big_therd">
+				<p>О НАС</p>
+				<p>МАГАЗИН</p>
+				<p>АКЦИИ</p>
+				<p>ОПЛАТА И ДОСТАВКА</p>
+				<p>СТАТЬИ</p>
+				<p>КОНТАКТЫ</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

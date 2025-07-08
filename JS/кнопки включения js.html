@@ -1,0 +1,80 @@
+<head>
+    <style>
+        .div{
+            display: flex;
+            gap: 1vw;
+            padding-top: 0.5vw;
+            padding-bottom: 0.5vw;
+            padding-left: 0.9vw;
+            padding-right: 0.3vw;
+            width:10vw;
+            border: 0;
+            background-color: gray;
+            border-radius: 35px;
+        }
+        .sdiv{
+            height: 3vw;
+            width: 6vw;
+            border-radius: 35px;
+            background-color: gray;
+            border: 2px solid white;
+        }
+        .p{
+            color: red;
+            font-size: 2vw;
+            margin: 0;
+            padding-top: 0.2vw;
+            padding-bottom: 0.2vw;
+        }
+        .divv{
+            height: 3vw;
+            width: 6vw;
+            border-radius: 35px;
+            background-color: green;
+            border: 2px solid green;
+        }
+        .p1{
+            color: green;
+            font-size: 2vw;
+            margin: 0;
+            padding-top: 0.2vw;
+            padding-bottom: 0.2vw;
+        }
+    </style>
+</head>
+<html>
+    <body>
+        <script>
+
+            let div = document.createElement("div")
+            div.className = "div"
+            document.body.appendChild(div)
+
+            let sdiv = document.createElement("div")
+            sdiv.className = "sdiv"
+            div.appendChild(sdiv)
+
+            let p = document.createElement("p")
+            p.className = "p"
+            p.innerText = "✖"
+            div.appendChild(p)
+
+            sdiv.addEventListener('click', function(){
+                if (sdiv.className == "sdiv") {
+                    sdiv.className = "divv"
+                    p.className = "p1"
+                    p.innerText = "✔"
+                    div.appendChild(p)
+                    div.appendChild(sdiv)
+                }
+                else if (sdiv.className == "divv"){
+                    p.className = "p"
+                    p.innerText = "✖"
+                    sdiv.className = "sdiv"
+                    div.appendChild(sdiv)
+                    div.appendChild(p)
+                }
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<style>
+			input{
+				display: none; 
+			}
+			label{
+				display: block;
+				width: 10vw;
+				height: 8vh;
+				background-color:rgb(56, 177, 221);
+				border-radius: 5px;
+				text-align: center;
+				padding-top: 4vh;
+				color:white;
+				border-bottom: 2vh solid rgb(20, 103, 134);
+				border-right: 1vh solid rgb(20, 103, 134);
+				border-left: 1vh solid rgb(20, 103, 134);
+			}
+			#mc:checked ~ label{
+				animation-name: label;
+				animation-duration: 0.5s;
+			}
+			@keyframes label {
+				from{
+					width: 10vw;
+					height: 8vh;
+					background-color:rgb(56, 177, 221);
+					border-radius: 5px;
+					text-align: center;
+					padding-top: 4vh;
+					color:white;
+					border-bottom: 2vh solid rgb(20, 103, 134);
+					border-right: 1vh solid rgb(20, 103, 134);
+					border-left: 1vh solid rgb(20, 103, 134);
+				}
+				25%{
+					width: 10vw;
+					height: 8vh;
+					background-color:rgb(56, 177, 221);
+					border-radius: 5px;
+					text-align: center;
+					padding-top: 4vh;
+					color:white;
+					border-bottom: 1vh solid rgb(20, 103, 134);
+					border-right: 0.5vh solid rgb(20, 103, 134);
+					border-left: 0.5vh solid rgb(20, 103, 134);
+					color: gray;				}
+				50%{
+					width: 10vw;
+					height: 8vh;
+					background-color:darkcyan;
+					border-radius: 5px;
+					border-bottom:0;
+					border-right: 0;
+					border-left: 0;
+					color: black;
+				}
+				75%{
+					width: 10vw;
+					height: 8vh;
+					background-color:rgb(56, 177, 221);
+					border-radius: 5px;
+					text-align: center;
+					padding-top: 4vh;
+					color:white;
+					border-bottom: 1vh solid rgb(20, 103, 134);
+					border-right: 0.5vh solid rgb(20, 103, 134);
+					border-left: 0.5vh solid rgb(20, 103, 134);
+					color: gray;
+				}
+				to{
+					width: 10vw;
+					height: 8vh;
+					background-color:rgb(56, 177, 221);
+					border-radius: 5px;
+					text-align: center;
+					padding-top: 4vh;
+					color:white;
+					border-bottom: 2vh solid rgb(20, 103, 134);
+					border-right: 1vh solid rgb(20, 103, 134);
+					border-left: 1vh solid rgb(20, 103, 134);
+				}
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<input type="checkbox" id="mc">
+		<label for="mc">Click me!</label>
+	</body>
+</html>

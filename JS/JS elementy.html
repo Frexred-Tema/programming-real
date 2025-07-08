@@ -1,0 +1,84 @@
+
+<html>
+<head>
+	<style>
+		body{
+			background-color: rgb(1, 206, 209);
+			display: flex;
+			justify-content: center;
+			align-content: center;
+		}
+		.forma{
+			display: flex;
+			flex-direction: column;
+			padding-bottom: 0.5vw;
+		}
+		.first{
+			background-color: white;
+			width: 25%;
+			padding: 5vw;
+			height: auto;
+			border-right: 1vw solid rgb(0, 165, 167);
+			border-bottom: 1vw solid rgb(0, 165, 167);
+		}
+		.button1{
+			background-color: rgb(250, 128, 113);
+		 	width: 25vw;
+			height: 3vw;
+			border: 0;
+			text-align: center;
+			color: white;
+			margin-top: 1vw;
+		}
+		.title{
+			font-size: 2vw;
+		}
+		.comment{
+			background-color: rgb(255, 236, 206);
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		let div1 = document.createElement("div")
+		div1.className = "first"
+		document.body.appendChild(div1)
+
+		let p1 = document.createElement("p")
+		p1.className = "title"
+		p1.innerText = "Log in"
+		div1.appendChild(p1)
+
+		let p2 = document.createElement("p")
+		p2.className = "comment"
+		p2.innerText = "Sorry. That login is incorrect"
+		div1.appendChild(p2)
+
+		let form = document.createElement("form")
+		form.className = "forma"
+		div1.appendChild(form)
+
+		let p3 = document.createElement("p")
+		p3.innerText = "Username:"
+		form.appendChild(p3)
+
+		let input1 = document.createElement("input")
+		input1.type = "text"
+		form.appendChild(input1)
+
+		let p4 = document.createElement("p")
+		p4.innerText = "Password:"
+		form.appendChild(p4)
+
+		let input2 = document.createElement("input")
+		input2.type = "password"
+		form.appendChild(input2)
+
+		let button = document.createElement("button")
+		button.innerText = "LOG IN"
+		button.className = "button1"
+		form.appendChild(button)
+	</script>
+</body>
+</html>

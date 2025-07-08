@@ -1,0 +1,453 @@
+<html>
+<head>
+	<style>
+		.body{
+			margin-inline: 5vw;
+			margin-top: 5vw;
+		}
+		.flex1{
+			display: flex;
+			justify-content: space-around;
+			background-color: rgb(242, 242, 242);
+			padding-inline: 5vw;
+			padding-top: 2vw;
+			font-family: 'Barlow', sans-serif;
+
+		}
+		.flex1flex1{
+			display: flex;
+			justify-content: space-around;
+			gap: 2.5vw;
+			padding-top: 1vw;
+			font-family: 'Barlow', sans-serif;
+
+		}
+		.flex1flex2{
+			display: flex;
+			font-family: 'Barlow', sans-serif;
+			gap: 3px;
+		}
+		.img1{
+			width: 1vw;
+			height: 2vh;
+			padding-top: 1vw;
+		}
+		.text1flex1{
+			color: rgb(243, 161, 32);
+			font-family: 'Barlow', sans-serif;
+		}
+		.text2flex1{
+			color: rgb(243, 161, 32);
+			font-family: 'Barlow', sans-serif;
+
+		}
+		.flex2flex1{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: rgb(242, 242, 242);
+			padding-inline: 5vw;
+			font-family: 'Barlow', sans-serif;
+		}
+		.f2t1{
+			color: rgb(243, 161, 32);
+			font-size: 2rem;
+		}
+		.ff1{
+			display: flex;
+			justify-content: space-around;
+			padding-inline: 5vw;
+			padding-top: 5vw;
+			padding-bottom: 5vw;
+			font-family: 'Barlow', sans-serif;
+
+		}
+		.ff2{
+			display: flex;
+			justify-content: space-around;
+			padding-inline: 5vw;
+			font-family: 'Barlow', sans-serif;
+
+		}
+		.f2f{
+			position: relative;
+			width: 10vw;
+			height: 25vh;
+			font-family: 'Barlow', sans-serif;
+
+		}
+		.palette{;
+			display: flex;
+			align-items: center;
+			position: absolute;
+			font-family: 'Barlow', sans-serif;
+		}
+		.yellow{
+			display: flex;
+			align-items: center;
+			position: absolute;
+			font-family: 'Barlow', sans-serif;
+
+		}
+		.flex2flex2{
+			background-color: rgb(242, 242, 242);
+			font-family: 'Barlow', sans-serif;
+
+		}
+		.hidden{
+			display: flex;
+			align-items: center;
+			position: absolute;
+		}
+		.ff3{
+			display: flex;
+			justify-content: space-around;
+			padding-inline: 5vw;
+			background-color: rgb(222, 222, 222);
+			padding-top: 5vw;
+			font-family: 'Barlow', sans-serif;
+
+		}
+		.minif1{
+			display: flex;
+			justify-content: space-around;
+			padding-top: 5vw;
+			background-color: rgb(242, 242, 242);
+			padding-bottom: 5vw;
+			font-family: 'Barlow', sans-serif;
+
+		}
+		.adds{
+			background-color: rgb(255, 159, 0);
+			width: 12vw;
+			height: 2.5vw;
+			text-align: center;
+			padding-top: 1vw;
+			border-radius: 20px;
+			font-family: 'Barlow', sans-serif;
+		}
+		.flex_img{
+			display: flex;
+			justify-content: space-around;
+			padding-inline: 5vw;
+			padding-top: 5vw;
+			padding-bottom: 5vw;
+			background-color: rgb(242, 242, 242);
+		}
+		.mini_flex_img{
+			display: flex;
+			flex-direction: column;
+			font-family: 'Barlow', sans-serif;
+			align-items: center;
+			text-align: center;
+		}
+		.img_flex_img{
+			width: 6vw;
+			height: 6vw;
+		}
+		.big_flex_of_image_one{
+			display: flex;
+			justify-content: space-around;
+			padding-top: 5vw;
+			padding-bottom: 5vw;
+			background-color: rgb(242, 242, 242);
+			padding-inline: 5vw;
+			align-items: center;
+			text-align: center;
+		}
+		.big_flex_of_image_two{
+			display: flex;
+			justify-content: space-around;
+			padding-inline: 5vw;
+			padding-top: 5vw;
+			padding-bottom: 5vw;
+			background-color: rgb(242, 242, 242);
+			align-items: center;
+			text-align: center;
+		}
+		.flex_sercle_png_one{
+			display: flex;
+			justify-content: space-around;
+			padding-top: 5vw;
+			padding-inline: 5vw;
+			background-color: rgb(242, 242, 242);
+		}
+		.flex_sercle_png_two{
+			display: flex;
+			justify-content: space-around;
+			background-color: rgb(242, 242, 242);
+			padding-bottom: 5vw;
+			padding-inline: 5vw;
+		}
+		.flex_relative{
+			position: relative;
+		}
+		.in_flex_absolute{
+			position: absolute;
+		}
+		.flex_img_company{
+			display: flex;
+			justify-content: space-around;
+			background-color: rgb(242, 242, 242);
+			padding-bottom: 5vw;
+			padding-inline: 5vw;
+			padding-top: 5vw;
+		}
+		.map_png{
+			width: 1420px;
+		}
+		.flex_text_last_one{
+			display: flex;
+			justify-content: space-around;
+			padding-top: 2.5vw;
+			padding-inline: 5vw;
+			color: white;
+		}
+		.flex_text_last_two{
+			display: flex;
+			justify-content: space-around;
+			padding-top: 2.5vw;
+			color: white;
+			font-family: 'Barlow', sans-serif;
+			padding-inline: 10vw;
+		}
+		.last_button{
+			width: 10vw;
+			height: 3vw;
+			border-radius: 20px;
+			border: 15px solid white;
+			background-color: black;
+			color: white;
+			margin-inline:40vw;
+			font-family: 'Barlow', sans-serif;
+			margin-top: 2.5vw;
+		}
+		.last_one_one{
+			display: flex;
+			padding-left: 35vw;
+			color: white;
+			font-family: 'Barlow', sans-serif;
+		}
+		.last_one_two{
+			display: flex;
+			padding-left: 39vw;
+			color: white;
+			font-family: 'Barlow', sans-serif;
+		}
+		.flex_last{
+			background-color: black;
+			font-family: 'Barlow', sans-serif;
+		}
+	</style>
+</head>
+<body class="body">
+	<div class="flex1">
+		<img src="logo.png">
+		<div class="flex1flex1">
+			<div>Товары</div>
+			<div>Услуги</div>
+			<div class="text1flex1">Для юридических лиц</div>
+			<div>Филиалы</div>
+		</div>
+		<div class="flex1flex2">
+			<img class="img1" src="tel_ic.png">
+			<p>+375 29</p>
+			<p class="text2flex1">123 45 67</p>
+		</div>
+	</div>
+	<div class="flex2"> 
+		<div class="flex2flex1">
+			<p class="f2t1">ТОВАРЫ</p>
+			<p>ПРОДАЖА ПОДДОНОВ ОТ 99Р/ШТ</p>
+			<p>В ЛЮБОМ КОЛИЧЕСТВЕ</p>
+		</div>
+		<div class="flex2flex2">
+			<div class="ff1">
+				<div class="f2f">
+					<img class="yellow" src="back_palette.png">
+					<img class="palette"src="palette_1.png">
+				</div>
+				<div class="f2f">
+					<img class="yellow" src="back_palette.png">
+					<img class="palette" src="palette_2.png">
+				</div>
+				<div class="f2f">
+					<img class="yellow" src="back_palette.png">
+					<img class="palette" src="palette_3.png">
+				</div>
+			</div>
+			<div class="ff2">
+				<div class="f2f">
+					<img class="yellow" src="back_palette.png">
+					<img class="palette" src="palette_4.png">
+				</div>
+				<div class="f2f">
+					<img class="yellow" src="back_palette.png">
+					<img class="palette" src="palette_5.png">
+				</div>
+				<div class="f2f">
+					<img class="yellow" src="back_palette.png">
+					<img class="palette" src="palette_6.png">
+				</div>
+			</div>
+			<div class="ff3">
+				<div class="f2f">
+					<img class="yellow" src="back_palette.png">
+					<img class="hidden" src="hidden_palette_1.png">
+				</div>
+				<div class="f2f">
+					<img class="yellow" src="back_palette.png">
+					<img class="hidden" src="hidden_palette_2.png">
+				</div>
+				<div class="f2f">
+					<img class="yellow" src="back_palette.png">
+					<img class="hidden" src="hidden_palette_3.png">
+				</div>
+			</div>
+		</div>
+		<div class="minif1">
+			<div class="adds">ДОПОЛЬНИТЕЛЬНО --></div>
+		</div>
+		<div class="flex2flex1">
+			<p class="f2t1">ПРЕИМУЩЕСТВА</p>
+			<p>ПРОДАЖА ПОДДОНОВ ОТ 99Р/ШТ</p>
+			<p>В ЛЮБОМ КОЛИЧЕСТВЕ</p>
+		</div>
+		<div class="flex_img">
+			<div class="mini_flex_img">
+				<img class="img_flex_img" src="dignity_ic_1.png">
+				<p>ЭКОНОМИЧНОСТЬ</p>
+			</div>
+			<div class="mini_flex_img">
+				<img class="img_flex_img" src="dignity_ic_2.png">
+				<p>КАЧЕСТВО</p>
+			</div>
+			<div class="mini_flex_img">
+				<img class="img_flex_img" src="dignity_ic_3.png">
+				<p>ОПЕРАТИВНОСТЬ</p>
+			</div>
+			<div class="mini_flex_img">
+				<img class="img_flex_img" src="dignity_ic_4.png">
+				<p>НАДЕЖНОСТЬ</p>
+			</div>
+			<div class="mini_flex_img">
+				<img class="img_flex_img" src="dignity_ic_5.png">
+				<p>ИНДИВИДУАЛЬНОСТЬ</p>
+			</div>
+		</div>
+		<div class="minif1">
+			<div class="adds">ПОДРОБНЕЕ</div>
+		</div>
+		<div class="flex2flex1">
+			<p class="f2t1">УСЛУГИ</p>
+			<p>ПРОДАЖА ПОДДОНОВ ОТ 99Р/ШТ</p>
+			<p>В ЛЮБОМ КОЛИЧЕСТВЕ</p>
+		</div>
+		<div>
+			<div class="big_flex_of_image_one">
+				<div>
+					<img src="service_img_1.png">
+					<p>ЗАКУПКА</p>
+				</div>
+				<div>
+					<img src="service_img_2.png">
+					<p>АРЕНДА</p>
+				</div>
+				<div>
+					<img src="service_img_3.png">
+					<p>ПРОДАЖА</p>
+				</div>
+			</div>
+			<div class="big_flex_of_image_two">
+				<div>
+					<img src="service_img_4.png">
+					<p>ВОЗВРАТ</p>
+				</div>
+				<div>
+					<img src="service_img_5.png">
+					<p>РЕМОНТ</p>
+				</div>
+				<div>
+					<img src="service_img_6.png">
+					<p>КОМПЛЕКСНЫЙ СЕРВИС</p>
+				</div>
+			</div>
+		</div>
+		<div class="flex2flex1">
+			<p class="f2t1">АУТСОРСИНГ</p>
+			<p>ПРОДАЖА ПОДДОНОВ ОТ 99Р/ШТ</p>
+			<p>В ЛЮБОМ КОЛИЧЕСТВЕ</p>
+		</div>
+		<div>
+			<div class="flex_sercle_png_one">
+				<div>
+					<img src="outsource_1.png">
+				</div>
+				<div class="flex_relative">
+					<img class="in_flex_absolute" src="car_1.png">
+					<img src="arrow_1.png">
+				</div>
+				<div>
+					<img src="outsource_2.png">
+				</div>
+			</div>
+			<div class="flex_sercle_png_two">
+				<div class="flex_relative">
+					<img class="in_flex_absolute" src="car_3.png">
+					<img src="arrow_3.png">
+				</div>
+				<div>
+					<img src="outsource_logo.png">
+				</div>
+				<div class="flex_relative">
+					<img class="in_flex_absolute" src="car_2.png">
+					<img src="arrow_2.png">
+				</div>
+			</div>
+			<div class="flex2flex1">
+				<p class="f2t1">НАШИ ПАРТНЕРЫ</p>
+				<p>ПРОДАЖА ПОДДОНОВ ОТ 99Р/ШТ</p>
+				<p>В ЛЮБОМ КОЛИЧЕСТВЕ</p>
+			</div>
+			<div class="flex_img_company">
+				<img src="company_1.png">
+				<img src="company_2.png">
+				<img src="company_3.png">
+				<img src="company_4.png">
+			</div>
+			<div class="flex2flex1">
+				<p class="f2t1">НАШИ ФИЛИАЛЫ</p>
+				<p>ПРОДАЖА ПОДДОНОВ ОТ 99Р/ШТ</p>
+				<p>В ЛЮБОМ КОЛИЧЕСТВЕ</p>
+			</div>
+			<img class="map_png" src="map.png">
+		</div>
+		<div class="flex_last">
+			<div class="flex_text_last_one">
+				<div>ДЕРЕВЯННЫЕ ПАЛЛЕТЫ</div>
+				<div>КРЫШКИ ДЛЯ ПАЛЛЕТОВ</div>
+				<div>ГОФРАУПАКОВКА</div>
+				<div>ПЛАСТИКОВЫЕ ПАЛЛЕТЫ</div>
+				<div>ПАЛЛЕТНЫЕ БОРТА</div>
+				<div>ПИЛОМАТЕРИАЛЫ</div>
+			</div>
+			<div class="flex_text_last_two">
+				<div>МЕБЕЛЬ ИЗ ДЕРЕВА</div>
+				<div>ДЕРЕВЯННЫЕ ЯЩИКИ</div>
+				<div>СТРЕЙЧПЛЕНКА</div>
+			</div>
+			<button class="last_button">ЗАДАТЬ ВОПРОС </button>
+			<div class="last_one_one">
+				<img src="">
+				<p>Адрес:</p>
+				<p>Город Казань улица Техническая 15</p>
+			</div>
+			<div class="last_one_two">
+				<img src="">
+				<p>Почта:</p>
+				<p>index@amail.com</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

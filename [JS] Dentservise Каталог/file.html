@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .card{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                align-items: center;
+                text-align: center;
+                border-radius: 10px;
+                padding: 0.61vw;
+                border: 1px solid rgb(239, 239, 239);
+            }
+            .basket-img-unvisable{
+                display: none;
+            }
+            .basket-img-visible{
+                width: 2vw;
+                height: 2vw;
+                background-color: rgb(238, 106, 104);
+                width: 2vw;
+                height: 2vw;
+                padding: 1.5vw;
+                border-radius: 50px;
+                cursor: pointer;
+                user-select: none;
+            }
+            .products{
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 2vw;
+            }
+            .preview{
+                width: 30vw;
+            }
+            .sp{
+                position: absolute;
+                background-color: white;
+                left: 50%;
+                transform: translate(-50%, -100%);
+                width: 10vw;
+                font-size: 1vw;
+                color: rgb(34, 206, 195);
+            }
+            .trash{
+                display: flex;
+                position: relative;
+                justify-content: end;
+            }
+            .trash_img{
+                background-color: rgb(37, 60, 85);
+                width: 2.5vw;
+                padding: 1.5vw;
+                border-radius: 50px;
+                height: 2.5vw;
+            }
+            .counter{
+                width: 2vw;
+                height: 2vw;
+                display: flex;
+                background-color: rgb(238, 106, 104);
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                position: absolute;
+                border-radius: 50px;
+                top: 0.6vw;
+                right: 0.6vw;
+                font-size: 1vw;
+                color: azure;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="trash">
+            <img class="trash_img" src="trash (1).svg">
+            <div id="counter" class="counter">0</div>
+        </div>
+        <div class="products">
+            <div id="card1" class="card">
+                <span class="sp">Super Price</span>
+                <img class="preview" src="https://avatars.mds.yandex.net/i?id=0ab68ede0465a139bf3f1a7ee4261a55342d6cab-3949150-images-thumbs&n=13">
+                <p>TheHunter: Call of the Wild</p>
+                <p>29.99$</p>
+                <img id="basket1" class="basket-img-unvisable" src="trash (1).svg">
+            </div>
+            <div id="card2" class="card">
+                <span class="sp">Super Price</span>
+                <img class="preview" src="https://avatars.mds.yandex.net/i?id=be23d8d942e17b41b31fb57b941b174b5b1aa3e3-5247972-images-thumbs&n=13">
+                <p>S.T.A.L.K.E.R 2</p>
+                <p>59.99$</p>
+                <img id="basket2" class="basket-img-unvisable" src="trash (1).svg">
+            </div>
+            <div id="card3" class="card">
+                <span class="sp">Super Price</span>
+                <img class="preview" src="https://avatars.mds.yandex.net/i?id=76c6ac55a970706ab05b5b7e39608b0239bd7c53-5219321-images-thumbs&n=13">
+                <p>The Isle</p>
+                <p>19.99$</p>
+                <img id="basket3" class="basket-img-unvisable" src="trash (1).svg">
+            </div>
+        </div>
+       <script>
+            let card1 = document.getElementById('card1');
+            card1.addEventListener('mouseover', ()=>{
+                card1.style.border = "1px solid rgb(169, 210, 218)";
+                let basket1 = document.getElementById('basket1').className = 'basket-img-visible';
+            })
+            card1.addEventListener('mouseout', ()=>{
+                card1.style.border = "1px solid rgb(239, 239, 239)";
+                let basket1 = document.getElementById('basket1').className = 'basket-img-unvisable';
+            })
+            let card2 = document.getElementById('card2');
+            card2.addEventListener('mouseover', ()=>{
+                card2.style.border = "1px solid rgb(169, 210, 218)";
+                let basket2 = document.getElementById('basket2').className = 'basket-img-visible';
+            })
+            card2.addEventListener('mouseout', ()=>{
+                card2.style.border = "1px solid rgb(239, 239, 239)";
+                let basket2 = document.getElementById('basket2').className = 'basket-img-unvisable';
+            })
+            let card3 = document.getElementById('card3');
+            card3.addEventListener('mouseover', ()=>{
+                card3.style.border = "1px solid rgb(169, 210, 218)";
+                let basket3 = document.getElementById('basket3').className = 'basket-img-visible';
+            })
+            card3.addEventListener('mouseout', ()=>{
+                card3.style.border = "1px solid rgb(239, 239, 239)";
+                let basket3 = document.getElementById('basket3').className = 'basket-img-unvisable';
+            })
+            let counter = document.getElementById('counter')
+            let basket1 = document.getElementById('basket1')
+            basket1.addEventListener('click', ()=>{
+                let count = counter.innerText;
+                count++
+                counter.innerText = count
+            })
+            let basket2 = document.getElementById('basket2')
+            basket2.addEventListener('click', ()=>{
+                let count = counter.innerText;
+                count++
+                counter.innerText = count
+            })
+            let basket3 = document.getElementById('basket3')
+            basket3.addEventListener('click', ()=>{
+                let count = counter.innerText;
+                count++
+                counter.innerText = count
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,203 @@
+<head>
+    <style>
+        body{
+            color: aliceblue;
+            background-color: black;
+        }
+        .huge{
+            display: flex;
+            background-color: gray;
+            padding-block: 0.5vw;
+            padding-inline: 1vw;
+            justify-content: space-between;
+        }
+        .first{
+            display: flex;
+            gap: 1vw;
+            align-items: center;
+        }
+        .second{
+            display: flex;
+            gap: 1vw;
+            align-items: center;
+        }
+        .images{
+            width: 2.5vw;
+            height: 2vw;
+            background-color: black;
+        }
+        .ima{
+            width: 2vw;
+            height: 2vw;
+        }
+        .power{
+            border: 1px solid white;
+            text-align: center;
+            background: linear-gradient(90deg, rgba(100,113,133,1) 78%, rgba(28,30,34,1) 78%);
+            width: 4vw;
+            border-radius: 20px;
+            height: 2vw;
+        }
+        .p{
+            margin: 0;
+            padding-block: 0.5vw;
+        }
+        .first_div{
+            display: flex;
+            justify-content: space-around;
+            gap: 3px;
+        }
+        .first_span{
+            margin-top: 15px;
+            width: 0.7vw;
+            height: 10px;
+            background-color: white;
+        }
+        .second_span{
+            margin-top: 10px;
+            width: 0.7vw;
+            height: 15px;
+            background-color: white;
+        }
+        .therd_span{
+            margin-top: 5px;
+            width: 0.7vw;
+            height: 20px;
+            background-color: white;
+        }
+        .fourst_span{
+            width: 0.7vw;
+            height: 25px;
+            background-color: white;
+        }
+        .second_div{
+            display: flex;
+            gap: 3px;
+        }
+        .therd_div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3px;
+        }
+        .s1{
+            width: 25px;
+            height: 4px;
+            background-color: white;
+        }
+        .s2{
+            width: 20px;
+            height: 4px;
+            background-color: white;
+        }
+        .s3{
+            width: 15px;
+            height: 4px;
+            background-color: white;
+        }
+        .s4{
+            width: 15px;
+            height: 15px;
+            border-radius: 20px;
+            background-color: white;
+        }
+        .time{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<html>
+    <body>
+        <div class="huge">
+            <div class="first">
+                <div id="time" class="time">
+                    <p id="first_one">11:</p>
+                    <p id="second_one">25</p>
+                </div>
+                <p>| 4,1 Kb/s</p>
+                <img class="ima" src="https://www.mare-vrbnik.com/assets/mare/images/footer/skype.png">
+                <img class="ima" src="https://catherineasquithgallery.com/uploads/posts/2021-03/1614807569_161-p-fon-dlya-skaipa-204.png">
+            </div>
+            <div id="adds" class="second">
+                <div class="first_div">
+                    <span class="first_span"></span>
+                    <span class="second_span"></span>
+                    <span class="therd_span"></span>
+                    <span class="fourst_span"></span>
+                </div>
+                <div class="second_div">
+                    <span class="first_span"></span>
+                    <span class="second_span"></span>
+                    <span class="therd_span"></span>
+                    <span class="fourst_span"></span>
+                </div>
+                <div class="therd_div">
+                    <span class="s1"></span>
+                    <span class="s2"></span>
+                    <span class="s3"></span>
+                    <span class="s4"></span>
+                </div>
+                <script>
+                    
+                    let power = document.createElement("div")
+                    power.className = "power"
+                    let adds = document.getElementById('adds')
+                    adds.appendChild(power)
+
+                    let p = document.createElement("p")
+                    let fps = 78
+                    p.innerText = fps
+                    p.className = "p"
+                    power.appendChild(p)
+
+                    power.addEventListener("click", function(){
+                        if (fps < 100) {
+                            fps = fps + 1
+                            p.innerText = fps
+                        }
+                        else {
+                            fps = fps - 99
+                            p.innerText = fps
+                        }
+                    })
+                    let time = document.getElementById('time')
+                    let first_one = document.getElementById('first_one')
+                    let first_time = 11
+                    first_time = Number(first_time)
+                    first_one.innerText = first_time
+                    let second_one = document.getElementById('second_one')
+                    let second_time = 25
+                    second_time = Number(second_time)
+                    second_one.innerText = second_time
+
+                    time.addEventListener("click", function(){
+                        if (second_time < 59) {
+                            second_time = second_time + 1
+                            second_one.innerText = second_time
+                            if (second_time < 10){
+                            second_one.innerText = "0" + second_time
+                            }
+                        }
+                        else {
+                            second_time = 0
+                            second_one.innerText = second_time
+                        }
+                    })
+                    time.addEventListener("click", function(){
+                        if (second_time == 59) {
+                            first_time = first_time + 1
+                            first_one.innerText = first_time
+                        }
+                        else if (first_one > 24){
+                            first_time = first_time - 24
+                            first_one.innerText = first_time
+                        }
+                    })
+
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

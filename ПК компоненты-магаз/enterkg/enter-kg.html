@@ -1,0 +1,58 @@
+<html>
+    <head>
+
+        <script src="jquery-3.7.1.min.js"></script>
+
+        <style>
+
+            body{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                margin-bottom: 2vw;
+            }
+            #double-div{
+                display: flex;
+                justify-content: space-around;
+            }
+            #loader-one{
+                width: 15%;
+                height: 5%;
+                border-radius: 20px;
+            }
+            #second-html{
+                margin-top: 2vw;
+            }
+
+        </style>
+    </head>
+    <body>
+        <p style="color: red;">Уважаемые покупатели!</p>
+        <p>Для оформления ЭСФ и ЭТТН при оплате наличными или через POS-терминал</p>
+        <p>Необходимо заранее предоставить доверенность и полные реквизиты Вашей компании.</p>
+        <p style="color: red;">Без доверенности ЭСФ и ЭТТН оформлена не будет.</p>
+        <div id='double-div'>
+            <p id="sections">Видокарты</p>
+        </div>
+        <button id="loader-one">Load products</button>
+        <div id="second-html"></div>
+        <script>
+            
+            let loader_one = document.getElementById('loader-one');
+            loader_one.addEventListener('click', ()=>{
+                let second_html = document.getElementById('second-html');
+                $.ajax({
+                    url: '../pc.html',
+                    type: 'GET',
+                    success: (response) =>{
+                        second_html.innerHTML = response
+                    }
+                }) 
+            });
+
+        </script>
+    </body>
+</html>

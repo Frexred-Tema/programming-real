@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <script src="jquery-3.7.1.min.js"></script>
+        <style>
+
+            body{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+            #val{
+                width: 20vw;
+            }
+            #but{
+                width: 8vw;
+                height: 3vw;
+            }
+            .div{
+                display: flex;
+                justify-content: space-around;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+                gap:  2vw;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <button id="but">Repair</button>
+        </div>
+        <script>
+            let but = document.getElementById('but');
+            but.addEventListener('click', () =>{
+                let result = [];
+                let result2 = [];
+                let war = [];
+                let war2 = [];
+                $.ajax({
+                    url: 'https://official-joke-api.appspot.com/random_joke',
+                    type: 'GET',
+                    success: (response) =>{
+                        let value = response.setup;
+                        value = String(value);
+                        value = value.split(' ');
+                        for (let i = 0; i < value.length; i++) {
+                            let temporary = []
+                            value[i] = value[i].toUpperCase();                                
+                            for (let j = 0; j < value[i].length; j++) {
+                                if (value[i][j] == value[i].length) {
+                                    temporary.push(value[i][j]);
+                                }
+                            if (value[i][j] == ' ' || value[i][j+1] == ' ') {
+                                    temporary.push(value[i][j]);
+                                j++
+                            }
+                            else{
+                                temporary.push(value[i][j]);
+                            }
+                        }
+                            temporary = temporary.join('');
+                            result.push(temporary);
+                        }   
+                        for (let ij = 0; ij < result.length; ij++) {
+                            if (result[ij] != '') {
+                                war.push(result[ij])
+                            }
+                        }
+                        let punchline = response.punchline;
+                        punchline = String(punchline);
+                        punchline = punchline.split(' ');
+                        for (let i = 0; i < punchline.length; i++) {
+                            let temporary = []
+                            punchline[i] = punchline[i].toUpperCase();                                
+                            for (let j = 0; j < punchline[i].length; j++) {
+                                if (punchline[i][j] == punchline[i].length) {
+                                    temporary.push(punchline[i][j]);
+                                }
+                            if (punchline[i][j] == ' ' || punchline[i][j+1] == ' ') {
+                                    temporary.push(punchline[i][j]);
+                                j++
+                            }
+                            else{
+                                temporary.push(punchline[i][j]);
+                            }
+                        }
+                            temporary = temporary.join('');
+                            result2.push(temporary);
+                        }   
+                        for (let ij = 0; ij < result2.length; ij++) {
+                            if (result2[ij] != '') {
+                                war2.push(result2[ij])
+                            }
+                        }
+                        war = war.join(' ')
+                        war2 = war2.join(' ')
+                        let div = document.createElement('div');
+                        div.className = 'div'
+                        document.body.appendChild(div)
+                        let p_1 = document.createElement('p');
+                        p_1.innerText = war;
+                        p_1.style.color = 'blue'
+                        div.appendChild(p_1);
+                        let p_2 = document.createElement('p');
+                        p_2.innerText = war2;
+                        p_2.style.color = 'red' 
+                        div.appendChild(p_2);
+                    }
+                })
+            })
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,195 @@
+<html>
+    <head>
+        <title>Drag</title>
+        <style>
+
+            body{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                display: flex;
+                gap: 2vw;
+                align-items: start;
+            }
+            #bossone{
+                background-color: green;
+                align-items: center;
+                width: 5vw;
+                display: flex;
+                flex-direction: column;
+                gap: 1vw;
+                border-radius: 20px;
+                padding: 2vw;
+                font-size: 1vw;
+            }
+            #bosstwo{
+                background-color: aqua;
+                align-items: center;
+                width: 5vw;
+                display: flex;
+                flex-direction: column;
+                gap: 1vw;
+                border-radius: 20px;
+                padding: 2vw;
+                font-size: 1vw;
+            }
+            #div1{
+                cursor: pointer;
+                user-select: none;
+                background-color: blue;
+                width: 5vw;
+                height: 2vw;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+            }
+            #div2{
+                cursor: pointer;
+                user-select: none;
+                background-color: blue;
+                width: 5vw;
+                height: 2vw;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+            }
+            #div3{
+                cursor: pointer;
+                user-select: none;
+                background-color: blue;
+                width: 5vw;
+                height: 2vw;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+            }
+            #div4{
+                cursor: pointer;
+                user-select: none;
+                background-color: blue;
+                width: 5vw;
+                height: 2vw;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+            }
+            #div5{
+                cursor: pointer;
+                user-select: none;
+                background-color: blue;
+                width: 5vw;
+                height: 2vw;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+            }
+            #div6{
+                cursor: pointer;
+                user-select: none;
+                background-color: blue;
+                width: 5vw;
+                height: 2vw;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div id="bossone">
+            <div id="div1" draggable="true">Яблоко</div>
+            <div id="div2" draggable="true">Груша</div>
+            <div id="div3" draggable="true">Орех</div>
+        </div>
+
+        <div id="bosstwo">
+            <div id="div4" draggable="true">Апельсин</div>
+            <div id="div5" draggable="true">Мандарин</div>
+            <div id="div6" draggable="true">Грейфрут</div>
+        </div>
+
+        <script>
+
+            let bossone = document.getElementById('bossone');
+            let bosstwo = document.getElementById('bosstwo');
+            let div1 = document.getElementById('div1');
+            let div2 = document.getElementById('div2');
+            let div3 = document.getElementById('div3');
+            let div4 = document.getElementById('div4');
+            let div5 = document.getElementById('div5');
+            let div6 = document.getElementById('div6');
+
+            bossone.addEventListener('dragover', (e)=>{
+                e.preventDefault();
+            });
+
+            bosstwo.addEventListener('dragover', (e)=>{
+                e.preventDefault();
+            });
+
+            div1.addEventListener('dragover', (e)=>{
+                console.log("Перемещение...");
+            });
+
+            div1.addEventListener('dragend', (e)=>{
+                let id1 = div1.id;
+                console.log(id1)
+                let text1 = div1.innerText;
+                div1.remove();
+                div1 = document.createElement('div');
+                div1.id = id1;
+                div1.innerText = text1;
+                bosstwo.appendChild(div1);
+                div1.draggable = true;
+                console.log("Сброс...");
+            });
+
+            div2.addEventListener('dragover', (e)=>{
+                console.log("Перемещение...");
+            });
+
+            div2.addEventListener('dragend', (e)=>{
+                let id2 = div2.id
+                let text2 = div2.innerText;
+                div2.remove();
+                div2 = document.createElement('div');
+                div2.id = id2;
+                div2.innerText = text2;
+                bosstwo.appendChild(div2);
+                div2.draggable = true;
+                console.log("Сброс...");
+            });
+
+            div3.addEventListener('dragover', (e)=>{
+                console.log("Перемещение...");
+            });
+
+            div3.addEventListener('dragend', (e)=>{
+                let id3 = div3.id;
+                let text3 = div3.innerText;
+                div3.remove();
+                div3.draggable = true
+                div3 = document.createElement('div');
+                div3.id = id3;
+                div3.innerText = text3;
+                bosstwo.appendChild(div3);
+                div3.draggable = true;
+                console.log("Сброс...");
+            });
+
+        </script>
+
+    </body>
+</html>

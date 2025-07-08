@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <script>
+
+            function min(a, b){// задача 1 функции
+                if (a > b) {
+                    console.log(b)
+                }
+                else if (a == b) {
+                    console.log(a, b)
+                }
+                else{
+                    console.log(a)
+                }
+            }
+            
+            min(3,1)
+
+            function pow(x, n) {
+                let result = x;
+                for (let i = 1; i < n; i++) {
+                    result *= x;
+                }
+                return result;
+            } 
+
+
+            let cons = pow(3, 3)
+            console.log(cons)
+
+        </script>
+    </body>
+</html>

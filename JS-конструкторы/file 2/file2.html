@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <style>
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+            }
+            .form{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                gap: 1vw;
+            }
+            .lb1{
+                font-size: 2rem;
+            }
+            .none{
+                width: 5vw;
+                height: 5vw;
+                font-size: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form" id="form">
+            <label class="lb1">Ширина</label>
+            <input type='number' id = 'shirina'>
+            <label class="lb1">Длина</label>
+            <input type='number' id = 'dlina'>
+            <button id="button">Вычислить S и P</button>
+        </div>
+        <p id='p'></p>
+        <p id='plo'></p>
+        <div id="figure"></div>
+        <script>
+
+            let d = document.getElementById('dlina')
+
+            let s = document.getElementById('shirina')
+
+            let button = document.getElementById('button');
+
+            class Rectangle {
+                    constructor(width, heigth){
+                        this.width = width;
+                        this.height = heigth;
+                    }
+                    getArea(){
+                        return this.width * this.height
+                    }
+                    getPerimeter(){
+                        return 2 * (this.width + this.height);
+                    }
+            }
+
+            button.addEventListener('click', function(){
+
+                d = d.value
+                s = s.value
+                let r = new Rectangle(d, s);
+                let Peri = r.getPerimeter();
+                let Plosh = r.getArea();
+
+                let plo = document.getElementById("plo")
+                plo.innerText = 'S = ' + Plosh
+
+                let p = document.getElementById("p")
+                p.innerText = 'P = ' + Peri
+
+                let figure = document.getElementById('figure')
+                figure.style.width = d
+                figure.style.height = s
+
+            })
+            
+        </script>
+    </body>
+</html>

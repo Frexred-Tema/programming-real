@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <style>
+
+            .head{
+                display: flex;
+                flex-direction: column;
+            }
+            body{
+                width: 16vw;
+            }
+            .first-title{
+                font-size: 2rem;
+            }
+            .first-line{
+                width: 16vw;
+                height: 2px;
+                background-color: black;
+            }
+            .gray-line{
+                background-color: gray;
+                width: 16vw;
+                height: 2px;
+            }
+            .first-avatar{
+                width: 3vw;
+                height: 3vw;
+                border-radius: 20px;
+            }
+            .pre-first-one{
+                display: flex;
+                flex-direction: column;
+            }
+            .first-one{
+                display: flex;
+                gap: 1vw;
+                padding-top: 1vw;
+            }
+            .name-one-time{
+                display: flex;
+                gap: 5px;
+            }
+            .second_one{
+                padding-top: 1vw;
+                display: flex;
+                gap: 1vw;
+            }
+            .name-two-time{
+                display: flex;
+                flex-direction: column;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <div class = 'head' id="head">
+            <p class="first-title">Medium Daily Digest</p>
+            <div class="first-line"></div>
+            <p class="second-title">TODAY'S HIGHLIGHTS</p>
+            <div class="gray-line"></div>
+            <div class="first-one">
+                <img class="first-avatar" src="https://forum.service-cm.ru/media/kunena/avatars/users/avatar906.jpg">
+                <div class="pre-first-one">
+                    <div class="name-one-time">
+                        <p>Anthony Gordon 5 min read</p>
+                    </div>
+                    <p>My 2024 MacBook Setup for Softawre Development</p>
+                    <p>Here's an insight intp my setup, workflow and tools to build software</p>
+                </div>
+            </div>
+            <div class="gray-line"></div>
+        </div>
+
+        <script>
+
+            class Daily {
+                constructor(){
+                    this.imageUrl = "";
+                    this.title = "";
+                    this.text = "";
+                    this.userName = "";
+                    this.avatarUrl = "";
+                }
+                addToDocument(){
+                    let head = document.getElementById('head') 
+
+                    let line = document.createElement('div')
+                    line.className = 'gray-line'
+                    head.appendChild(line)
+
+                    let second_card = document.createElement('div')
+                    second_card.className = "second_one"
+                    head.appendChild(second_card)
+
+                    let avatar = document.createElement('img')
+                    avatar.className='first-avatar'
+                    avatar.src = this.avatarUrl;
+                    second_card.appendChild(avatar)
+                    
+                    let div1 = document.createElement('div')
+                    div1.className = 'pre-first-one'
+                    second_card.appendChild(div1)
+
+                    let div11 = document.createElement('div')
+                    div11.className = 'name-two-time'
+                    div1.appendChild(div11)
+
+                    let p1 = document.createElement('p')
+                    p1.innerText = this.userName
+                    div11.appendChild(p1)
+
+                    let p2 = document.createElement('p')
+                    p2.innerText = this.title
+                    div11.appendChild(p2)
+                    
+                    let p3 = document.createElement('p')
+                    p3.innerText = this.text
+                    div11.appendChild(p3)
+                }
+            }
+            
+            let card = new Daily()
+            card.avatarUrl = 'https://avatars.mds.yandex.net/i?id=1fdc8d3372073143a64afab8d443cc8c37104d85-5546794-images-thumbs&n=13'
+            card.userName = 'Axel Casas, PhD Candidate in Python in plain English'
+            card.title = 'Stop Doing Tutorials. Learn Programming Like This'
+            card.text = 'Learn programming faster and better'
+            card.addToDocument()
+
+            let card2 = new Daily()
+            card2.avatarUrl = 'https://avatars.mds.yandex.net/i?id=1fdc8d3372073143a64afab8d443cc8c37104d85-5546794-images-thumbs&n=13'
+            card2.userName = 'Axel Casas, PhD Candidate in Python in plain English'
+            card2.title = 'Stop Doing Tutorials. Learn Programming Like This'
+            card2.text = 'Learn programming faster and better'
+            card2.addToDocument()
+
+            let card3 = new Daily()
+            card3.avatarUrl = 'https://avatars.mds.yandex.net/i?id=1fdc8d3372073143a64afab8d443cc8c37104d85-5546794-images-thumbs&n=13'
+            card3.userName = 'Axel Casas, PhD Candidate in Python in plain English'
+            card3.title = 'Stop Doing Tutorials. Learn Programming Like This'
+            card3.text = 'Learn programming faster and better'
+            card3.addToDocument()
+        </script>
+    </body>
+</html>

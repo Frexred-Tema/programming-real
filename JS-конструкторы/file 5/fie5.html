@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <style>
+            .blasck{
+                display: flex;
+                flex-direction: column;
+                padding-right: 75%;
+                text-align: left;
+                gap: 1vw;
+            }
+            .abc{
+                width: 5vw;
+                height: 2.5vw;
+            }
+            td{
+                border: 1px solid black;
+                margin: 0;
+                padding: 0;
+            }
+            .talbe{
+                border: 1px solid black;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body> 
+        <form class="blasck">
+            <input id="in1" type="text" placeholder="Введите Имя">
+            <input id="in2" type="text" placeholder="Введите Фамилию">
+            <input id="in3" type="text" placeholder="Введите статус">
+        </form>
+        <button class="abc" id="abc">Register</button>
+        <table class="table" id = 'list'>
+            
+        </table>
+        <script>
+            let button = document.getElementById('abc')
+            let table = document.getElementById('list')
+            let mass = []
+            class User{
+                constructor(firstName, secondName, status) {
+                    this.firstName = firstName
+                    this.secondName = secondName 
+                    this.status = status
+                }
+                Register(td1, td2, td3){
+                    td1.innerText = this.firstName
+                    td2.innerText = this.secondName
+                    td3.innerText = this.status
+                }
+            }
+            button.addEventListener('click', function(){
+                let input1 = document.getElementById('in1')
+                let input2 = document.getElementById('in2')
+                let input3 = document.getElementById('in3')
+                let tr = document.createElement('tr')
+                table.appendChild(tr)
+                let td1 = document.createElement('td')
+                tr.appendChild(td1)
+                let td2 = document.createElement('td')
+                tr.appendChild(td2)
+                let td3 = document.createElement('td')
+                tr.appendChild(td3)
+                let abc = new User(input1.value, input2.value, input3.value);
+                abc.Register(td1, td2, td3)
+                mass.push(abc)
+            })
+        </script> 
+    </body>
+</html>

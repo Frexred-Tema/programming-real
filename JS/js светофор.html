@@ -1,0 +1,115 @@
+<head>
+    <style>
+        .big{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1vw;
+            padding: 3vw;
+            width: 6vw;
+            height: 16vw;
+            background-color: black;
+        }
+        .red{
+            width: 5vw;
+            height: 5vw;
+            border-radius: 20px;
+            background-color: red;
+        }
+        .yellow{
+            width: 5vw;
+            height: 5vw;
+            background-color: yellow;
+            border-radius: 20px;
+        }
+        .green{
+            width: 5vw;
+            height: 5vw;
+            background-color: green;
+            border-radius: 20px;
+        }
+        .gray{
+            width: 5vw;
+            height: 5vw;
+            background-color: gray;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<html>
+    <body>
+        <script>
+
+            let big = document.createElement("div")
+            big.className = "big"
+            document.body.appendChild(big)
+
+            let red = document.createElement("div")
+            red.className = "red"
+            big.appendChild(red)
+
+            let yellow = document.createElement("div")
+            yellow.className = "gray"
+            big.appendChild(yellow)
+
+            let green = document.createElement("div")
+            green.className = "gray"
+            big.appendChild(green)
+
+            red.addEventListener('click', function(){
+                if (red.className == "red") {
+                    red.className = "gray"
+                    yellow.className = "yellow"
+                    green.className = "gray"
+                }
+                else if (green.className == "green") {
+                    green.className = "gray"
+                    red.className = "red"
+                    yellow.className = "gray"
+                }
+                else if (yellow.className == "yellow") {
+                    yellow.className = "gray"
+                    green.className = "green"
+                    red.className = "gray"
+                }
+            })
+
+            yellow.addEventListener('click', function(){
+                if (yellow.className == "yellow") {
+                    yellow.className = "gray"
+                    green.className = "green"
+                    red.className = "gray"
+                }
+                else if (red.className == "red") {
+                    red.className = "gray"
+                    yellow.className = "yellow"
+                    green.className = "gray"
+                }
+                else if (green.className == "green") {
+                    green.className = "gray"
+                    red.className = "red"
+                    yellow.className = "gray"
+                }
+                
+            })
+
+            green.addEventListener('click', function(){
+                if (green.className == "green") {
+                    green.className = "gray"
+                    red.className = "red"
+                    yellow.className = "gray"
+                }
+                else if (yellow.className == "yellow") {
+                    yellow.className = "gray"
+                    green.className = "green"
+                    red.className = "gray"
+                }
+                else if (red.className == "red") {
+                    red.className = "gray"
+                    yellow.className = "yellow"
+                    green.className = "gray"
+                }
+            })
+        </script>
+    </body>
+</html>

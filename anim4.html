@@ -1,0 +1,130 @@
+<html>
+	<head>
+		<style>
+			input{
+				display: none; 
+			}
+			.formatemirlana{
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+			.a{
+				width: 5vw;
+				height: 4vh;
+				border-radius: 10px;
+				background: red;
+				border: 5px solid black;
+			}
+			#a{
+				animation-name: a;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+			}
+			@keyframes a{
+				from{
+					background: rgb(221, 221, 221);
+				}
+				50%{
+					background: rgb(51, 73, 96);
+				}
+				to{
+					background: rgb(221, 221, 221);
+				}
+			}
+			.b{
+				width: 2vw;
+				height: 4vh;
+				border-radius: 20px;
+				background-color: red;
+				border: 2px solid black;
+			}
+			#b{
+				animation-name: b;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+			}
+			@keyframes b {
+				from{
+					width: 2vw;
+				height: 4vh;
+				border-radius: 10px 0 0 10px;
+				background-color: rgb(127, 140, 156);
+				}
+				50%{
+					width: 2vw;
+				margin-left: 3vw;
+				height: 4vh;
+				border-radius: 0 10px 10px 0;
+				background-color: rgb(32, 209, 180);
+			}
+				to{
+					width: 2vw;
+				height: 4vh;
+				border-radius: 10px 0 0 10px;
+				background-color: rgb(127, 140, 156);
+				}
+			}
+			label{	
+				display: block;
+				width: 5vw;
+				height: 4vh;
+				cursor: pointer;
+				/*background-color: white;*/
+				border: 2px solid black;
+				border-radius: 10px;
+			}
+			@keyframes label{
+				from{
+					background-color: red;
+				}
+				50%{
+					background-color: green;
+				}
+				to{
+					background-color: red;
+				}
+			}
+			#mc:checked ~ label{
+				animation-name: label;
+				animation-duration: 2s;
+			}
+			span{
+				display: block;
+				width: 30px;
+				height: 30px;
+				border-radius: 20px;
+				border: 2px solid black;
+				background-color: red;
+			}
+			input:checked ~ label span{
+				animation-name: game;
+				animation-duration: 2s;
+			}
+			@keyframes game{
+				from{
+					margin-left: 0;
+				}
+				50%{
+					margin-left: 50px;
+					background-color: green;
+				}
+				to{
+					margin-right: 50px;
+					background-color: red;
+				}
+			}
+		</style>
+	</head>
+	<body class="formatemirlana"> 
+		<div class="a" id="a">
+			<div class="b" id="b"></div>
+		</div>
+		<form>
+			<input type="checkbox" id="mc">
+			<label for="mc" id="label">
+				<span></span>
+			</label>
+		</form>
+	</body>
+</html>

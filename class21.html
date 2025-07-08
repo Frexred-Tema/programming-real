@@ -1,0 +1,242 @@
+<html>
+	<head>
+		<style>
+			.d1{
+				margin-left: 200px;
+				font-size: 2REM;
+			}
+			.CAR{
+				background-image: url("https://img.freepik.com/premium-vector/programmer-with-code-cat-on-book-and-coffee-vector-clip-art-illustration_138676-92.jpg");
+				background-size: cover;
+				height: 675px;
+				width: 1500px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				gap: 20px;
+			}
+			.d2{
+				border-color: blue;
+				background-color: rgb(254, 108, 92);
+			}
+			.imgflex1{
+				display: flex;
+				justify-content: space-around;
+				gap: 30px;
+			}
+			.imgflex2{
+				display: flex;
+				justify-content: space-around;
+				gap: 20px;
+				margin-top: 50px;
+			}
+			.b2{
+				font-size: 3.5rem;
+				
+			}
+			.b3{
+				font-size: 1.5rem;
+			}
+			.fl11{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			.f1{						
+				margin-left: 400px;
+				margin-right: 400px;
+				margin-bottom: 100px;
+			}
+			.s1{
+				font-size: 2rem;
+			}
+			.fl1{
+				display: flex;
+				justify-content: space-around;
+				color:white;
+				background-size: cover;4
+			}
+			.fl3{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				font-size: 1.2rem;
+				color: gray;
+				margin-top:100px;
+			}
+			.sc1{
+				margin-left: 500px;
+				margin-top: 100px;
+				margin-bottom: 100px;
+			}
+			.fle1{
+				width: 450px;
+				height: 400px;
+			}
+			.fle2{
+				width: 450px;
+				height: 400px;
+			}
+			.fle3{
+				width: 450px;
+				height: 400px;
+			}
+			.fle4{
+				width: 450px;
+				height: 400px;
+			}
+			.fle5{
+				width:450px;
+				height: 400px;
+			}
+			.fle6{
+				width: 450px;
+				height: 400px;
+			}
+			.show{
+				font-size: 2rem;
+			}
+			.con{
+				margin-left: 100px;
+				color: gray;
+			}
+			.s1{
+				margin-top: 100px;
+			}
+			.u{
+				color:blue;
+			}
+			.image1{
+				width: 100px;
+				height: 100px;
+				background-image: url("https://e7.pngegg.com/pngimages/682/99/png-clipart-mobile-phones-telephone-call-mobile-phone-logo-miscellaneous-angle.png");
+				background-size: cover;
+			}
+			.image2{
+				width: 100px;
+				height: 100px;
+				background-image: url("https://e7.pngegg.com/pngimages/383/35/png-clipart-microphone-megaphone-loudspeaker-computer-icons-horn-loudspeaker-microphone-logo-thumbnail.png");
+				background-size: cover;
+			}
+			.image3{
+				width: 100px;
+				height: 100px;
+				background-size: cover;
+				background-image:url("data:image/jpeg;base64,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");
+			}
+			.card{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.p{
+				text-align: center;
+				margin: 0;
+			}
+			.flex{
+				display: flex;
+				gap: 20px;
+			}
+			.down{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				background-image: url("https://cdn-trans.info/uploads/2020/09/642b6b185ea18cbf65f515eef9d.jpg");
+				background-size: cover;
+				gap: 25px;
+			}
+			input{
+				background:transparent;
+				background-size: cover;
+			}
+			.frexred4{
+				border-color: blue;
+				margin-left: 130px;
+				width: 40px;
+				border-radius: 5px 5px 5px 5px;
+			}
+			.frexred3{
+				width: 175px;
+				height: 75px;
+				border-color: gray;
+				border-radius: 5px 5px 5px 5px;
+				width: 330px;
+			}
+			.frexred2{
+				border-color: gray;
+				border-radius: 5px 5px 5px 5px;
+				width: 330px;
+			}
+			.frexred1{
+				border-color: gray;
+				border-radius: 5px 5px 5px 5px;
+				width: 330px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="d1">STRICT</div>
+		<div class="CAR">
+			<div class="b2"><u class="u">STRICT</u></div>
+			<div class="b3">be strict its not good</div>
+			<button class="d2">Call to action</button>
+		</div>
+		<div class="fl11">
+			<div class="s1">SIMPLE & Pure Desigh</div>
+			<div class="f1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+		</div>
+		<div class="flex">
+			<div class="card">
+				<div class="image1"></div>
+				<p>optimized for all devisec</p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			</div>
+			<div class="card">
+				<div class="image2"></div>
+				<p>clean and minimal disign</p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			</div>
+			<div class="card">
+				<div class="image3"></div>
+				<p>font awesome icon</p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			</div>
+		</div>
+		<div class="sc1">
+			<div class="show">SHOWCASE your work lke a pro</div>
+			<div class="con">contact me if you like my project</div>
+		</div>
+		<div class="imgflex1">
+			<img class="fle1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Shishkin%2C_Ivan_-_Morning_in_a_Pine_Forest.jpg/400px-Shishkin%2C_Ivan_-_Morning_in_a_Pine_Forest.jpg">
+			<img class="fle2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBq5KwSNfi570z_JGbAPVOcoSrtMJbtxN1_A&usqp=CAU">
+			<img class="fle3" src="https://flomaster.club/uploads/posts/2022-06/1655824820_1-flomaster-club-p-kartini-na-temu-priroda-krasivo-1.jpg">
+		</div>
+		<div class="imgflex2">
+			<img class="fle4" src="https://i.pinimg.com/originals/48/2f/2a/482f2a31720098cecaf7c10450c67f4a.jpg">
+			<img class="fle5" src="https://sites.google.com/site/kartinyoprirode/_/rsrc/1366816433381/home/Polenov_Zolotay_osen.jpg?height=247&width=400">
+			<img class="fle6" src="https://www.art-vernissage.ru/media/cache/52/e8/52e8b0fe2768fb3fc4f6256627c159a1.jpg">
+		</div>
+		<div class="down">
+			<div>Stay with us </div>
+			<div class="frex">We wnsure quality and support</div>
+			<form class="frexred11">
+    			<input  class="frexred1" placeholder="password">
+    		</form>
+    		<form class="frexred22">
+    			<input  class="frexred2" placeholder="email">
+    		</form>
+    		<form class="frexred33">
+    			<input class="frexred3" placeholder="massage">
+    		</form>
+    		<form class="frexred44">
+    			<input type="checkbox" name="adaadsadasda">
+    			<label>Subscribe newsletter</label>
+    			<input class="frexred4" placeholder="send">
+     		</form>
+		</div>
+	</body>
+</html>
+		

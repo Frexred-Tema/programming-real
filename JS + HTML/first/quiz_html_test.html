@@ -1,0 +1,300 @@
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+                padding-left: 4vw;
+                padding-top: 3vh;
+                font-family: Roboto;
+            }
+            .d1 {
+                gap: 3vw;
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+                padding-top: 8vw;
+            }
+            .h{
+                font-size: 50px;
+                margin: 0;
+                padding: 0;
+            }
+            .ab{
+                font-size: 25px;
+                margin: 0;
+                padding: 0;
+            }
+            .abc{
+                font-size: 20px;
+                padding-left: 5vw;
+                margin: 0;
+                padding: 0;
+            }
+            .d2{
+                display: flex;
+                flex-direction: column;
+                padding-left: 5vw;
+                padding-block: 2vw;
+                gap: 2vw;
+                color: gray;
+            }
+            .d3{
+                display: flex;
+                justify-content: space-between;
+                padding-right: 10vw
+            }
+            .but{
+                width: 10vw;
+                height: 5vw;
+                font-size: 2vw;
+                background-color: rgb(4, 169, 109);
+                border-radius: 5px;
+                border: 0;
+                color: blanchedalmond;
+            }
+            .but:hover{
+                cursor: pointer;
+            }
+            .none{
+                display: none;
+            }
+            .visible{
+                display: flex;
+            }
+            .div4{
+                display: flex;
+            }
+            .last{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                font-size: 5vw;
+                color: greenyellow;
+                padding-top: 5vw;
+            }
+            .time{
+                border: 2px solid black;
+                padding: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                border-radius: 20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "last" class="none">
+            <p>The test is being checked, please wait, it will take a couple of minutes</p>
+        </div>
+        <div class="d1">
+            <p class="h">HTML Quiz</p> 
+            <p id="counter" class="ab"></p>
+            <p class="ab" id="Question">What does HTML stand for?</p> 
+        </div>
+        <form class="d2" id = "form">
+            <div>
+                <input type="radio" name="asd">
+                <label id="lb1">Hyperlinks and Text Markup Language</label>
+            </div>
+            <div>
+                <input type="radio" name="asd">
+                <label id="lb2">Home Tool Markup Language</label>
+            </div>
+            <div id='div3'class="div3">
+                <input type="radio" name="asd">
+                <label id="lb3">Hyper Text Markup Language</label>
+            </div>
+            <div class="div4" id="div4">
+                <input id ='ip4' class="none" type="radio" name="asd">
+                <label id="lb4"></label>
+            </div>
+        </form>
+        </div>
+        <div class="d3">
+            <button class="but" id="but">Next ˃</button>
+            <p id = 'time' class="time">0:0</p>
+        </div>
+        <script>
+            let Question = ["What does HTML stand for?",'Who is making the Web standards?', 'Choose the correct HTML element for the largest heading','What is the correct HTML element for inserting a line break?','What is the correct HTML for adding a background color?','Choose the correct HTML element to define important text','Choose the correct HTML element to define emphasized text','What is the correct HTML for creating a hyperlink?','Which character is used to indicate an end tag?','How can you open a link in a new tab/browser window?','Which of these elements are all <table> elements?','Inline elements are normally displayed without starting a new line.','How can you make a numbered list?','How can you make a bulleted list?','What is the correct HTML for making a checkbox?','What is the correct HTML for making a text input field?','What is the correct HTML for making a drop-down list?','What is the correct HTML for making a text area?','What is the correct HTML for inserting an image?','What is the correct HTML for inserting a background image?','An <iframe> is used to display a web page within a web page.','HTML comments start with <!-- and end with -->','Block elements are normally displayed without starting a new line.','Which HTML element defines the title of a document?','Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?','Which doctype is correct for HTML5?','Which HTML element is used to specify a footer for a document or section?','In HTML, you can embed SVG elements directly into an HTML page.','What is the correct HTML element for playing video files?','What is the correct HTML element for playing audio files?','The HTML global attribute, contenteditable is used to:','In HTML, onblur and onfocus are:','Graphics defined by SVG is in which format?','The HTML <canvas> element is used to:','In HTML, which attribute is used to specify that an input field must be filled out?','Which input type defines a slider control?','Which HTML element is used to display a scalar measurement within a range?','Which HTML element defines navigation links?','In HTML, what does the <aside> element define?','Which HTML element is used to specify a header for a document or section?']
+            let Answers = [["Home Tool Markup Language","Hyper Text Markup Language","Hyperlinks and Text Markup Language"],
+            ['Google','Mozilla','Microsoft','The World Wide Web Consortium'],
+            ['<h6>','<h1>','<heading>','<head>'],
+            ['<break>','<or>','<lb>'],
+            ['<background ›yellow</background>','<body bg="ye llow">','<body style= "background-color:yellow;">'],
+            ['<i>','<b>','<strong>','<important>'],
+            ['<italic>','<em >','<i>'],
+            ['<a url= "http://www.w3schools.com">W3Schools.com</a>','<a name="http://www.w3schools.com">W3Schools.com</a>','<a> http://www.w3schools.com</a>','<a href= "http://www.w3schools.com">W3Schools</a>'],
+            ['^','/','*','<'],
+            ['<a href="url" new>','<a href="url" target="_blank">','<a href="url" target= "new" >'],
+            ['‹table > <tr> <tt>','‹thead> < body> <tr>','‹table > < head > <tfoot>','< table > <tr> <td>'],
+            ['True','False'],
+            ['< list>','‹dl>','<ol>','<ul>'],
+            ['< list>','<ul>','‹ dl>','<ol>'],
+            ['< check>','<input type="check">','< input type="checkbox">','< checkbox>'],
+            ['< textfield >','<input type="text" >','< textinput type= "text">','< input type= "textfield">'],
+            ['<input type= "list">','< select>','< input type="dropdown" >','< list>'],
+            ['< input type= "textarea">','<input type= "textbox">','< textarea >'],
+            ['<img src="image.gif" alt="Mylmage" >','<img alt= "Mylmage"> image.gif </img>','<image src="image.gif" alt= "Mylmage">','< img href="image.gif" alt= "Mylmage" >'],
+            ['< background img="background.gif">','< body style="background-image:url(background.gif)">','<body bg="background.gif">'],
+            ['There is no such thing as an <iframe>','False','True'],
+            ['True','False'],
+            ['False','True'],
+            ['‹head>','< title>','< meta >'],
+            ['longdesc','title','alt','src'],
+            ['<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 5.0//EN"."http://www.w3.org/TR/html5/strict.dtd">','‹!DOCTYPE html>','‹!DOCTYPE HTML5>'],
+            ['< section>','< bottom >','< footer>'],
+            ['False','True'],
+            ['< media >','< movie>','‹video>'],
+            ['< audio >','‹mp3>','‹sound>'],
+            ['Specify whether the content of an element should be editable or not','Specifies a context menu for an element. The menu appears when a user right-clicks onthe element','Update content from the server','Return the position of the first found occurrence of content inside a string'],
+            ['Style attributes','HTML elements','Event attributes'],
+            ['HTML','CSS','XML'],
+            ['draw graphics','create draggable elements','display database records','manipulate data in MySQL'],
+            ['placeholder','validate','formvalidate','required'],
+            ['slider','search','range','controls'],
+            ['< gauge>','< range>','< meter>','< measure >'],
+            ['‹ navigation>','< nav>','< navigate>'],
+            ['The ASCII character-set; to send information between computers on the Internet','A navigation list to be shown at the left side of the page','Content aside from the page content'],
+            ['‹header>','‹head>','<section>','<top>']]
+ 
+            let but = document.getElementById('but')
+
+            let div4 = document.getElementById('div4')
+
+            let div3 = document.getElementById('div3')
+
+            let ip4 = document.getElementById('ip4')
+            
+            let i = 1
+
+            let score = 0
+            
+            let bruh = 1
+
+            let counter = document.getElementById('counter')
+
+            counter.innerText = 'Question ' +  bruh + ' of 40:' 
+
+            let Que = document.getElementById('Question')
+
+            let second = 0
+            let minutes = 0
+            let Timerinterval
+            let isStarted = false
+            let time = document.getElementById("time")
+
+            but.addEventListener('click', function(){
+                if (!isStarted) {
+                    isStarted = true
+                    Timerinterval = setInterval(function(){
+                        second++
+                        time.innerText = minutes + ':' + second
+                        if ( second > 58) {
+                            second = -1
+                            minutes++
+                        }  
+                    }, 1000)
+                }
+                if (isStarted && bruh == 40) {
+                    isStarted = false 
+                    clearInterval(Timerinterval)
+                }
+            })
+            
+            but.addEventListener('click', function(){
+                bruh+=1
+                if (Answers[i].length == 4) {
+                    Que.innerText = Question[i]
+
+                    let label1 = document.getElementById('lb1')
+                    label1.innerText = Answers[i][0]
+
+                    let label2 = document.getElementById('lb2')
+                    label2.innerText = Answers[i][1]
+                    
+                    div3.className = 'visible'
+                    let label3 = document.getElementById('lb3')
+                    label3.innerText = Answers[i][2]
+
+                    let label4 = document.getElementById('lb4')
+                    div4.className = 'visible'
+                    ip4.className = 'visible'
+                    label4.innerText = Answers[i][3]
+
+                    counter.innerText = 'Question ' +  bruh + ' of 40:'
+
+                    i+=1
+                }
+                else if (Answers[i].length == 3) {
+                    Que.innerText = Question[i]
+
+                    let label1 = document.getElementById('lb1')
+                    label1.innerText = Answers[i][0]
+
+                    let label2 = document.getElementById('lb2')
+                    label2.innerText = Answers[i][1]
+
+                    let label3 = document.getElementById('lb3')
+                    
+                    label3.innerText = Answers[i][2]
+
+                    div4.className = 'none'
+
+                    counter.innerText = 'Question ' +  bruh + ' of 40:'
+
+                    i+=1
+                }
+                else if (Answers[i].length == 2) {
+                    Que.innerText = Question[i]
+                    
+                    let label1 = document.getElementById('lb1')
+                    label1.innerText = Answers[i][0]
+
+                    let label2 = document.getElementById('lb2')
+                    label2.innerText = Answers[i][1]
+
+                    div3.className = 'none'
+
+                    div4.className = 'none'
+
+                    counter.innerText = 'Question ' +  bruh + ' of 40:'
+
+                    i+=1
+                }
+                if (bruh == 40) {
+                    let last = document.getElementById('last')
+                    last.className = 'last'
+                    isStarted = false
+                    clearInterval(Timerinterval)
+                }
+            })
+            let myJson;
+                fetch("quiz.json"). then((r) => {
+                    console.log ("then 1")
+                    return r.json();
+                 }).then((d) => {
+                    myJson = d;
+                    console.log(myJson)
+                    let keys = Object.keys(myJson)
+                    for (let i = 0; i < keys.length; i++) {
+                        let row = myJson[keys[i]]
+                        let data1 = document.createElement('div')
+                        data1.className  = 'abc'
+                        document.body.appendChild(data1)
+                        let pp1 = document.createElement('p')
+                        pp1.innerText = row['question']
+                        console.log(row['correct'])
+                        for (let j=0; j < row['answers'].length; j++) {
+                            console.log(row['answers'][j])
+                        }
+                    }
+                }).catch((e) => {
+                    console.log("catch")
+                    console.log(e);
+                });
+                
+        </script>
+    </body>
+</html>

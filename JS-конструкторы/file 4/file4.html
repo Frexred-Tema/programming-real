@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        class Div{
+            constructor(color) {
+                this.color = color
+                this.div = document.createElement('div')
+                document.body.appendChild(this.div)
+            }
+        }
+        class Square extends Div{
+            constructor(color, storona){
+                super(color);
+                this.storona = storona
+                let abc = document.createElement('div')
+                this.div.appendChild(abc)
+                abc.style.backgroundColor = this.color
+                abc.style.height = this.storona+'vw'
+                abc.style.width = this.storona+'vw'
+            }
+        }
+        class Rectangle extends Div{
+            constructor(color, width, heigth){
+                super(color);
+                this.width = width
+                this.heigth = heigth
+                let abc = document.createElement('div')
+                this.div.appendChild(abc)
+                abc.style.backgroundColor = this.color
+                abc.style.height = this.heigth+'vw'
+                abc.style.width = this.width+'vw'
+                abc.style.marginTop = 5+'vw' 
+            }
+        }
+        class Circle extends Div{
+            constructor(color, radius){
+                super(color);
+                this.radius = radius
+                let abc = document.createElement('div')
+                this.div.appendChild(abc)
+                abc.style.backgroundColor = this.color
+                abc.style.height = this.radius+'vw'
+                abc.style.width = this.radius+'vw'
+                abc.style.borderRadius = 50 + '%'
+            }
+        }
+
+        let square = new Square('green', 10)
+        let rectangle = new Rectangle('black', 10, 5)
+        let circle = new Circle('red', 8)
+
+    </script>
+</body>
+</html>

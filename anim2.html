@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<style>
+			.a{
+				margin-left: 50%;
+				margin-top: 25%;
+			}
+			#a{
+				animation-duration: 4s;
+				animation-name: a;
+				animation-iteration-count: infinite;
+				background-color: black;
+				width: 5vw;
+				height: 5vw;
+			}
+			@keyframes a{
+				from{
+					transform: rotate(90deg) scale(1.0);
+				}
+				25%{
+					transform: rotate(180deg) scale(1.0);
+				}
+				25.1%{
+					transform: rotate(180deg) scale(1.5);
+				}
+				50%{
+					transform: rotate(270deg);
+					width: 5vw;
+					height: 5vw;
+				}
+				51%{
+					transform: rotate(270deg) scale(1.5);
+					width: 7vw;
+					height: 7vw;
+				}
+				75%{
+					transform: rotate(360deg);
+					width: 5vw;
+					height: 5vw;
+				}
+				76%{
+					transform: rotate(360deg) scale(1.5);
+					width: 7vw;
+					height: 7vw;
+				}
+				to{
+					transform: rotate(90deg);
+					width: 5vw;
+					height: 5vw;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="a" id="a"></div>
+	</body>
+</html>

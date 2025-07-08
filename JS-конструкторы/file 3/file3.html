@@ -1,0 +1,191 @@
+<html>
+    <head>
+        <style>
+            body{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                background-image: url('https://cdn.culture.ru/images/41212575-b352-52f7-ac9c-919414407597');
+                background-size: cover;
+                padding: 0;
+                margin: 0;
+            }
+            .line{
+                width: 100%;
+                height: 2px;
+                background-color: grey;
+            }
+            .forms{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                gap: 1vw;
+                padding-top: 1vw;
+            }
+            .titles{
+                font-size: 2vw;
+                font-family: sans-serif;
+            }
+            .button{
+                width: 6vw;
+                height: 2vw;
+            }
+            .white-backround{
+                background-color: aliceblue;
+                width: 70%;
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="white-backround">
+            <p class="titles">Квадрат</p>
+            <form class="forms" id='square'>
+                <label></label>
+                <input type='number' id = 'square-value'>
+            </form>
+            <button id="button-first" class="button">Найти P и S</button>
+            <p id="Squares-P"></p>
+            <p id="Squares-S"></p>
+            <div class="line"></div>
+            <p class="titles">Прямоуголники</p>
+            <form class="forms" id="rectangle">
+                <label></label>
+                <input type='number' id = 'rectangle-value-one'>
+                <label></label>
+                <input type='number' id = 'rectangle-value-two'>
+            </form>
+            <button id="button-second" class="button">Найти P и S</button>
+            <p id="Rectangles-P"></p>
+            <p id="Rectangles-S"></p>
+            <div class="line"></div>
+            <p class="titles">Треугольники</p>
+            <form class="forms" id="triangle">
+                <label>Введите длину стороны AB.</label>
+                <input type='number' id = 'triangle-value-one'>
+                <label>Введите длину стороны BC.</label>
+                <input type='number' id = 'triangle-value-two'>
+                <label>Введите длину стороны CA.</label>
+                <input type='number' id = 'triangle-value-three'>
+            </form>
+            <button id="button-third" class="button">Найти P и S</button>
+            <p id ='triangles-P'></p>
+            <p id="triangles-S"></p>
+            <div class="line"></div>
+            <p class="titles">Круги</p>
+            <form class="forms" id="circle">
+                <label>Введите радиус круга.</label>
+                <input type='number' id = 'circle-value'>
+            </form>
+            <button id="button-fourst" class="button">Найти P и S</button>
+            <p id="circle-P"></p>
+            <p id="circle-S"></p>
+        </div>
+        <script>
+            class Square {
+                constructor(width) {
+                    this.width = width
+                }
+                findSquareoOne(){
+                    return this.width*4
+                }
+                findSquareoTwo(){
+                    return this.width* this.width
+                }
+            }
+            class Rectangle {
+                constructor(width, heigth) {
+                    this.width = width
+                    this.heigth = heigth
+                }
+                findRectangleOne(){
+                    return 2*(this.width + this.heigth)
+                }
+                findRectangleTwo(){
+                    return this.width * this.heigth
+                }
+            }
+            class Triangle {
+                constructor(ab, bc, ca) {
+                    this.ab = ab
+                    this.bc = bc
+                    this.ca = ca
+                }
+                findTrianglesOne(){
+                    return this.ab + this.bc + this.ca
+                }
+            }
+            class Circle {
+                constructor(radius) {
+                    this.radius = radius
+                }
+                findCircleOne(){
+                    return 2*3,14*this.radius
+                }
+                findCircleTwo(){
+                    return 3,14*this.radius*this.radius
+                }
+            }
+            let button_first = document.getElementById('button-first')
+            button_first.addEventListener('click', function(){
+                let square_value = document.getElementById('square-value')
+                square_value = Number(square_value.value)
+                let abc = new Square(square_value)
+                let findP = abc.findSquareoOne()
+                let findS = abc.findSquareoTwo()
+                let P = document.getElementById('Squares-P')
+                P.innerText = 'Периметр квадрата ' + findP
+                let S = document.getElementById('Squares-S')
+                S.innerText = 'Площадь квадрата ' + findS
+            })
+            let button_second = document.getElementById('button-second')
+            button_second.addEventListener('click', function(){
+                let rectangle_value_one = document.getElementById('rectangle-value-one')
+                rectangle_value_one = Number(rectangle_value_one.value)
+                let rectangle_value_two = document.getElementById('rectangle-value-two')
+                rectangle_value_two = Number(rectangle_value_two.value)
+                let abc = new Rectangle(rectangle_value_one, rectangle_value_two)
+                let findP = abc.findRectangleOne()
+                let findS = abc.findRectangleTwo()
+                let P = document.getElementById('Rectangles-P')
+                P.innerText = 'Периметр прямоугольника ' + findP
+                let S = document.getElementById('Rectangles-S')
+                S.innerText = 'Площадь прямоугольника ' + findS
+            })
+            let button_third = document.getElementById('button-third')
+            button_third.addEventListener('click', function(){
+                let triangle_value_one = document.getElementById("triangle-value-one")
+                let triangle_value_two = document.getElementById("triangle-value-two")
+                let triangle_value_three = document.getElementById("triangle-value-three")
+                triangle_value_one = Number(triangle_value_one.value)
+                triangle_value_two = Number(triangle_value_two.value)
+                triangle_value_three = Number(triangle_value_three.value)
+                let abc = new Triangle(triangle_value_one, triangle_value_two, triangle_value_three)
+                let findP = abc.findTrianglesOne();
+                let findS = findP/2
+                findS = Math.sqrt (findS*(findS-triangle_value_one)*(findS-triangle_value_two)*(findS-triangle_value_three));
+                let P = document.getElementById('triangles-P')
+                P.innerText = 'Перимерт треугольника ' + findP
+                let S = document.getElementById('triangles-S')
+                S.innerText = 'Площадь треугольника ' + findS
+            })
+            let button_fourst = document.getElementById('button-fourst')
+            button_fourst.addEventListener('click', function(){
+                let circle_value_one = document.getElementById("circle-value")
+                circle_value_one = Number(circle_value_one.value)
+                let abc = new Circle(circle_value_one)
+                let findP = abc.findCircleOne()
+                let findS = abc.findCircleTwo()
+                let P = document.getElementById('circle-P')
+                P.innerText = 'Периметр круга ' + findP
+                let S = document.getElementById('circle-S')
+                S.innerText = 'Площадь круга ' + findS
+            })
+        </script>
+    </body>
+</html>

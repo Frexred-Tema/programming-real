@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Features</title>
+	<style>
+		.first-flex-text{
+			display: flex;
+			align-items: center;
+			text-align: center;
+			font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+			gap: 1vw;
+			border-bottom: 1px solid lightgray;
+		}
+		.text-one{
+			font-size: 2vw;
+		}
+		.second-flex{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			padding-top: 5vw;
+			padding-bottom: 5vw;
+		}
+		.clava-img{
+			width: 100px;
+			height: 83px;
+		}
+		.muz-img{
+			width: 40px;
+			height: 40px;
+		}
+		.text-two{
+			font-size: 4vw;
+			font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+		}
+		.text-three{
+			font-size: 2vw;
+			width: 50vw;
+			color: gray;
+			font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+		}
+		.text-four{
+			font-size: 2vw;
+			font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+		}
+		.flex-in-second-flex{
+			display: flex;
+			align-items: center;
+			text-align: center;
+			gap: 0.5vw;
+		}
+		.therd_flex{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+			padding-top: 5vw;
+		}
+		.text_five{
+			font-size: 4vw;
+		}
+		.text_six{
+			font-size: 2vw;
+			width: 60vw;
+			color: gray;
+		}
+		.firstimg-img{
+			width: 60vw;
+		}
+		.fourst-flex{
+			padding-top: 10vw;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+		}
+		.first-in-fourst-flex{
+			display: flex;
+			gap: 2vw;
+			align-items: center;
+		}
+		.webps{
+			width: 25vw;
+			height: 15vw;
+		}
+		.in-fourst-flex{
+			width: 30vw;
+		}
+		.button-in-fourst-flex{
+			width: 15vw;
+			color: gray;
+			height: 2px;
+			border: 0;
+			padding: 0;
+		}
+		.title-fourst-flex{
+			font-size: 4vw;
+		}
+		.title-in-fourst-flex{
+			font-size: 2vw;
+		}
+		.p-in-foust-flex{
+			color: gray;
+		}
+		.dcs{
+			width: 25vw;
+		}
+		.fivest-flex{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			padding-inline: 25vw;
+			padding-top: 10vw;
+			gap: 5vw;
+			font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+		}
+		.div-in-fivest{
+			display: flex;
+			flex-direction: column;
+		}
+		.dives-in-5{
+			display: flex;
+			gap: 3vw;
+		}
+		.mini-titles-in-five{
+			font-size: 1.5vw;
+		}
+		.text-in-five-flex{
+			color: gray;
+			text-align: 0;
+		}
+		.flex-6{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+		}
+		.rdc{
+			width: 50vw;
+			height: ;
+		}
+		.p-flex-6{
+			font-size: 2vw;
+			color: gray;
+			padding-inline: 25vw;
+		}
+		.flex-7{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+		}
+		.grid-7{
+			display: flex;
+			gap: 2vw;
+		}
+		.pngs{
+			width: 5vw;
+			height: 5vw;
+		}
+		.flex-8{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			padding-inline: 15vw;
+			font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+		}
+		.f-in-f8{
+			display: flex;
+		}
+		.f1-in-f{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			gap: 2vw;
+			width: 30vw;
+		}
+		.g8-imgs{
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+		}
+		.big-in-f8{
+			display: flex;
+			flex-direction: column;
+			gap: 4vw;
+			padding-top: 5vw;
+		}
+		.title-in-f8{
+			font-size: 4vw;
+			color: dark;
+		}
+		.in-title-f8{
+			font-size: 2vw;
+			color: gray;
+		}
+		.title-mini{
+			font-size: 2vw;
+			color: rgb(21, 102, 200);
+		}
+		.text-f8{
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			text-align: center;
+		}
+		.title-f9{
+			font-size: 4vw;
+			color: dark;
+			font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+		}
+		.flex-9{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding-inline: 10vw;
+			font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+		}
+		.flex-in-f9{
+			display: flex;
+			justify-content: space-around;
+			gap: 5vw;
+		}
+		.mini-flex-in-flex-nine{
+			padding: 1vw;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+		.title-of-mini-flex{
+			font-size: 2vw;
+			margin: 0;
+		}
+		.gray-text{
+			color: gray;
+			margin: 0;
+		}
+		.black-button-first{
+			color: white;
+			width: 15vw;
+			height: 3vw;
+			border-radius: 15px;
+			background: linear-gradient(0deg, rgba(28,30,34,1) 0%, rgba(61,63,66,1) 100%);
+		}
+		.black-button-second{
+			color: white;
+			width: 7vw;
+			height: 3vw;
+			border-radius: 15px;
+			background: linear-gradient(0deg, rgba(28,30,34,1) 0%, rgba(61,63,66,1) 100%);
+		}
+		.white-button-first{
+			width: 15vw;
+			height: 3vw;
+			border-radius: 15px;
+			border: 1px solid gray;
+		}
+		.white-button-second{
+			width: 7vw;
+			height: 3vw;
+			border-radius: 15px;
+			border: 1px solid gray;
+		}
+		.flex-10{
+			display: flex;
+			justify-content: space-around;
+			gap: 2vw;
+			padding-inline: 10vw;
+			padding-top: 10vw;
+		}
+		.gray-last-in-f10{
+			color: gray;
+			font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+		}
+		.github{
+			font-size: 2vw;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<div class="first-flex-text">
+		<p class="text-one">Features</p>
+		<p>Actions</p>
+		<p>Packages</p>
+		<p>Security</p>
+		<p>Codespaces</p>
+		<p>Copilot</p>
+		<p>Code review</p>
+		<p>Search</p>
+		<p>Issues</p>
+		<p>Discussions</p>
+	</div>
+	<div class="second-flex">
+		<img class="clava-img" src="clava.png">
+		<p class="text-two">Write better code</p>
+		<p class="text-three">On GitHub, lightweight code review tools are built into every pull request. Your team can create review processes that improve the quality of your code and fit neatly into your workflow.</p>
+		<div class="flex-in-second-flex">
+			<img class="muz-img" src="muz.png">
+			<p class="text-four">See what's possible</p>
+		</div>
+	</div>
+	<div class="therd_flex">
+		<p class="text_five">Start with a pull request</p>
+		<p class="text_six">Pull requests are fundamental to how teams review and improve code on GitHub. Evolve projects, propose new features, and discuss implementation details before changing your source code.</p>
+	</div>
+	<div class="therd_flex">
+		<p class="text_five">Make a change</p>
+		<p class="text_six">Start a new feature or propose a change to existing code with a pull request-a base for your team to coordinate details and refine your changes.</p>
+		<p>Learn pull request fundementals ></p>
+		<img class="firstimg-img" src="firstimg.webp">
+	</div>
+	<div class="fourst-flex">
+		<p class="title-fourst-flex">See every update</p>
+		<div class="first-in-fourst-flex">
+			<div class="in-fourst-flex">
+				<img class="webps" src="secondimg.webp">
+				<p class="title-in-fourst-flex">Diffs</p>
+				<p class="p-in-foust-flex">Preview changes in context with your code to see what is being proposed. Side-by-side Diffs highlight added, edited, and deleted code right next to the original file, so you can easily spot chandes.</p>
+				<button class="button-in-fourst-flex"></button>
+				<p>Learn how to compare branches with diffs ></p>
+			</div>
+			<div class="in-fourst-flex">
+				<img class="webps" src="secondimg.webp">
+				<p class="title-in-fourst-flex">History</p>
+				<p class="p-in-foust-flex">Browse commits, comments, and references related to your pull request in a timeline-style interface. Your pull request will also highlight what's changed since you last checked.</p>
+				<button class="button-in-fourst-flex"></button>
+				<p>Pro-tip: You can search your commit history by keyword, committer, organization, and more.</p>
+			</div>
+			<div class="in-fourst-flex">
+				<img class="webps" src="therdimg.webp">
+				<p class="title-in-fourst-flex">Blame</p>
+				<p class="p-in-foust-flex">See what a file looked like before a particular change. With blame view, you can see how any portion of your file has evolved over time without viewing the file's full history.</p>
+				<button class="button-in-fourst-flex"></button>
+				<p>Pro-tip: Use git blame to trace the changes in a file.</p>
+			</div>
+		</div>
+	</div>
+	<div class="fivest-flex">
+		<p class="title-fourst-flex">DISCUSS CODE</p>
+		<div class="dives-in-5">
+			<img class="dcs" src="dc1.webp">
+			<div class="div-in-fivest">
+				<p class="mini-titles-in-five">Comments</p>
+				<p class="text-in-five-flex">On GitHub, conversations happen alongside your code. Leave detailed comments on code syntax and ask questions about structure inline.</p>
+			</div>
+		</div>
+		<div class="dives-in-5">
+			<img class="dcs" src="dc2.webp">
+			<div class="div-in-fivest">
+				<p class="mini-titles-in-five">Review requests</p>
+				<p class="text-in-five-flex">If you're on the other side of the code, requesting peer reviews is easy. Add users to your pull request, and they'll receive a notification letting them know you need their feedback.</p>
+			</div>
+		</div>
+		<div class="dives-in-5">
+			<img class="dcs" src="dc3.webp">
+			<div class="div-in-fivest">
+				<p class="mini-titles-in-five">Reviews</p>
+				<p class="text-in-five-flex">Save your teammates a few notifications. Bundle your comments into one cohesive review, then specify whether comments are required changes or just suggestions.</p>
+			</div>
+		</div>
+	</div>
+	<div class="flex-6">
+		<p class="title-fourst-flex">Resolve simple conflicts</p>
+		<p class="p-flex-6">You can't always avoid conflict. Merge pull requests faster by resolving simple merge conflicts on GitHub-no command line necessary.</p>
+		<img class="rdc" src="rdc.webp">
+		<p>Learn how to resolve merge conflicts on GitHub and using the command line.</p>
+	</div>
+	<div class="flex-7">
+		<p>Merge the highest quality code</p>
+		<p>Reviews can improve your code, but mistakes happen. Limit human error and ensure only high quality code gets merged with detailed permissions and status checks.</p>
+		<div class="grid-7">
+			<div>
+				<img class="pngs" src="icon1.png">
+				<p>Permissions</p>
+				<p>Give collaborators as much access as they need through your repository settings. You can extend access to a few teams and select which ones can read or write to your files. The options you have for permissions depend on your plan.</p>
+				<p>See plan options ></p>
+			</div>
+			<div>
+				<img class="pngs" src="icon2.png">
+				<p>Protected branches</p>
+				<p>Protected Branches help you maintain the integrity of your code. Limit who can push to a branch, and disable force pushes to specific branches. Then scale your policies with the Protected Branches API.</p>
+			</div>
+			<div>
+				<img class="pngs" src="icon3.png">
+				<p>Required status checks</p>
+				<p>Create required status checks to add an extra layer of error prevention on branches. Use the Status API to enforce checks and disable the merge button until they pass. To err is human; to automate, divine!</p>
+			</div>
+		</div>
+	</div>
+	<div class="flex-8">
+		<p class="title-in-f8">Bulletproof your review process</p>
+		<p class="in-title-f8"> Build on GitHub with review tools to avoid human error and add extra polish to your team's code with review tools.</p>
+		<div class="big-in-f8">
+			<div class="f-in-f8">
+				<div class="f1-in-f">
+					<img class="g8-imgs" src="f8-img1.webp">
+					<div class="text-f8">
+						<p class="title-mini">Codecov</p>
+						<p>Group, merge, archive and compare coverage reports</p>
+					</div>
+				</div>
+				<div class="f1-in-f">
+					<img class="g8-imgs" src="f8-img2.webp">
+					<div class="text-f8">
+						<p class="title-mini">Codacy</p>
+						<p>Automated code reviews to help developers ship better software, faster</p>
+					</div>
+				</div>
+			</div>
+			<div class="f-in-f8">
+				<div class="f1-in-f">
+					<img class="g8-imgs" src="f8-img3.webp">
+					<div class="text-f8">
+						<p class="title-mini">Coveralls</p>
+						<p>Ensure that new code is fully covered, and see coverage trends emerge</p>
+					</div>
+				</div>
+				<div class="f1-in-f">
+					<img class="g8-imgs" src="f8-img4.webp">
+					<div class="text-f8">
+						<p class="title-mini">CodeFactor</p>
+						<p>Automated Code Review for GitHub</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="flex-9">
+		<p class="title-f9">Get started</p>
+		<div class="flex-in-f9">
+			<div class="mini-flex-in-flex-nine">
+				<p class="title-of-mini-flex">Free</p>
+				<p class="gray-text">The basics for individuals</p>
+				<p class="gray-text">and organizations</p>
+				<p class="title-of-mini-flex">$0</p>
+				<p class="gray-text">per month</p>
+				<p class="gray-text">forever</p>
+				<button class="white-button-first">Join for free</button>
+			</div>
+			<div class="mini-flex-in-flex-nine">
+				<p class="title-of-mini-flex">Team</p>
+				<p class="gray-text">Advanced collaboration for</p>
+				<p class="gray-text">individuals and organizations</p>
+				<p class="title-of-mini-flex">$4̷$3.67</p>
+				<p class="gray-text">per user/month</p>
+				<p class="gray-text">for the first 12 months</p>
+				<button class="black-button-first">Continue with Team</button>
+			</div>
+			<div class="mini-flex-in-flex-nine">
+				<p class="title-of-mini-flex">Enterprise</p>
+				<p class="gray-text">Security, compliance,</p>
+				<p class="gray-text">and flexible deployment</p>
+				<p class="title-of-mini-flex">$21$19.25</p>
+				<p class="gray-text">per user/month</p>
+				<p class="gray-text">for the first 12 months'</p>
+				<div>
+					<button class="black-button-second">Start a free trial</button>
+					<button class="white-button-second">Contact Sales</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="flex-10">
+		<div class="flex-in-f10">
+			<p class="github">GitHub</p>
+			<p>Subscribe to our developer newsletter</p>
+			<p class="gray-last-in-f10">Get tips, technical guides, and best practices. Once a month. Right</p>
+			<p class="gray-last-in-f10">in your inbox.</p>
+			<button class="white-button-second">Subscribe</button>
+		</div>
+		<div class="flex-in-f10">
+			<p class="gray-last-in-f10">Product</p>
+			<p class="gray-last-in-f10">Features</p>
+			<p class="gray-last-in-f10">Enterprise</p>
+			<p class="gray-last-in-f10">Copilot</p>
+			<p class="gray-last-in-f10">Security</p>
+			<p class="gray-last-in-f10">Pricing</p>
+			<p class="gray-last-in-f10">Team</p>
+			<p class="gray-last-in-f10">Resources</p>
+			<p class="gray-last-in-f10">Roadmap</p>
+			<p class="gray-last-in-f10">Compare GitHub</p>
+		</div>
+		<div class="flex-in-f10">
+			<p class="gray-last-in-f10">Platform</p>
+			<p class="gray-last-in-f10">Developer API</p>
+			<p class="gray-last-in-f10">Partners</p>
+			<p class="gray-last-in-f10">Electron</p>
+			<p class="gray-last-in-f10">GitHub Desktop</p>
+		</div>
+		<div class="flex-in-f10">
+			<p class="gray-last-in-f10">Support</p>
+			<p class="gray-last-in-f10">Docs</p>
+			<p class="gray-last-in-f10">Community Forum</p>
+			<p class="gray-last-in-f10">Professional Services</p>
+			<p class="gray-last-in-f10">Premium Support</p>
+			<p class="gray-last-in-f10">Skills</p>
+			<p class="gray-last-in-f10">Status</p>
+			<p class="gray-last-in-f10">Contact GitHub</p>
+		</div>
+		<div class="flex-in-f10">
+			<p class="gray-last-in-f10">Company</p>
+			<p class="gray-last-in-f10">About</p>
+			<p class="gray-last-in-f10">Customer stories</p>
+			<p class="gray-last-in-f10">Blog</p>
+			<p class="gray-last-in-f10">The ReadME Project</p>
+			<p class="gray-last-in-f10">Careers</p>
+			<p class="gray-last-in-f10">Press</p>
+			<p class="gray-last-in-f10">Inclusion</p>
+			<p class="gray-last-in-f10">Social Impact</p>
+			<p class="gray-last-in-f10">Shop</p>
+		</div>
+	</div>
+</body>
+</html>

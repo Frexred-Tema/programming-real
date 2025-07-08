@@ -1,0 +1,109 @@
+<head>
+    <style>
+        .button{
+            border: 1px solid black;
+            width: 5vw;
+            padding-block: 1vw;
+            text-align: center;
+            border-radius: 20px;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<html>
+    <body>
+
+        <form>
+            <input id="t1" type="text">
+            <input id="n1" type="number">
+        </form>
+
+        <form>
+            <input id="t2" type="text">
+            <input id="n2" type="number">
+        </form>
+
+        <form>
+            <input id="t3" type="text">
+            <input id="n3" type="number">
+        </form>
+
+        <form>
+            <input id="t4" type="text">
+            <input id="n4" type="number">
+        </form>
+
+        <form>
+            <input id="t5" type="text">
+            <input id="n5" type="number">
+        </form>
+
+        <div id="button" class="button">SEND</div>
+
+        <div id="hidden" class="hidden">в
+            <p id="hidden1" class="hidden"></p>
+            <p id="hidden2" class="hidden"></p>
+            <p id="hidden3" class="hidden"></p>
+            <p id="hidden4" class="hidden"></p>
+            <p id="hidden5" class="hidden"></p>
+        </div>
+        <script>
+
+            let but = document.getElementById("button")
+            let t1 = document.getElementById("t1")
+            let t2 = document.getElementById("t2")
+            let t3 = document.getElementById("t3")
+            let t4 = document.getElementById("t4")
+            let t5 = document.getElementById("t5")
+            let n1 = document.getElementById("n1")
+            let n2 = document.getElementById("n2")
+            let n3 = document.getElementById("n3")
+            let n4 = document.getElementById("n4")
+            let n5 = document.getElementById("n5")
+            let hide = document.getElementById("hidden")
+            let hidden1 = document.getElementById("hidden1")
+            let hidden2 = document.getElementById("hidden2")
+            let hidden3 = document.getElementById("hidden3")
+            let hidden4 = document.getElementById("hidden4")
+            let hidden5 = document.getElementById("hidden5")
+            but.addEventListener("click", function () {
+                if (n1.value > 18) {
+                    if (n1.value < 30){
+                    hidden1.innerText = t1.value + n1.value
+                    }
+                }
+            })
+            but.addEventListener("click", function () {
+                if (n2.value > 18) {
+                    if (n2.value < 30){
+                    hidden2.innerText = t2.value + n2.value
+                    }
+                }
+            })
+            but.addEventListener("click", function () {
+                if (n3.value > 18) {
+                    if (n3.value < 30){
+                    hidden3.innerText = t3.value + n3.value
+                    }
+                }
+            })
+            but.addEventListener("click", function () {
+                if (n4.value > 18) {
+                    if (n4.value < 30){
+                    hidden4.innerText = t4.value + n4.value
+                    }
+                }
+            })
+            but.addEventListener("click", function () {
+                if (n5.value > 18) {
+                    if (n5.value < 30){
+                    hidden5.innerText = t5.value + n5.value
+                    }
+                }
+            })
+
+        </script>
+    </body>
+</html>

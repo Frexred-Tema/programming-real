@@ -1,0 +1,228 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+
+            body{
+                font-size: 1.5vw;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .title{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .list1{
+                border: 1px solid black;
+            }
+            .list2{
+                margin-top: 5vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                gap: 2.5vw;
+            }
+            .table{
+                display: grid;
+                grid-template-columns: 40% 15% 15% 15% 15%;
+                text-align: center;
+                gap: 1vw;
+            }
+            .product1{
+                display: grid;
+                padding: 0;
+                border: 1px solid black;
+                align-items: center;
+                grid-template-columns: 40% 15% 15% 15% 15%;
+                text-align: center;
+                gap: 1vw;
+            }
+            .product2{
+                padding: 0;
+                border: 1px solid black;
+                border: 0;
+                display: grid;
+                grid-template-columns: 40% 15% 15% 15% 15%;
+                align-items: center;
+                text-align: center;
+                gap: 1vw;
+            }
+            .counterm1{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                gap: 1vw;
+                
+            }
+            .counterm2{
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                gap: 1vw;
+            }
+            .counter1{
+                border: 1px solid black;
+                width: 2vw;
+                height: 2vw;
+            }
+            .counter2{
+                border: 1px solid black;
+                width: 2vw;
+                height: 2vw;
+                user-select: none;
+            }
+            .imgm{
+                display: flex;
+            }
+            .znaki{
+                user-select: none;
+                cursor: pointer;
+            }
+            .buybutton{
+                width: 20vw;
+                height: 5vw;
+                border-radius: 15px;
+                user-select: none;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+    <body>
+        <p class="title">КОРЗИНА</p>
+        <div class="list1">
+            <div class="table">
+                <p class="tovar">ТОВАР</p>
+                <p class="tovary">ЦЕНА</p>
+                <p class="tovary">КОЛИЧЕСТВО</p>
+                <p class="tovary">ИТОГИ</p>
+                <p class="tovary">УДАЛИТЬ</p>
+            </div>
+            <div id="product1" class="product1">
+                <div class="imgm">
+                    <img style="width: 15vw;" src="https://avatars.mds.yandex.net/i?id=64145b9d46ca269887c602883968ec04d2758b03-5234574-images-thumbs&n=13">
+                    <p>ASUS Видеокарта GeForce RTX 3060 Ti 8 ГБ (TUF-RTX3060TI-O8G-V2-GAMING), LHR</p>
+                </div>
+                <p id="price1" class="price1">26899</p>
+                <div class="counterm1">
+                    <p id="minus1" class='znaki' style="font-size: 1.5rem;">-</p>
+                    <p id="counter1" class="counter1">0</p>
+                    <p id="plus1" class='znaki' style="font-size: 1.5rem;">+</p>
+                </div>
+                <p id="totpr1" class="totprice1"></p>
+                <p id='del1' style="font-size: 3vw; cursor: pointer; user-select: none;">X</p>
+            </div>
+            <div id="product2" class="product2">
+                <div class="imgm">
+                    <img style="width: 15vw;" src="https://avatars.mds.yandex.net/i?id=aac8c6405715eec91dc987649d3b16073c05d2c8032ade7b-12923036-images-thumbs&n=13">
+                    <p>ASUS Видеокарта GeForce RTX 3060 Ti 8 ГБ (TUF-RTX3060TI-O8G-V2-GAMING), LHR</p>
+                </div>
+                <p id="price2" class="price2">18399</p>
+                <div class="counterm2">
+                    <p id="minus2" class='znaki' style="font-size: 1.5rem;">-</p>
+                    <p id="counter2" class="counter2">0</p>
+                    <p id="plus2" class='znaki' style="font-size: 1.5rem;">+</p>
+                </div> 
+                <p id="totpr2" class="totprice2"></p>
+                <p id='del2' style="font-size: 3vw; cursor: pointer; user-select: none;">X</p>
+            </div>
+        </div>
+        <div class="list2">
+            <div style="display: flex; gap: 2vw;">
+                <div>Итого</div>
+                <div id="total_price"></div>
+            </div>
+            <button id="buybutton" class="buybutton">Оформить заказ</button>
+        </div>
+        <script>
+
+            let counter1 = document.getElementById('counter1');
+            let counter2 = document.getElementById('counter2');
+            let min1 = document.getElementById('minus1');
+            let min2 = document.getElementById('minus2');
+            let plus1 = document.getElementById('plus1');
+            let plus2 = document.getElementById('plus2');
+            let tp1 = document.getElementById('totpr1');
+            let tp2 = document.getElementById('totpr2');
+            let price1 = document.getElementById('price1');
+            let price2 = document.getElementById('price2');
+            let tprice = document.getElementById('total_price');
+            let del1 = document.getElementById('del1');
+            let del2 = document.getElementById('del2');
+            let product1 = document.getElementById('product1');
+            let product2 = document.getElementById('product2');
+
+
+            del1.addEventListener('click', ()=>{
+                tp1.innerText = counter1.innerText * price1.innerText;
+                let abc = tprice.innerText - tp1.innerText
+                tprice.innerHTML = abc
+                product1.remove();
+            })
+
+            del2.addEventListener('click', ()=>{
+                tp2.innerText = counter2.innerText * price2.innerText;
+                let abc = tprice.innerText - tp2.innerText
+                tprice.innerHTML = abc
+                product2.remove();
+            })
+            
+            min1.addEventListener('click', ()=>{
+                if (counter1.innerText != 0) {
+                    let counter = counter1.innerText;
+                    counter-=1;
+                    counter1.innerText = counter;
+                    tp1.innerText = counter1.innerText * price1.innerText;
+                    tp2.innerText = counter2.innerText * price2.innerText;
+                    let tpre1 = Number(tp1.innerText);
+                    let tpre2 = Number(tp2.innerText);
+                    tprice.innerText = tpre1 + tpre2;
+                };
+            });
+
+            min2.addEventListener('click', ()=>{
+                if (counter2.innerText != 0) {
+                    let counter = counter2.innerText;
+                    counter-=1;
+                    counter2.innerText = counter;
+                    tp1.innerText = counter1.innerText * price1.innerText;
+                    tp2.innerText = counter2.innerText * price2.innerText;
+                    let tpre1 = Number(tp1.innerText);
+                    let tpre2 = Number(tp2.innerText);
+                    tprice.innerText = tpre1 + tpre2;
+                };
+            });
+
+            plus1.addEventListener('click', ()=>{
+                let counter = counter1.innerText;
+                counter++;
+                counter1.innerText = counter;
+                tp1.innerText = counter1.innerText * price1.innerText;
+                tp2.innerText = counter2.innerText * price2.innerText;
+                tprice.innerText = tp1.innerText + tp2.innerText;
+                let tpre1 = Number(tp1.innerText);
+                let tpre2 = Number(tp2.innerText);
+                tprice.innerText = tpre1 + tpre2;
+            });
+
+            plus2.addEventListener('click', ()=>{
+                let counter = counter2.innerText;
+                counter++;
+                counter2.innerText = counter;
+                tp1.innerText = counter1.innerText * price1.innerText;
+                tp2.innerText = counter2.innerText * price2.innerText;
+                tprice.innerText = tp1.innerText + tp2.innerText;
+                let tpre1 = Number(tp1.innerText);
+                let tpre2 = Number(tp2.innerText);
+                tprice.innerText = tpre1 + tpre2;
+            });
+
+
+                        
+        </script>
+    </body>
+</html>

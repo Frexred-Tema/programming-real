@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        'use strict';
+        // Задание | No 1 Сколько типов данных в js? Перечислить. 
+        // Всего 8 типов данных Number, bigint, string, bolean, null, undefined, object, symbol
+
+        // Заданиме No | 2 Чему равен  typeof null в режиме use strict?
+        // Выведет null
+
+        // Задание No 3 |  Какое будет выведено значение: let x = 5; alert(x++); 
+        // будет выведено 6 так как x++ это как +1
+
+        // Задание No 4 | Обьяснить
+        
+        let a = (1,5 - 1) * 2;
+        
+        alert(a) 
+        // Выведиться 1 так как 1,5 - 1 = 0,5 затем 0,5 * 2 = 1
+
+        // Задание No 5 | Чему равно 2 && 1 && null && 0 && undefined ?
+        // Неизвестно может быть любой из них
+
+        // Задание No 6 | Дней в недели 7. Первый день понедельник, второй день вторник и т.д.
+        // Напишите программу которая выводит день недели по заданному числу.
+        // На введение  числа 0,8,9… выводить сообщение ошибки.
+        
+        let b = prompt('Ведните число от одного до семи')
+        switch (b) {
+            case '1': console.log('Понедельник'); break;
+            case '2': console.log('Вторник'); break;
+            case '3': console.log('Среда'); break;
+            case '4': console.log('Четверг'); break;
+            case '5': console.log('Пятница'); break;
+            case '6': console.log('Суббота'); break;
+            case '7': console.log('Воскресенье'); break;
+            default: console.log('Ошибка вы ввели число больше 7'); break;
+        }
+
+        // Задание No 7 | Дан массив  
+        // let scores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69, 34, 55, 51, 52, 44, 51, 69, 64, 66, 55, 52, 61, 46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 51, 44];  
+        //Значения в массиве получены в ходе эксперимента ученых. Вы сможете написать программу, которая будет выводить такой отчет?0
+        
+        let scores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69, 34, 55, 51, 52, 44, 51, 69, 64, 66, 55, 52, 61, 46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 51, 44];  
+        console.log("Пробирка #1 значение" + scores[0])
+        console.log("Пробирка #2 значение" + scores[1])
+        console.log("Пробирка #3 значение" + scores[2])
+        console.log("Пробирка #4 значение" + scores[3])
+        console.log("Пробирка #5 значение" + scores[4])
+        console.log("Пробирка #6 значение" + scores[5])
+        console.log("Пробирка #7 значение" + scores[6])
+        console.log("Пробирка #8 значение" + scores[7])
+        console.log("Пробирка #9 значение" + scores[8])
+        console.log("Пробирка #10 значение" + scores[9])
+        console.log("Пробирка #11 значение" + scores[10])
+        console.log("Пробирка #12 значение" + scores[11])
+        console.log("Пробирка #13 значение" + scores[12])
+        console.log("Пробирка #14 значение" + scores[13])
+        console.log("Пробирка #15 значение" + scores[14])
+        console.log("Пробирка #16 значение" + scores[15])
+        console.log("Пробирка #17 значение" + scores[16])
+        console.log("Пробирка #18 значение" + scores[17])
+        console.log("Пробирка #19 значение" + scores[18])
+        console.log("Пробирка #20 значение" + scores[19])
+        console.log("Пробирка #21 значение" + scores[20])
+        console.log("Пробирка #22 значение" + scores[21])
+        console.log("Пробирка #23 значение" + scores[22])
+        console.log("Пробирка #24 значение" + scores[23])
+        console.log("Пробирка #25 значение" + scores[24])
+        console.log("Пробирка #26 значение" + scores[25])
+        console.log("Пробирка #27 значение" + scores[26])
+        console.log("Пробирка #28 значение" + scores[27])
+        console.log("Пробирка #29 значение" + scores[28])
+        console.log("Пробирка #30 значение" + scores[29])
+        console.log("Пробирка #31 значение" + scores[30])
+        console.log("Пробирка #32 значение" + scores[31])
+        console.log("Пробирка #33 значение" + scores[32])
+        console.log("Пробирка #34 значение" + scores[33])
+        console.log("Пробирка #35 значение" + scores[34])
+        console.log("Пробирка #36 значение" + scores[35])
+
+        // Задание No 8 | Этот код не выполняется должным образом. Попытайтесь понять, почему
+        // function multiply(a, b){
+        //     a * b
+        // }
+        // Потому что во первых я думаю надо было создать переменную а во вторых нету return
+
+        // задание 9 | Написать функцию которая принимает два параметра a и b введение с клавиатуры и выдает сумму a+b;
+        // Ввод | 1 и 2 | -5 и 2 | 5 и 5 |
+        // Вывод | 3 | -3 | 10 |
+
+        let fun1 = function (boy, girl){
+            let abc = boy + girl
+            console.log(abc)
+            return abc
+        }
+        fun1(1, 2)
+        fun1(-5, 2)
+        fun1(5, 5)
+
+        // Задание No 10 | Первое столетие охватывает период с 1 года по 100 год включительно
+        // второе столетие — с 101 года по 200 год включительно и т. д. Учитывая год, верните столетие, в котором он находится.
+        // Ввод | 1705 | 1900 | 1601 | 2000 |
+        // Вывод | 18 | 19 | 17 | 20 |
+
+        let fun2 = function (sad) {
+            let tir = (sad/100) + 1
+            console.log(tir)
+            return tir
+        }
+        fun2(1705)
+
+        // Задание No 11 | доллары в сомах
+
+        let fun3 = function (dollars){
+            let soms = dollars * 90;
+            console.log(soms)
+            return soms;
+        }
+        
+        let soms = prompt()
+        fun3(soms)
+        
+        // Задание No 12 | вам дается строка чисел, разделенных пробелами, и вы должны вернуть наибольшее и наименьшее число.
+        
+        const numbers1 = ['1', '2', '3', '4', '5']
+        const numbers2 = ['1', '2', '3', '4', '5']
+        const numbers3 = ['1', '2', '-3', '4', '5']
+        const numbers4 = ['1', '9', '3', '4', '-5']
+        let i1 = 1
+        let max1 = 1
+        let min1 = 1
+        while (i1 < numbers1.length) {
+            if (numbers1[i1] > min1) {
+                min1 = numbers1[i1];
+                i1++
+            }
+            else if (numbers1[i1] < max1) {
+                max = numbers1[i1]
+                i1++
+            }
+            console.log(min1, max1, '|| 1 массив')
+        }
+        let i2 = 1
+        let max2 = 1
+        let min2 = 1
+        while (i2 < numbers2.length) {
+            if (numbers2[i2] > min2) {
+                min2 = numbers2[i2];
+                i2++
+            }
+            else if (numbers2[i2] < max2) {
+                max2 = numbers2[i2]
+                i2++
+            }
+            console.log(min2, max2, '|| 2 массив')
+        }
+        let i3 = 1
+        let max3 = 1
+        let min3 = 1
+        while (i3 < numbers3.length) {
+            if (numbers3[i3] > min3) {
+                min3 = numbers3[i3];
+                i3++
+            }
+            else if (numbers3[i3] < max3) {
+                max3 = numbers3[i3]
+                i3++
+            }
+            console.log(min3, max3, '|| 3 массив')
+        }
+        let i4 = 1
+        let max4 = 1
+        let min4 = 1
+        while (i4 < numbers4.length) {
+            if (numbers4[i4] > min4) {
+                min4 = numbers1[i4];
+                i4++
+            }
+            else if (numbers4[i4] < max4) {
+                max4 = numbers4[i4]
+                i4++
+            }
+            console.log(min4, max4, '|| 4 массив')
+        }
+
+        // Задание No 13 | Наша футбольная команда завершила чемпионат
+        // Результаты матчей нашей команды записываются в виде набора строк в массиве. Каждый матч представлен строкой в ​​формате "x:y", где x— счет нашей команды, а y— счет наших противников.
+        // Например: ["3:1", "2:2", "0:1", ...]
+        // Очки за каждый матч начисляются следующим образом:
+        // если x > y: 3 очка (победа)
+        // если x < y: 0 очков (проигрыш)
+        // если x = y: 1 балл (ничья)
+        // Нам нужно написать функцию, которая берет этот набор и возвращает количество очков, которое наша команда ( x) набрала в чемпионате по приведенным выше правилам.
+        // Заметки:
+        // наша команда всегда играет 10 матчей в чемпионате
+
+        
+        const cmdscores = ['1:0', '2:0', '3:0', '1:1', '2:1', '3:1', '1:2', '2:2', '3:2', '1:3'];
+        let opponents = [];
+        let we = [];
+        for (let i = 0; i < cmdscores.length; i++) {
+            const [x, y] = cmdscores[i].split(":");
+            we.push(x);
+            opponents.push(y);
+        }
+        let all = function (xz) {
+            let sum = 0;
+            for (let i = 0; i < xz.length; i++) {
+                sum += Number(xz[i]);
+            }
+            return sum;
+        } 
+        const vsego = all(we);
+        console.log("Мы набрали:", vsego, "очков");
+
+        // Задание No 14 || Создайте функцию, которая возвращает сумму двух наименьших положительных чисел для заданного массива минимум из 4 положительных целых чисел.
+        // Например, когда массив передается как [19, 5, 42, 2, 77], вывод должен быть 7.
+        // Вывести  таблицу умножения заданного числа. Например, таблица умножения для number == 5 выглядит следующим образом:
+        // 1 * 5 = 5
+        // 2 * 5 = 10
+        // 3 * 5 = 15
+        // 4 * 5 = 20
+        // 5 * 5 = 25
+        // 6 * 5 = 30
+        // 7 * 5 = 35
+        // 8 * 5 = 40
+        // 9 * 5 = 45
+        // 10 * 5 = 50
+
+        let first_numbers = [19, 5, 42, 2, 77]
+        let min_first = 2
+        let min_second = 5
+        for (let i = 0; i < first_numbers.length; i++){
+            if (first_numbers[i] < min_first) {
+                min_first = first_numbers[i]
+            }
+        } 
+        let second_numbers = [19,5, 42, 77]
+        for (let e = 0; e < second_numbers.length; e++){
+            if (second_numbers[e] < min_second) {
+                min_second = second_numbers[e]
+            }
+        }
+
+        console.log(min_first + min_second, 'сумма двух наименьших чисел')
+        let summ = min_first + min_second
+        
+        for (let g = 1; g <= 10; g++) {
+            let multiplication = summ * g
+            console.log(multiplication)
+        }
+
+    </script>
+</body>
+</html>

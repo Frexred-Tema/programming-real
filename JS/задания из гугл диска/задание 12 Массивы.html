@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <script>
+            
+            let styles = ['Джаз', 'Блюз']
+            console.log(styles);
+            styles.push('Рок-н-ролл')
+            console.log(styles);
+            styles.unshift('Джаз', 'Классика')
+            styles.pop()
+            styles.pop()
+            styles.pop()
+            styles.push('Рок-н-ролл')
+            console.log(styles);
+            alert(styles.shift(0))
+            console.log(styles);
+            styles.unshift('Реп', 'Регги')
+            console.log(styles);
+
+            //задание 2 массивы: ДАННЫЙ КОД ВЫВЕДЕТ ЯБЛОКИ, ГРУША, АПЕЛЬСИН, БАНАН
+
+            let a = []
+            console.log('Не одного')
+            a.push('Асель')
+            console.log(a, 'нравиться')
+            a.pop()
+            a.push('Мирбек', 'Самат')
+            console.log(a[0] + 'у', 'и', a[1] + 'у', 'Нравиться')
+            let b = ["Мирбек", "Нурсултан", "Алтынай"]
+            console.log(b[0] + 'у', "и", b[1] + "у", "и", b[2], "Нравиться")
+            let p = ["Самир","Нурсултан","Самат","Алтынай"]
+            console.log(p[0] + 'у', "и", p[1] + "у", "и","ещё 2", "Нравиться")
+        </script>
+    </body>
+</html>

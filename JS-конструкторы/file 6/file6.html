@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <style>
+            .road{
+                background-color: greenyellow;
+                position: absolute;
+                width: 1vw;
+                height: 1vw;
+            }
+            .wall{ 
+                background-color: blueviolet;
+                position: absolute;
+                width: 1vw;
+                height: 1vw;
+            }
+            .sigma{
+                position: absolute;
+                background-color: red;
+                background-image: url('https://avatars.mds.yandex.net/i?id=ef694bbd29476586305d60624a4e3a6b3b518579-12720241-images-thumbs&n=13');
+                width: 1vw;
+                height: 1vw;
+                background-size: cover;
+            }
+            .time{
+                border: 2px solid black;
+                width: 4vw;
+                padding-block: 1vw;
+                border-radius: 1vw;
+                margin-left: 16.5vw;
+                text-align: center;
+            }
+            .d3{
+                display: flex;
+                justify-content: space-between;
+                padding-right: 10vw
+            }
+        </style>
+    </head>
+    <body>
+        <div id="table"></div>
+        <div class="d3"></div>
+            <p id = 'time' class="time">0:0</p>
+        </div>
+        <script>
+            let second = 0
+            let minutes = 0
+            let Timerinterval
+            let isStarted = false
+            let time = document.getElementById("time")
+
+            window.addEventListener('keydown', function(){
+                if (!isStarted) {
+                    isStarted = true
+                    Timerinterval = setInterval(function(){
+                        second++
+                        time.innerText = minutes + ':' + second
+                        if ( second > 58) {
+                            second = -1
+                            minutes++
+                        }  
+                    }, 1000)
+                }
+            })
+            let x = 1
+            let y = 1
+            let table = document.getElementById('table')
+            let mass = [
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1],
+                [1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1],
+                [1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1],
+                [1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+                [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1],
+                [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
+                [1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1],
+                [1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+                [1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
+                [1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 2, 1],
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+            ];
+            for(let i = 0; i < mass.length; i++){
+                for(let j = 0; j < mass[i].length; j++) { 
+                    let div = document.createElement('div');
+                    if (mass[i][j] == 1) {
+                        div.className = 'wall';
+                    }
+                    else if (mass[i][j] == 0) {
+                        div.className = 'road';
+                    }
+                    table.appendChild(div);
+                    div.style.left = i * 1 + 'vw'
+                    div.style.top = j * 1 + 'vw'
+                }
+            }
+            let sigma = document.createElement('span')
+            sigma.className = 'sigma'
+            sigma.style.left = x + 'vw'
+            sigma.style.top = y + 'vw'
+            table.appendChild(sigma)
+            window.addEventListener('keydown', (e)=>{
+                if (e.key == 'ArrowRight') {
+                    if (mass[x+1][y] == 2) {
+                        alert('Вы победили')
+                        sigma.style.left = x + 'vw'
+                        isStarted = false 
+                        clearInterval(Timerinterval)
+                    }
+                    else if (mass[x+1][y] != 1) {
+                        x+=1
+                        sigma.style.left = x + 'vw'
+                    }
+                }
+                if (e.key == 'ArrowLeft') {
+                    if (mass[x-1][y] != 1) {
+                        x-=1
+                        sigma.style.left = x + 'vw'
+                    }
+                }
+                if (e.key == 'ArrowUp') {
+                    if (mass[x][y-1] != 1) {
+                        y-=1
+                        sigma.style.top = y + 'vw'
+                    }
+                }
+                if (e.key == 'ArrowDown') {
+                    if (mass[x][y+1] != 1) {
+                        y+=1
+                        sigma.style.top = y + 'vw'
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
