@@ -9,3 +9,4 @@ def randomizer(x, abc):
     else:
         return abc
 print(randomizer(x, abc))
+print(1)
