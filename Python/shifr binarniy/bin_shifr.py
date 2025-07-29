@@ -7,18 +7,18 @@ temp = []
 mw = []
 for i in range(len(word)):
     for j in range(len(alp)):
-        if (len(temp) != 5):
-            if (word[i] == alp[j]):
-                temp.append(j)
-        elif (i == len(word)-1):
+        if (word[i] == alp[j]):
             temp.append(j)
-            mw.append(temp)
+print(mw)
+while len(temp) != 0:
+    tem = []
+    for sep in range(5):
+        if len(temp) != 0:
+            tem.append(temp[0])
+            del temp[0]
         else:
-            if (word[i] == alp[j]):
-                mw.append(temp)
-                temp = []
-                temp.append(j)
-
+            tem.append(0)
+    mw.append(tem)
 print(mw)
 total = []
 for n in range(len(mw)):
@@ -31,5 +31,4 @@ for n in range(len(mw)):
     t = t << 5
     t = t | mw[n][0]
     total.append(t)
-
 print(total)
