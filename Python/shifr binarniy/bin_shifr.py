@@ -19,7 +19,7 @@ while len(temp) != 0:
         else:
             tem.append(0)
     mw.append(tem)
-print(mw)
+print()
 total = []
 for n in range(len(mw)):
     t = mw[n][4] << 5
