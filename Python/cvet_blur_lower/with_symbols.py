@@ -36,23 +36,16 @@ last = []
 for n in range(len(blured)):
     fix_err = []
     for o in range(len(blured[n])):
-        blured[n][o][0] = int(blured[n][o][0] / 255 * 70 // 1)
+        blured[n][o][0] = int(blured[n][o][0] / 255 * 68 // 1)
         fix_err.append(blured[n][o][0])
     last.append(fix_err)
 
 s_mas = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/|()1{}[]?-_+~<>i!lI;:,\"^'. "
 
-ltt = []
-print(last)
-
 for h1 in range(len(last)):
-    lt = []
     for h2 in range(len(last[h1])):
         for h3 in range(len(s_mas)):
-            if (last[h1][h2] == s_mas[h3]):
-                print(last)
-                lt.append(s_mas[h3])
-    ltt.append(lt)
-print(ltt)
-for iker in range(len(ltt)):
-    print(ltt[iker])
+            if (last[h1][h2] == h3):
+                last[h1][h2] = s_mas[h3]
+for rn in range(len(last)):
+    print(last[rn])
