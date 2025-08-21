@@ -1,6 +1,6 @@
 import numpy as np
 from PIL import Image
-temp = Image.open('vremennaia.jpg').convert("RGB")
+temp = Image.open('naruto.jpg').convert("RGB")
 image = np.array(temp)
 r = 0
 g = 0
@@ -22,4 +22,4 @@ for i in range(len(image)):
 blured = np.array(blured)
 blured = Image.fromarray(blured.astype(np.uint8)) 
 blured.show()
-        
+blured.save('Naruto229.png')
