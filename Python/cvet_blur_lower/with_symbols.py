@@ -40,12 +40,13 @@ for n in range(len(blured)):
         fix_err.append(blured[n][o][0])
     last.append(fix_err)
 
-s_mas = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/|()1{}[]?-_+~<>i!lI;:,\"^'. "
+s_mas = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/|()1{}[]?-_+~<>i!lI;:,\"^'."
 
 for h1 in range(len(last)):
     for h2 in range(len(last[h1])):
         for h3 in range(len(s_mas)):
-            if (last[h1][h2] == h3):
+            print(last[h1][h2])
+            if (int(last[h1][h2]) == h3):
                 last[h1][h2] = s_mas[h3]
 for rn in range(len(last)):
     print(last[rn])
